@@ -23,7 +23,7 @@ namespace DeleteMe.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-P55IN8A\\SQLEXPRESS;Initial Catalog=test;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=test;Integrated Security=True");
             }
         }
 
