@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prauge_Parking
+namespace Prauge_Parking.Main
 {
-    public partial class MainScreen : Form
+    public partial class Map : UserControl
     {
-        public MainScreen()
+        public Map()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Map_Load(object sender, EventArgs e)
         {
-            Brush brush = Brushes.Red;
-
+            MapGenerating mapGenerating = new MapGenerating();
+          
+            
+            
         }
     }
 }
