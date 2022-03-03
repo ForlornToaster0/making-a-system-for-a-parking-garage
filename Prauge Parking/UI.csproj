@@ -13,4 +13,8 @@
     <PackageReference Include="FontAwesome" Version="4.7.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
