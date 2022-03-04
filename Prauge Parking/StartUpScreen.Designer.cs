@@ -28,113 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
+            this.SpotsMany = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PriceHour = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.VechicleTypes = new System.Windows.Forms.CheckedListBox();
+            this.CreateConfig = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.CarsSpot = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.MotorcyclesSpot = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // SpotsMany
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.SpotsMany.Location = new System.Drawing.Point(70, 77);
+            this.SpotsMany.Name = "SpotsMany";
+            this.SpotsMany.Size = new System.Drawing.Size(100, 23);
+            this.SpotsMany.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 80);
+            this.label1.Location = new System.Drawing.Point(67, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "How many spots";
+            this.label1.Text = "Number of spots";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 151);
+            this.label2.Location = new System.Drawing.Point(70, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Price per hour";
             // 
-            // textBox2
+            // PriceHour
             // 
-            this.textBox2.Location = new System.Drawing.Point(11, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 2;
+            this.PriceHour.Location = new System.Drawing.Point(70, 138);
+            this.PriceHour.Name = "PriceHour";
+            this.PriceHour.Size = new System.Drawing.Size(100, 23);
+            this.PriceHour.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 80);
+            this.label3.Location = new System.Drawing.Point(206, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 15);
+            this.label3.Size = new System.Drawing.Size(81, 15);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Select vechicle types";
+            this.label3.Text = "Vechicle types";
             // 
-            // checkedListBox1
+            // VechicleTypes
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.VechicleTypes.FormattingEnabled = true;
+            this.VechicleTypes.Items.AddRange(new object[] {
             "Car",
             "Motorcycle"});
-            this.checkedListBox1.Location = new System.Drawing.Point(152, 98);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 7;
+            this.VechicleTypes.Location = new System.Drawing.Point(206, 77);
+            this.VechicleTypes.Name = "VechicleTypes";
+            this.VechicleTypes.Size = new System.Drawing.Size(120, 94);
+            this.VechicleTypes.TabIndex = 7;
             // 
-            // button1
+            // CreateConfig
             // 
-            this.button1.Location = new System.Drawing.Point(324, 218);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Create config";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CreateConfig.Location = new System.Drawing.Point(367, 206);
+            this.CreateConfig.Name = "CreateConfig";
+            this.CreateConfig.Size = new System.Drawing.Size(150, 23);
+            this.CreateConfig.TabIndex = 8;
+            this.CreateConfig.Text = "Create config";
+            this.CreateConfig.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(320, 80);
+            this.label4.Location = new System.Drawing.Point(425, 59);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 15);
+            this.label4.Size = new System.Drawing.Size(92, 15);
             this.label4.TabIndex = 10;
-            this.label4.Text = "How many cars in one spot";
+            this.label4.Text = "Cars in one spot";
             // 
-            // textBox3
+            // CarsSpot
             // 
-            this.textBox3.Location = new System.Drawing.Point(371, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 9;
+            this.CarsSpot.Location = new System.Drawing.Point(425, 77);
+            this.CarsSpot.Name = "CarsSpot";
+            this.CarsSpot.Size = new System.Drawing.Size(100, 23);
+            this.CarsSpot.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(302, 151);
+            this.label5.Location = new System.Drawing.Point(425, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 15);
+            this.label5.Size = new System.Drawing.Size(134, 15);
             this.label5.TabIndex = 12;
-            this.label5.Text = "How many motorcycles in spot";
+            this.label5.Text = "Motorcycles in one spot";
             // 
-            // textBox4
+            // MotorcyclesSpot
             // 
-            this.textBox4.Location = new System.Drawing.Point(371, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 11;
+            this.MotorcyclesSpot.Location = new System.Drawing.Point(425, 141);
+            this.MotorcyclesSpot.Name = "MotorcyclesSpot";
+            this.MotorcyclesSpot.Size = new System.Drawing.Size(100, 23);
+            this.MotorcyclesSpot.TabIndex = 11;
             // 
             // label6
             // 
@@ -146,25 +155,90 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Config car park";
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 48;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 120);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox1.TabIndex = 14;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.MapMarkedAlt;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 48;
+            this.iconPictureBox2.Location = new System.Drawing.Point(12, 59);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox2.TabIndex = 15;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.CarAlt;
+            this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 48;
+            this.iconPictureBox3.Location = new System.Drawing.Point(371, 59);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox3.TabIndex = 16;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Motorcycle;
+            this.iconPictureBox4.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 48;
+            this.iconPictureBox4.Location = new System.Drawing.Point(371, 123);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox4.TabIndex = 17;
+            this.iconPictureBox4.TabStop = false;
+            // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(624, 510);
+            this.Controls.Add(this.iconPictureBox4);
+            this.Controls.Add(this.iconPictureBox3);
+            this.Controls.Add(this.iconPictureBox2);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.MotorcyclesSpot);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.CarsSpot);
+            this.Controls.Add(this.CreateConfig);
+            this.Controls.Add(this.VechicleTypes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PriceHour);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SpotsMany);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartUpScreen";
             this.Text = "StartUpScreen";
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,17 +246,21 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox SpotsMany;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox PriceHour;
         private Label label3;
-        private CheckedListBox checkedListBox1;
-        private Button button1;
+        private CheckedListBox VechicleTypes;
+        private Button CreateConfig;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox CarsSpot;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox MotorcyclesSpot;
         private Label label6;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
     }
 }
