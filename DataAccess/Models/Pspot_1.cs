@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Models
 {
     [Table("Vehicle")]
-    public partial class Vehicle
+    public partial class Pspot
     {
         [Key]
         public int Spot { get; set; }

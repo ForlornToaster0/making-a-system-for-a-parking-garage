@@ -18,8 +18,8 @@ namespace DeleteMe.Data
         {
         }
 
-        public virtual DbSet<Pspot> Pspots { get; set; } = null!;
-        public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
+        public virtual DbSet<Models.Pspot> Pspots { get; set; } = null!;
+        public virtual DbSet<DataAccess.Models.Pspot> Vehicles { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,12 +31,12 @@ namespace DeleteMe.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Pspot>(entity =>
+            modelBuilder.Entity<Models.Pspot>(entity =>
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
             
-            modelBuilder.Entity<Vehicle>(entity =>
+            modelBuilder.Entity<DataAccess.Models.Pspot>(entity =>
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
