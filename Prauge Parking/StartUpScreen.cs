@@ -1,4 +1,6 @@
-﻿using DeleteMe.Data;
+﻿using DataAccess;
+using DataAccess.Data;
+using DataAccess.Models;
 using System;
 ﻿using System;
 using System.Collections.Generic;
@@ -18,8 +20,11 @@ namespace Prauge_Parking
         {
             var context = new testContext();
             context.Database.EnsureCreated();
-
-
+            if (context.Pspots.Count() == 0)
+            {
+                PopulateDbWithTestData populateDbWithTestData = new();
+                populateDbWithTestData.Populate();
+            }
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;

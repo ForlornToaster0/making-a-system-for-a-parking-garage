@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace DeleteMe.Models
+namespace DataAccess.Models
 {
     [Table("PSpot")]
     public partial class Pspot
