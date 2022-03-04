@@ -57,6 +57,7 @@
             this.SpotsMany.Name = "SpotsMany";
             this.SpotsMany.Size = new System.Drawing.Size(100, 23);
             this.SpotsMany.TabIndex = 0;
+            this.SpotsMany.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -82,7 +83,8 @@
             this.PriceHour.Location = new System.Drawing.Point(70, 138);
             this.PriceHour.Name = "PriceHour";
             this.PriceHour.Size = new System.Drawing.Size(100, 23);
-            this.PriceHour.TabIndex = 2;
+            this.PriceHour.TabIndex = 1;
+            this.PriceHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -97,19 +99,19 @@
             // 
             this.VechicleTypes.FormattingEnabled = true;
             this.VechicleTypes.Items.AddRange(new object[] {
-            "Car",
-            "Motorcycle"});
+            "Cars",
+            "Motorcycles"});
             this.VechicleTypes.Location = new System.Drawing.Point(206, 77);
             this.VechicleTypes.Name = "VechicleTypes";
             this.VechicleTypes.Size = new System.Drawing.Size(120, 94);
-            this.VechicleTypes.TabIndex = 7;
+            this.VechicleTypes.TabIndex = 2;
             // 
             // CreateConfig
             // 
             this.CreateConfig.Location = new System.Drawing.Point(367, 206);
             this.CreateConfig.Name = "CreateConfig";
             this.CreateConfig.Size = new System.Drawing.Size(150, 23);
-            this.CreateConfig.TabIndex = 8;
+            this.CreateConfig.TabIndex = 5;
             this.CreateConfig.Text = "Create config";
             this.CreateConfig.UseVisualStyleBackColor = true;
             // 
@@ -127,7 +129,8 @@
             this.CarsSpot.Location = new System.Drawing.Point(425, 77);
             this.CarsSpot.Name = "CarsSpot";
             this.CarsSpot.Size = new System.Drawing.Size(100, 23);
-            this.CarsSpot.TabIndex = 9;
+            this.CarsSpot.TabIndex = 3;
+            this.CarsSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -143,7 +146,8 @@
             this.MotorcyclesSpot.Location = new System.Drawing.Point(425, 141);
             this.MotorcyclesSpot.Name = "MotorcyclesSpot";
             this.MotorcyclesSpot.Size = new System.Drawing.Size(100, 23);
-            this.MotorcyclesSpot.TabIndex = 11;
+            this.MotorcyclesSpot.TabIndex = 4;
+            this.MotorcyclesSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
