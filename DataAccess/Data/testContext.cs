@@ -35,7 +35,7 @@ namespace DataAccess.Data
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
             
-            modelBuilder.Entity<DataAccess.Models.Pspot>(entity =>
+            modelBuilder.Entity<DataAccess.Models.Vehicle>(entity =>
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
