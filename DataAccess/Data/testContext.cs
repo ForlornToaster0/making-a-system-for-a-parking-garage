@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using DeleteMe.Models;
+using DataAccess.Models;
 
 namespace DeleteMe.Data
 {
@@ -18,12 +19,13 @@ namespace DeleteMe.Data
         }
 
         public virtual DbSet<Pspot> Pspots { get; set; } = null!;
+        public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=test;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\SSQLLocalDB;Initial Catalog=test;Integrated Security=True");
             }
         }
 
@@ -33,10 +35,14 @@ namespace DeleteMe.Data
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
+            
+            modelBuilder.Entity<Vehicle>(entity =>
+            {
+                entity.Property(e => e.Spot).ValueGeneratedNever();
+            });
 
             OnModelCreatingPartial(modelBuilder);
         }
-
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
