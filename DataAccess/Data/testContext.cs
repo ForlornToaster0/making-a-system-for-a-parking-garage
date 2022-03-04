@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using DeleteMe.Models;
 using DataAccess.Models;
 
-namespace DeleteMe.Data
+namespace DataAccess.Data
 {
     public partial class testContext : DbContext
     {
@@ -25,7 +24,7 @@ namespace DeleteMe.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\SSQLLocalDB;Initial Catalog=test;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=test;Integrated Security=True");
             }
         }
 
