@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
             this.SpotsMany = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -58,6 +61,7 @@
             this.SpotsMany.Size = new System.Drawing.Size(100, 23);
             this.SpotsMany.TabIndex = 0;
             this.SpotsMany.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.SpotsMany, "How many parking spots");
             // 
             // label1
             // 
@@ -85,6 +89,7 @@
             this.PriceHour.Size = new System.Drawing.Size(100, 23);
             this.PriceHour.TabIndex = 1;
             this.PriceHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip2.SetToolTip(this.PriceHour, "What is the price per hour");
             // 
             // label3
             // 
@@ -105,6 +110,7 @@
             this.VechicleTypes.Name = "VechicleTypes";
             this.VechicleTypes.Size = new System.Drawing.Size(120, 94);
             this.VechicleTypes.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.VechicleTypes, "Select vechicle types");
             // 
             // CreateConfig
             // 
@@ -131,6 +137,7 @@
             this.CarsSpot.Size = new System.Drawing.Size(100, 23);
             this.CarsSpot.TabIndex = 3;
             this.CarsSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.CarsSpot, "How many cars fit in one parking spot");
             // 
             // label5
             // 
@@ -148,6 +155,7 @@
             this.MotorcyclesSpot.Size = new System.Drawing.Size(100, 23);
             this.MotorcyclesSpot.TabIndex = 4;
             this.MotorcyclesSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip1.SetToolTip(this.MotorcyclesSpot, "How many motorcycles fit in one parking spot");
             // 
             // label6
             // 
@@ -266,5 +274,7 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
     }
 }
