@@ -21,10 +21,11 @@ namespace Core
     public class ParkingSpots : Phouse
     {
         public int SpotSize { get; set; }   
-        public ParkingSpots(int houseSizeX, int houseSizeY, int spotAmount, int spotSize) : base(houseSizeX , houseSizeY, spotAmount)
+        public int Position { get; set; }   
+        public ParkingSpots(int houseSizeX, int houseSizeY, int spotAmount, int spotSize, int pos) : base(houseSizeX , houseSizeY, spotAmount)
         {
             SpotSize = spotSize;
-            
+            Position = pos;
         }
     }
 

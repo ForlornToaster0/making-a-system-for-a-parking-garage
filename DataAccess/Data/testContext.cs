@@ -17,8 +17,8 @@ namespace DataAccess.Data
         {
         }
 
-        public virtual DbSet<Models.Pspot> Pspots { get; set; } = null!;
-        public virtual DbSet<DataAccess.Models.Pspot> Vehicles { get; set; } = null!;
+        public virtual DbSet<Models.DBPspot> Pspots { get; set; } = null!;
+        public virtual DbSet<DataAccess.Models.DBPspot> Vehicles { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,12 +30,12 @@ namespace DataAccess.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Models.Pspot>(entity =>
+            modelBuilder.Entity<Models.DBPspot>(entity =>
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });
             
-            modelBuilder.Entity<DataAccess.Models.Vehicle>(entity =>
+            modelBuilder.Entity<DataAccess.Models.DBVehicle>(entity =>
             {
                 entity.Property(e => e.Spot).ValueGeneratedNever();
             });

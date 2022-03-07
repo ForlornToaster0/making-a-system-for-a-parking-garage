@@ -11,19 +11,11 @@ namespace DataAccess
 {
     public class DataExtration
     {
-        public static Pspot[] CarData()
+        public static DBPspot[] AllData()
         {
             using testContext Context = new();
             {
-                var data = Context.Pspots.Select(s=>s).Where(p=>p.Type=="Car").ToArray();
-                return data;
-            }
-        }
-        public static Pspot[] MCData()
-        {
-            using testContext Context = new();
-            {
-                var data = Context.Pspots.Select(s => s).Where(p => p.Type == "MC").ToArray();
+                var data = Context.Pspots.Select(s => s).ToArray();
                 return data;
             }
         }

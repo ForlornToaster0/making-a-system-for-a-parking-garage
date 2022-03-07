@@ -19,8 +19,7 @@ namespace Prauge_Parking
         public MainScreen()
         {
             InitializeComponent();
-            Inzilasing inzilasing = new();
-            inzilasing.Cars();
+           
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
@@ -30,15 +29,13 @@ namespace Prauge_Parking
             WindowState = FormWindowState.Maximized;
 
             MapGenerating mapGenerating = new();
-
-
             Inzilasing mapInfo = new();
-            Car[] car = mapInfo.Cars();
-            MC[] mc = mapInfo.MC();
-            Vehicle[] vehicles = car.Concat<Vehicle>(mc).ToArray();
+            
+      
+            Vehicle[] vehicles = mapInfo.NewCars();
+   
+            Phouse phouse = new(10, 10, 100);
 
-
-            ParkingSpots phouse = new(10, 10, 100, 4);
             var maps = mapGenerating.Creating(phouse, vehicles);
             foreach (var map in maps)
             {

@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccess.Models
 {
-    [Table("PSpot")]
-    public partial class Pspot
+    [Table("Vehicle")]
+    public partial class DBVehicle
     {
         [Key]
         public int Spot { get; set; }
         [StringLength(10)]
         public string? Reg { get; set; }
-        public DateTime Arrival { get; set; }
+        public DateTime? Arrival { get; set; }
         [StringLength(20)]
         public string? Type { get; set; }
     }

@@ -23,7 +23,7 @@ namespace DataAccess.Models
             {
                 foreach (var item in testdata)
                 {
-                    Pspot vehicle = new Pspot();
+                    DBPspot vehicle = new DBPspot();
 
                     vehicle.Spot = Convert.ToInt32(item[0]);
                     vehicle.Reg = Convert.ToString(item[1]);
