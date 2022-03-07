@@ -1,5 +1,5 @@
-﻿using DataAccess.Models;
-using DeleteMe.Data;
+﻿using DataAccess.Data;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +12,9 @@ namespace DataAccess
     {
         public static void AddVehicles()
         {
-            using (var context = new testContext())
-            {
+            var context = new testContext();
+
+
                 Pspot[] pspot = new Pspot[] {
                     new Pspot {  Spot = 1,
                     Reg = "ABC123",
@@ -55,12 +56,12 @@ namespace DataAccess
                     Reg = "QCC123",
                     Arrival = new DateTime(2021, 01, 01),
                     Type = "MC" } };
-                context.AddRange(pspot);
-                context.SaveChanges();
-            }
+            context.AddRange(pspot);
+            context.SaveChanges();
+
         }
     }
 
 
-    
+
 }

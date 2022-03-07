@@ -13,7 +13,7 @@ namespace DataAccess.Models
         public int Spot { get; set; }
         [StringLength(10)]
         public string? Reg { get; set; }
-        public DateTime? Arrival { get; set; }
+        public DateTime Arrival { get; set; }
         [StringLength(20)]
         public string? Type { get; set; }
     }

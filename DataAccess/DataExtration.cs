@@ -1,5 +1,6 @@
 ﻿
 using DataAccess.Data;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,20 @@ namespace DataAccess
 {
     public class DataExtration
     {
-        public string?[] Reg()
+        public static Pspot[] CarData()
         {
-            using var context = new testContext();
+            using testContext Context = new();
             {
-                
-                var reg = context.Pspots.Select(s=> s.Reg).ToArray();
-                return reg;
+                var data = Context.Pspots.Select(s=>s).Where(p=>p.Type=="Car").ToArray();
+                return data;
             }
         }
-        public string?[] Type()
+        public static Pspot[] MCData()
         {
-            using var context = new testContext();
+            using testContext Context = new();
             {
-
-                var type = context.Pspots.Select(s => s.Type).ToArray();
-                return type;
+                var data = Context.Pspots.Select(s => s).Where(p => p.Type == "MC").ToArray();
+                return data;
             }
         }
     }
