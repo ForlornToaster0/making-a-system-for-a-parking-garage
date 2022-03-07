@@ -11,8 +11,9 @@ namespace DataAccess.Models
     {
         [Key]
         public int Spot { get; set; }
+        [Key]
         [StringLength(10)]
-        public string? Reg { get; set; }
+        public string Reg { get; set; } = null!;
         public DateTime Arrival { get; set; }
         [StringLength(20)]
         public string? Type { get; set; }

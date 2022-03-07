@@ -15,7 +15,7 @@ namespace Core
         {
             var carData = DataExtration.AllData();
 
-            Vehicle[] list = new Vehicle[101];
+            Vehicle[] list = new Vehicle[100];
        
             foreach (var car in carData)
             {
