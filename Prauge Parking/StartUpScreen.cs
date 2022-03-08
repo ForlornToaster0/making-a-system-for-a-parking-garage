@@ -60,9 +60,27 @@ namespace Prauge_Parking
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Test t = new Test();
+            Parking t = new Parking();
             t.TopLevel = false;
-            // pnlContent
+            pnlContent.Controls.Add(t);
+            t.BringToFront();
+            t.Show();
+        }
+
+        private void btnCars_Click(object sender, EventArgs e)
+        {
+            Cars t = new Cars();
+            t.TopLevel = false;
+            pnlContent.Controls.Add(t);
+            t.BringToFront();
+            t.Show();
+        }
+
+        private void btnMotorcycles_Click(object sender, EventArgs e)
+        {
+            Motorcycles t = new Motorcycles();
+            t.TopLevel = false;
+            pnlContent.Controls.Add(t);
             t.BringToFront();
             t.Show();
         }

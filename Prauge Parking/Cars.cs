@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Prauge_Parking
 {
-    public partial class Test : Form
+    public partial class Cars : Form
     {
-        public Test()
+        public Cars()
         {
             InitializeComponent();
         }

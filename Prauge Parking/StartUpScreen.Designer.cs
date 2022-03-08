@@ -28,36 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
+            this.label6 = new System.Windows.Forms.Label();
+            this.PanelMenu = new System.Windows.Forms.Panel();
+            this.btnMotorcycles = new System.Windows.Forms.Button();
+            this.btnCars = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.SpotsMany = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.PriceHour = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.VechicleTypes = new System.Windows.Forms.CheckedListBox();
             this.CreateConfig = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.CarsSpot = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.MotorcyclesSpot = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(12, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 29);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Config car park";
+            // 
+            // PanelMenu
+            // 
+            this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelMenu.Controls.Add(this.btnMotorcycles);
+            this.PanelMenu.Controls.Add(this.btnCars);
+            this.PanelMenu.Controls.Add(this.button1);
+            this.PanelMenu.Controls.Add(this.label6);
+            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.PanelMenu.Name = "PanelMenu";
+            this.PanelMenu.Size = new System.Drawing.Size(200, 510);
+            this.PanelMenu.TabIndex = 19;
+            // 
+            // btnMotorcycles
+            // 
+            this.btnMotorcycles.FlatAppearance.BorderSize = 0;
+            this.btnMotorcycles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMotorcycles.Location = new System.Drawing.Point(35, 142);
+            this.btnMotorcycles.Name = "btnMotorcycles";
+            this.btnMotorcycles.Size = new System.Drawing.Size(134, 30);
+            this.btnMotorcycles.TabIndex = 2;
+            this.btnMotorcycles.Text = "Motorcycles";
+            this.btnMotorcycles.UseVisualStyleBackColor = true;
+            this.btnMotorcycles.Click += new System.EventHandler(this.btnMotorcycles_Click);
+            // 
+            // btnCars
+            // 
+            this.btnCars.FlatAppearance.BorderSize = 0;
+            this.btnCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCars.Location = new System.Drawing.Point(35, 106);
+            this.btnCars.Name = "btnCars";
+            this.btnCars.Size = new System.Drawing.Size(134, 30);
+            this.btnCars.TabIndex = 1;
+            this.btnCars.Text = "Cars";
+            this.btnCars.UseVisualStyleBackColor = true;
+            this.btnCars.Click += new System.EventHandler(this.btnCars_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(35, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 30);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Parking";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pnlContent
+            // 
+            this.pnlContent.Location = new System.Drawing.Point(206, 6);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(593, 317);
+            this.pnlContent.TabIndex = 20;
             // 
             // SpotsMany
             // 
@@ -66,15 +132,22 @@
             this.SpotsMany.Size = new System.Drawing.Size(100, 23);
             this.SpotsMany.TabIndex = 0;
             this.SpotsMany.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.SpotsMany, "How many parking spots");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(67, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 15);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 1;
+            // 
+            // PriceHour
+            // 
+            this.PriceHour.Location = new System.Drawing.Point(70, 134);
+            this.PriceHour.Name = "PriceHour";
+            this.PriceHour.Size = new System.Drawing.Size(100, 23);
+            this.PriceHour.TabIndex = 1;
+            this.PriceHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -84,15 +157,6 @@
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Price per hour";
-            // 
-            // PriceHour
-            // 
-            this.PriceHour.Location = new System.Drawing.Point(70, 134);
-            this.PriceHour.Name = "PriceHour";
-            this.PriceHour.Size = new System.Drawing.Size(100, 23);
-            this.PriceHour.TabIndex = 1;
-            this.PriceHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip2.SetToolTip(this.PriceHour, "What is the price per hour");
             // 
             // label3
             // 
@@ -114,7 +178,6 @@
             this.VechicleTypes.Size = new System.Drawing.Size(120, 94);
             this.VechicleTypes.TabIndex = 2;
             this.VechicleTypes.TabStop = false;
-            this.toolTip1.SetToolTip(this.VechicleTypes, "Select vechicle types");
             // 
             // CreateConfig
             // 
@@ -126,6 +189,14 @@
             this.CreateConfig.UseVisualStyleBackColor = true;
             this.CreateConfig.Click += new System.EventHandler(this.CreateConfig_Click);
             // 
+            // CarsSpot
+            // 
+            this.CarsSpot.Location = new System.Drawing.Point(425, 73);
+            this.CarsSpot.Name = "CarsSpot";
+            this.CarsSpot.Size = new System.Drawing.Size(100, 23);
+            this.CarsSpot.TabIndex = 3;
+            this.CarsSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -135,14 +206,13 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Cars in one spot";
             // 
-            // CarsSpot
+            // MotorcyclesSpot
             // 
-            this.CarsSpot.Location = new System.Drawing.Point(425, 73);
-            this.CarsSpot.Name = "CarsSpot";
-            this.CarsSpot.Size = new System.Drawing.Size(100, 23);
-            this.CarsSpot.TabIndex = 3;
-            this.CarsSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.CarsSpot, "How many cars fit in one parking spot");
+            this.MotorcyclesSpot.Location = new System.Drawing.Point(425, 137);
+            this.MotorcyclesSpot.Name = "MotorcyclesSpot";
+            this.MotorcyclesSpot.Size = new System.Drawing.Size(100, 23);
+            this.MotorcyclesSpot.TabIndex = 4;
+            this.MotorcyclesSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -152,25 +222,6 @@
             this.label5.Size = new System.Drawing.Size(134, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Motorcycles in one spot";
-            // 
-            // MotorcyclesSpot
-            // 
-            this.MotorcyclesSpot.Location = new System.Drawing.Point(425, 137);
-            this.MotorcyclesSpot.Name = "MotorcyclesSpot";
-            this.MotorcyclesSpot.Size = new System.Drawing.Size(100, 23);
-            this.MotorcyclesSpot.TabIndex = 4;
-            this.MotorcyclesSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.MotorcyclesSpot, "How many motorcycles fit in one parking spot");
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(12, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(175, 29);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Config car park";
             // 
             // iconPictureBox1
             // 
@@ -245,79 +296,56 @@
             this.panel1.Controls.Add(this.PriceHour);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.SpotsMany);
-            this.panel1.Location = new System.Drawing.Point(236, 88);
+            this.panel1.Location = new System.Drawing.Point(206, 329);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(593, 267);
             this.panel1.TabIndex = 18;
-            // 
-            // PanelMenu
-            // 
-            this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.PanelMenu.Controls.Add(this.button1);
-            this.PanelMenu.Controls.Add(this.label6);
-            this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(200, 510);
-            this.PanelMenu.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(35, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Parking";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 510);
+            this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartUpScreen";
             this.Text = "StartUpScreen";
+            this.PanelMenu.ResumeLayout(false);
+            this.PanelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.PanelMenu.ResumeLayout(false);
-            this.PanelMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private Label label6;
+        private Panel PanelMenu;
+        private Button button1;
+        private Panel pnlContent;
+        private Button btnMotorcycles;
+        private Button btnCars;
         private TextBox SpotsMany;
         private Label label1;
-        private Label label2;
         private TextBox PriceHour;
+        private Label label2;
         private Label label3;
         private CheckedListBox VechicleTypes;
         private Button CreateConfig;
-        private Label label4;
         private TextBox CarsSpot;
-        private Label label5;
+        private Label label4;
         private TextBox MotorcyclesSpot;
-        private Label label6;
+        private Label label5;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private ToolTip toolTip1;
-        private ToolTip toolTip2;
         private Panel panel1;
-        private Panel PanelMenu;
-        private Button button1;
     }
 }
