@@ -15,8 +15,8 @@ namespace Core
         {
             var carData = DataExtration.AllData();
 
-            Vehicle[] list = new Vehicle[100];
-       
+            Vehicle[] list = new Vehicle[carData.Length];
+            int i = 0;
             foreach (var car in carData)
             {
                 switch (car.Type)
@@ -25,19 +25,32 @@ namespace Core
                         {
                             MC mc = new(car.Reg, car.Arrival);
                             mc.VehicleCost = 10;
-                            list[car.Spot-1] = mc;
+                            list[i] = mc;
+                            i++;
                             break;
                         }
                     case "Car":
                         {
                             Car cars = new(car.Reg, car.Arrival);
                             cars.VehicleCost = 20;
-                            list[car.Spot-1] = cars;
+                            list[i] = cars;
+                            i++;
                             break;
                         }
                 }
             }
             return list;
+        }
+        public ParkingSpots[] parkings()
+        {
+            var par = NewCars();
+            ParkingSpots[] parkings = new ParkingSpots[par.Length];
+            
+            for (int i = 0; i < parkings.Length; i++)
+            {
+                //parkings[i].Position = par[i];
+            }
+            return parkings;
         }
     }
 }

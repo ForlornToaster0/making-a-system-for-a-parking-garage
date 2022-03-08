@@ -10,13 +10,13 @@ namespace Prauge_Parking
 {
     internal class MapGenerating
     {
-        public IconButton[,] Creating(Phouse spots, Vehicle[] vehicles)
+        public IconButton[,] Creating(ParkingSpots[] spot,Phouse house, Vehicle[] vehicles)
         {
-            IconButton[,] map = new IconButton[spots.HouseSizeX, spots.HouseSizeY];
+            IconButton[,] map = new IconButton[house.HouseSizeX, house.HouseSizeY];
             int i = 0;
-            for (int mapLenght = 0; mapLenght < spots.HouseSizeX; mapLenght++)
+            for (int mapLenght = 0; mapLenght < house.HouseSizeX; mapLenght++)
             {
-                for (int x = 0; x < spots.HouseSizeY; x++)
+                for (int x = 0; x < house.HouseSizeY; x++)
                 {
                     Pspots pspots = new();
                     map[x, mapLenght] = pspots.Modular(x, mapLenght);
