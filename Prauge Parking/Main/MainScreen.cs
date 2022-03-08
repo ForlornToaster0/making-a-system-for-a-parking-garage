@@ -34,9 +34,9 @@ namespace Prauge_Parking
       
             Vehicle[] vehicles = mapInfo.NewCars();
    
-            Phouse phouse = new(10, 10, 100);
-
-            var maps = mapGenerating.Creating(phouse, vehicles);
+            ParkingSpots[] parkingSpots = mapInfo.parkings();
+            Phouse phouse = new Phouse(10,10,100);
+            var maps = mapGenerating.Creating(parkingSpots,phouse, vehicles);
             foreach (var map in maps)
             {
                 Controls.Add(map);

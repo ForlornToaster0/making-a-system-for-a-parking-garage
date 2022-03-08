@@ -75,8 +75,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Number of spots";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -126,6 +124,7 @@
             this.CreateConfig.TabIndex = 5;
             this.CreateConfig.Text = "Create config";
             this.CreateConfig.UseVisualStyleBackColor = true;
+            this.CreateConfig.Click += new System.EventHandler(this.CreateConfig_Click);
             // 
             // label4
             // 

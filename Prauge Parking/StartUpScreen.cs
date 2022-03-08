@@ -1,8 +1,9 @@
-﻿using DataAccess;
+﻿using Core;
+using DataAccess;
 using DataAccess.Data;
 using DataAccess.Models;
 using System;
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Prauge_Parking
     {
         public StartUpScreen()
         {
-            var context = new testContext();
+            testContext context = new();
             context.Database.EnsureCreated();
             if (context.Pspots.Count() == 0)
             {
@@ -40,10 +41,21 @@ namespace Prauge_Parking
 
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void CreateConfig_Click(object sender, EventArgs e)
         {
 
+            XMLWriter xmlWritre = new XMLWriter();
+            int may = int.Parse(SpotsMany.Text);
+            float Price = float.Parse(PriceHour.Text);
+            var test = VechicleTypes.CheckedItems;
+            List<string> config = new List<string>();
+            for (int i = 0; i < test.Count; i++)
+            {
+                test[i].ToString().Trim();
+                config.Add(test[i].ToString());
+            }
+            int size = int.Parse(CarsSpot.Text);
+            xmlWritre.TestWriter(may, Price, config, size);
         }
 
         private void button1_Click(object sender, EventArgs e)

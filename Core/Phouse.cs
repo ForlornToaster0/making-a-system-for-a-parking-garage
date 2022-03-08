@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    public class Phouse
+    public class Phouse : ParkingSpots
     {
         public int HouseSizeX { get; set; }
         public int HouseSizeY { get; set; }
         public int SpotAmount { get; set; }
-        public Phouse(int houseSizeX,int houseSizeY, int spotAmount)
+        public Phouse(int houseSizeX,int houseSizeY, int spotAmount) : base(houseSizeX, houseSizeY)
         {
             HouseSizeX = houseSizeX;
             HouseSizeY = houseSizeY;
             SpotAmount = spotAmount;
         }
     }
-    public class ParkingSpots : Phouse
+    public class ParkingSpots 
     {
         public int SpotSize { get; set; }   
         public int Position { get; set; }   
-        public ParkingSpots(int houseSizeX, int houseSizeY, int spotAmount, int spotSize, int pos) : base(houseSizeX , houseSizeY, spotAmount)
+        public ParkingSpots(int spotSize, int pos) 
         {
-            SpotSize = spotSize;
+            SpotSize = 4;
             Position = pos;
         }
     }
