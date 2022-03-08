@@ -12,7 +12,7 @@ namespace DataAccess.Models
     {
         public void Populate()
         {
-            string[] data = File.ReadAllLines("testdata.csv");
+            // string[] data = File.ReadAllLines("testdata.csv");
 
             List<string[]> testdata = data
                 .Skip(1)

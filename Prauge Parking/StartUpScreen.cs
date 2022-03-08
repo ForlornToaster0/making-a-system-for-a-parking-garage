@@ -45,5 +45,14 @@ namespace Prauge_Parking
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Test t = new Test();
+            t.TopLevel = false;
+            // pnlContent
+            t.BringToFront();
+            t.Show();
+        }
     }
 }
