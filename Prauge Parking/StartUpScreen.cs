@@ -39,15 +39,14 @@ namespace Prauge_Parking
                 InitializeComponent();
             }
 
+        }    
 
-        }
-        private void CreateConfig_Click(object sender, EventArgs e)
+        private void BtnCreate_Click(object sender, EventArgs e)
         {
-
             XMLWriter xmlWritre = new XMLWriter();
             int may = int.Parse(SpotsMany.Text);
             float Price = float.Parse(PriceHour.Text);
-            var test = VechicleTypes.CheckedItems;
+            var test = VehicleTypes.CheckedItems;
             List<string> config = new List<string>();
             for (int i = 0; i < test.Count; i++)
             {
@@ -56,33 +55,6 @@ namespace Prauge_Parking
             }
             int size = int.Parse(CarsSpot.Text);
             xmlWritre.TestWriter(may, Price, config, size);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Parking t = new Parking();
-            t.TopLevel = false;
-            pnlContent.Controls.Add(t);
-            t.BringToFront();
-            t.Show();
-        }
-
-        private void btnCars_Click(object sender, EventArgs e)
-        {
-            Cars t = new Cars();
-            t.TopLevel = false;
-            pnlContent.Controls.Add(t);
-            t.BringToFront();
-            t.Show();
-        }
-
-        private void btnMotorcycles_Click(object sender, EventArgs e)
-        {
-            Motorcycles t = new Motorcycles();
-            t.TopLevel = false;
-            pnlContent.Controls.Add(t);
-            t.BringToFront();
-            t.Show();
         }
     }
 }
