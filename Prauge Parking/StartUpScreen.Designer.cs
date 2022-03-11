@@ -53,7 +53,8 @@
             this.LabelY = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BtnExit = new FontAwesome.Sharp.IconButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCars)).BeginInit();
@@ -284,7 +285,7 @@
             this.BtnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAbout.IconSize = 16;
             this.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAbout.Location = new System.Drawing.Point(789, 423);
+            this.BtnAbout.Location = new System.Drawing.Point(708, 431);
             this.BtnAbout.Name = "BtnAbout";
             this.BtnAbout.Size = new System.Drawing.Size(75, 23);
             this.BtnAbout.TabIndex = 52;
@@ -292,24 +293,37 @@
             this.BtnAbout.UseVisualStyleBackColor = true;
             this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
-            // iconButton1
+            // BtnExit
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(609, 171);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(75, 23);
-            this.iconButton1.TabIndex = 53;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.BtnExit.IconColor = System.Drawing.Color.Black;
+            this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnExit.IconSize = 16;
+            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.Location = new System.Drawing.Point(789, 431);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(75, 23);
+            this.BtnExit.TabIndex = 53;
+            this.BtnExit.Text = "Exit";
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(712, 15);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(92, 38);
+            this.textBox1.TabIndex = 54;
+            this.textBox1.Text = "1 car = 4 spots\r\n1 mc = 2 spots";
             // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 466);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnAbout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LabelY);
@@ -370,6 +384,7 @@
         private Label LabelY;
         private Label label1;
         private FontAwesome.Sharp.IconButton BtnAbout;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnExit;
+        private TextBox textBox1;
     }
 }

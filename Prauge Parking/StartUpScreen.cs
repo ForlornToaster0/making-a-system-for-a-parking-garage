@@ -84,5 +84,10 @@ namespace Prauge_Parking
         {
             MessageBox.Show("Prague Parking v2.0", "About");
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
