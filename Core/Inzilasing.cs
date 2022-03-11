@@ -11,11 +11,11 @@ namespace Core
     public class Inzilasing
     {
 
-        public Vehicle[] NewCars()
+        public List<Vehicle> NewCars()
         {
             var carData = DataExtration.AllData();
 
-            Vehicle[] list = new Vehicle[carData.Length];
+            List<Vehicle> list = new();
             int i = 0;
             foreach (var car in carData)
             {
@@ -23,34 +23,31 @@ namespace Core
                 {
                     case "MC":
                         {
-                            MC mc = new(car.Reg, car.Arrival);
-                            mc.VehicleCost = 10;
-                            list[i] = mc;
-                            i++;
+                            list.Add(new MC(car.Reg, car.Arrival));
+
                             break;
                         }
                     case "Car":
                         {
-                            Car cars = new(car.Reg, car.Arrival);
-                            cars.VehicleCost = 20;
-                            list[i] = cars;
-                            i++;
+                            list.Add(new Car(car.Reg, car.Arrival));
+
                             break;
                         }
                 }
             }
-            return list;
+            return list;        
         }
-        public ParkingSpots[] parkings()
+        public List<ParkingSpots> parkings()
         {
-            var par = NewCars();
-            ParkingSpots[] parkings = new ParkingSpots[par.Length];
-            
-            for (int i = 0; i < parkings.Length; i++)
             {
-                //parkings[i].Position = par[i];
+                var allData = DataExtration.AllData();
+                List<ParkingSpots> parkings = new();
+                foreach (var car in allData)
+                {
+                    parkings.Add(new ParkingSpots(0, car.Spot));
+                }
+                return parkings;
             }
-            return parkings;
         }
     }
 }

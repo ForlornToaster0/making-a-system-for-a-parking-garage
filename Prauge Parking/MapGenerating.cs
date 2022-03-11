@@ -10,40 +10,25 @@ namespace Prauge_Parking
 {
     internal class MapGenerating
     {
-        public IconButton[,] Creating(ParkingSpots[] spot,Phouse house, Vehicle[] vehicles)
+        public IconButton[] Creating(Phouse house)
         {
-            IconButton[,] map = new IconButton[house.HouseSizeX, house.HouseSizeY];
+            IconButton[] map = new IconButton[house.SpotAmount];
             int i = 0;
             for (int mapLenght = 0; mapLenght < house.HouseSizeX; mapLenght++)
             {
                 for (int x = 0; x < house.HouseSizeY; x++)
                 {
+                    string newName = $"MapSpot{i}";
+
                     Pspots pspots = new();
-                    map[x, mapLenght] = pspots.Modular(x, mapLenght);
-                    map[x, mapLenght].Text = "Empty";
-                    map[x, mapLenght].BackColor = Color.White;
-
-
-                    if (vehicles[i] != null)
-                    {
-
-
-
-                        if (vehicles[i].GetType() == typeof(Car))
-                        {
-                            map[x, mapLenght].Text = $"Car\n{vehicles[x + mapLenght].RegNumber}";
-                            map[x, mapLenght].BackColor = Color.Green;
-                        }
-                        else if (vehicles[i].GetType() == typeof(MC))
-                        {
-                            map[x, mapLenght].Text = $"MC\n{vehicles[x + mapLenght].RegNumber}";
-                            map[x, mapLenght].BackColor = Color.Yellow;
-                        }
-                    }
+                    map[i] = pspots.Modular(x, mapLenght);
+                    map[i].Text = "Empty";
+                    map[i].BackColor = Color.White;
+                    map[i].BringToFront();
+                    map[i].Name = newName;
                     i++;
                 }
             }
-
             return map;
         }
 

@@ -60,9 +60,9 @@
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(12, 9);
+            this.LabConfig.Location = new System.Drawing.Point(14, 12);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(175, 29);
+            this.LabConfig.Size = new System.Drawing.Size(217, 36);
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
@@ -74,17 +74,19 @@
             this.PanelMenu.Controls.Add(this.LabConfig);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(200, 339);
+            this.PanelMenu.Size = new System.Drawing.Size(229, 452);
             this.PanelMenu.TabIndex = 19;
             // 
             // BtnVehicles
             // 
             this.BtnVehicles.FlatAppearance.BorderSize = 0;
             this.BtnVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVehicles.Location = new System.Drawing.Point(35, 106);
+            this.BtnVehicles.Location = new System.Drawing.Point(40, 141);
+            this.BtnVehicles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnVehicles.Name = "BtnVehicles";
-            this.BtnVehicles.Size = new System.Drawing.Size(134, 30);
+            this.BtnVehicles.Size = new System.Drawing.Size(153, 40);
             this.BtnVehicles.TabIndex = 1;
             this.BtnVehicles.Text = "Vehicles";
             this.BtnVehicles.UseVisualStyleBackColor = true;
@@ -93,18 +95,20 @@
             // 
             this.BtnParking.FlatAppearance.BorderSize = 0;
             this.BtnParking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnParking.Location = new System.Drawing.Point(35, 70);
+            this.BtnParking.Location = new System.Drawing.Point(40, 93);
+            this.BtnParking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnParking.Name = "BtnParking";
-            this.BtnParking.Size = new System.Drawing.Size(134, 30);
+            this.BtnParking.Size = new System.Drawing.Size(153, 40);
             this.BtnParking.TabIndex = 0;
             this.BtnParking.Text = "Parking";
             this.BtnParking.UseVisualStyleBackColor = true;
             // 
             // BtnCreate
             // 
-            this.BtnCreate.Location = new System.Drawing.Point(206, 152);
+            this.BtnCreate.Location = new System.Drawing.Point(235, 203);
+            this.BtnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCreate.Name = "BtnCreate";
-            this.BtnCreate.Size = new System.Drawing.Size(154, 23);
+            this.BtnCreate.Size = new System.Drawing.Size(176, 31);
             this.BtnCreate.TabIndex = 4;
             this.BtnCreate.Text = "Create config";
             this.BtnCreate.UseVisualStyleBackColor = true;
@@ -117,27 +121,29 @@
             this.IconSpots.IconChar = FontAwesome.Sharp.IconChar.MapMarkedAlt;
             this.IconSpots.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconSpots.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconSpots.IconSize = 48;
-            this.IconSpots.Location = new System.Drawing.Point(206, 12);
+            this.IconSpots.IconSize = 55;
+            this.IconSpots.Location = new System.Drawing.Point(235, 16);
+            this.IconSpots.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconSpots.Name = "IconSpots";
-            this.IconSpots.Size = new System.Drawing.Size(48, 48);
+            this.IconSpots.Size = new System.Drawing.Size(55, 64);
             this.IconSpots.TabIndex = 33;
             this.IconSpots.TabStop = false;
             // 
             // LabelSpots
             // 
             this.LabelSpots.AutoSize = true;
-            this.LabelSpots.Location = new System.Drawing.Point(260, 12);
+            this.LabelSpots.Location = new System.Drawing.Point(297, 16);
             this.LabelSpots.Name = "LabelSpots";
-            this.LabelSpots.Size = new System.Drawing.Size(96, 15);
+            this.LabelSpots.Size = new System.Drawing.Size(120, 20);
             this.LabelSpots.TabIndex = 31;
             this.LabelSpots.Text = "Number of spots";
             // 
             // PhouseSpot
             // 
-            this.PhouseSpot.Location = new System.Drawing.Point(260, 30);
+            this.PhouseSpot.Location = new System.Drawing.Point(297, 40);
+            this.PhouseSpot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhouseSpot.Name = "PhouseSpot";
-            this.PhouseSpot.Size = new System.Drawing.Size(100, 23);
+            this.PhouseSpot.Size = new System.Drawing.Size(114, 27);
             this.PhouseSpot.TabIndex = 0;
             this.PhouseSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -148,27 +154,29 @@
             this.IconPrice.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
             this.IconPrice.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconPrice.IconSize = 48;
-            this.IconPrice.Location = new System.Drawing.Point(464, 66);
+            this.IconPrice.IconSize = 55;
+            this.IconPrice.Location = new System.Drawing.Point(530, 88);
+            this.IconPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconPrice.Name = "IconPrice";
-            this.IconPrice.Size = new System.Drawing.Size(48, 48);
+            this.IconPrice.Size = new System.Drawing.Size(55, 64);
             this.IconPrice.TabIndex = 39;
             this.IconPrice.TabStop = false;
             // 
             // LabelPrice
             // 
             this.LabelPrice.AutoSize = true;
-            this.LabelPrice.Location = new System.Drawing.Point(518, 66);
+            this.LabelPrice.Location = new System.Drawing.Point(592, 88);
             this.LabelPrice.Name = "LabelPrice";
-            this.LabelPrice.Size = new System.Drawing.Size(53, 15);
+            this.LabelPrice.Size = new System.Drawing.Size(65, 20);
             this.LabelPrice.TabIndex = 38;
             this.LabelPrice.Text = "Mc Price";
             // 
             // McPrice
             // 
-            this.McPrice.Location = new System.Drawing.Point(518, 84);
+            this.McPrice.Location = new System.Drawing.Point(592, 112);
+            this.McPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.McPrice.Name = "McPrice";
-            this.McPrice.Size = new System.Drawing.Size(100, 23);
+            this.McPrice.Size = new System.Drawing.Size(114, 27);
             this.McPrice.TabIndex = 3;
             this.McPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -179,27 +187,29 @@
             this.IconCar.IconChar = FontAwesome.Sharp.IconChar.CarAlt;
             this.IconCar.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.IconCar.IconSize = 48;
-            this.IconCar.Location = new System.Drawing.Point(464, 12);
+            this.IconCar.IconSize = 55;
+            this.IconCar.Location = new System.Drawing.Point(530, 16);
+            this.IconCar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IconCar.Name = "IconCar";
-            this.IconCar.Size = new System.Drawing.Size(48, 48);
+            this.IconCar.Size = new System.Drawing.Size(55, 64);
             this.IconCar.TabIndex = 37;
             this.IconCar.TabStop = false;
             // 
             // LabelCars
             // 
             this.LabelCars.AutoSize = true;
-            this.LabelCars.Location = new System.Drawing.Point(518, 12);
+            this.LabelCars.Location = new System.Drawing.Point(592, 16);
             this.LabelCars.Name = "LabelCars";
-            this.LabelCars.Size = new System.Drawing.Size(67, 15);
+            this.LabelCars.Size = new System.Drawing.Size(85, 20);
             this.LabelCars.TabIndex = 36;
             this.LabelCars.Text = "Size Per Lot";
             // 
             // SizeLot
             // 
-            this.SizeLot.Location = new System.Drawing.Point(518, 30);
+            this.SizeLot.Location = new System.Drawing.Point(592, 40);
+            this.SizeLot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SizeLot.Name = "SizeLot";
-            this.SizeLot.Size = new System.Drawing.Size(100, 23);
+            this.SizeLot.Size = new System.Drawing.Size(114, 27);
             this.SizeLot.TabIndex = 2;
             this.SizeLot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -207,17 +217,20 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(206, 189);
+            this.dataGridView1.Location = new System.Drawing.Point(235, 242);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(420, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 200);
             this.dataGridView1.TabIndex = 40;
             // 
             // btnShowConfig
             // 
-            this.btnShowConfig.Location = new System.Drawing.Point(472, 152);
+            this.btnShowConfig.Location = new System.Drawing.Point(539, 203);
+            this.btnShowConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShowConfig.Name = "btnShowConfig";
-            this.btnShowConfig.Size = new System.Drawing.Size(154, 23);
+            this.btnShowConfig.Size = new System.Drawing.Size(176, 31);
             this.btnShowConfig.TabIndex = 41;
             this.btnShowConfig.Text = "Show Config";
             this.btnShowConfig.UseVisualStyleBackColor = true;
@@ -225,18 +238,19 @@
             // 
             // CarPrice
             // 
-            this.CarPrice.Location = new System.Drawing.Point(260, 84);
+            this.CarPrice.Location = new System.Drawing.Point(297, 112);
+            this.CarPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CarPrice.Name = "CarPrice";
-            this.CarPrice.Size = new System.Drawing.Size(100, 23);
+            this.CarPrice.Size = new System.Drawing.Size(114, 27);
             this.CarPrice.TabIndex = 42;
             this.CarPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(260, 66);
+            this.label1.Location = new System.Drawing.Point(297, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 43;
             this.label1.Text = "Car Price";
             // 
@@ -247,18 +261,19 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 48;
-            this.iconPictureBox1.Location = new System.Drawing.Point(206, 66);
+            this.iconPictureBox1.IconSize = 55;
+            this.iconPictureBox1.Location = new System.Drawing.Point(235, 88);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox1.Size = new System.Drawing.Size(55, 64);
             this.iconPictureBox1.TabIndex = 44;
             this.iconPictureBox1.TabStop = false;
             // 
             // StartUpScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 339);
+            this.ClientSize = new System.Drawing.Size(720, 452);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CarPrice);
@@ -276,6 +291,7 @@
             this.Controls.Add(this.PhouseSpot);
             this.Controls.Add(this.PanelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StartUpScreen";
             this.Text = "StartUpScreen";
             this.PanelMenu.ResumeLayout(false);
