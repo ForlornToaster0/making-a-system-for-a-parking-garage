@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
             this.LabConfig = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
@@ -48,6 +49,7 @@
             this.CarPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.TipConfig = new System.Windows.Forms.ToolTip(this.components);
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPrice)).BeginInit();
@@ -111,6 +113,7 @@
             this.BtnCreate.Size = new System.Drawing.Size(176, 31);
             this.BtnCreate.TabIndex = 4;
             this.BtnCreate.Text = "Create config";
+            this.TipConfig.SetToolTip(this.BtnCreate, "Creates/updates config file");
             this.BtnCreate.UseVisualStyleBackColor = true;
             this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
@@ -118,7 +121,7 @@
             // 
             this.IconSpots.BackColor = System.Drawing.SystemColors.Control;
             this.IconSpots.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IconSpots.IconChar = FontAwesome.Sharp.IconChar.MapMarkedAlt;
+            this.IconSpots.IconChar = FontAwesome.Sharp.IconChar.Parking;
             this.IconSpots.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconSpots.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconSpots.IconSize = 55;
@@ -146,12 +149,13 @@
             this.PhouseSpot.Size = new System.Drawing.Size(114, 27);
             this.PhouseSpot.TabIndex = 0;
             this.PhouseSpot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.PhouseSpot, "How many spots?");
             // 
             // IconPrice
             // 
             this.IconPrice.BackColor = System.Drawing.SystemColors.Control;
             this.IconPrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IconPrice.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.IconPrice.IconChar = FontAwesome.Sharp.IconChar.Motorcycle;
             this.IconPrice.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconPrice.IconSize = 55;
@@ -179,12 +183,13 @@
             this.McPrice.Size = new System.Drawing.Size(114, 27);
             this.McPrice.TabIndex = 3;
             this.McPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.McPrice, "What price for mc?");
             // 
             // IconCar
             // 
             this.IconCar.BackColor = System.Drawing.SystemColors.Control;
             this.IconCar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IconCar.IconChar = FontAwesome.Sharp.IconChar.CarAlt;
+            this.IconCar.IconChar = FontAwesome.Sharp.IconChar.Building;
             this.IconCar.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconCar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconCar.IconSize = 55;
@@ -209,9 +214,10 @@
             this.SizeLot.Location = new System.Drawing.Point(592, 40);
             this.SizeLot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SizeLot.Name = "SizeLot";
-            this.SizeLot.Size = new System.Drawing.Size(114, 27);
-            this.SizeLot.TabIndex = 2;
+            this.SizeLot.Size = new System.Drawing.Size(100, 23);
+            this.SizeLot.TabIndex = 1;
             this.SizeLot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.SizeLot, "What size per lot?");
             // 
             // dataGridView1
             // 
@@ -222,17 +228,18 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 200);
-            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.Size = new System.Drawing.Size(420, 150);
+            this.dataGridView1.TabIndex = 6;
             // 
             // btnShowConfig
             // 
             this.btnShowConfig.Location = new System.Drawing.Point(539, 203);
             this.btnShowConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShowConfig.Name = "btnShowConfig";
-            this.btnShowConfig.Size = new System.Drawing.Size(176, 31);
-            this.btnShowConfig.TabIndex = 41;
+            this.btnShowConfig.Size = new System.Drawing.Size(154, 23);
+            this.btnShowConfig.TabIndex = 5;
             this.btnShowConfig.Text = "Show Config";
+            this.TipConfig.SetToolTip(this.btnShowConfig, "Shows config file");
             this.btnShowConfig.UseVisualStyleBackColor = true;
             this.btnShowConfig.Click += new System.EventHandler(this.btnShowConfig_Click);
             // 
@@ -241,9 +248,10 @@
             this.CarPrice.Location = new System.Drawing.Point(297, 112);
             this.CarPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CarPrice.Name = "CarPrice";
-            this.CarPrice.Size = new System.Drawing.Size(114, 27);
-            this.CarPrice.TabIndex = 42;
+            this.CarPrice.Size = new System.Drawing.Size(100, 23);
+            this.CarPrice.TabIndex = 2;
             this.CarPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.CarPrice, "What price for car?");
             // 
             // label1
             // 
@@ -258,7 +266,7 @@
             // 
             this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Car;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 55;
@@ -326,5 +334,6 @@
         public TextBox CarPrice;
         public Label label1;
         public FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private ToolTip TipConfig;
     }
 }
