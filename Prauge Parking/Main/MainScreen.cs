@@ -24,27 +24,34 @@ namespace Prauge_Parking
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            TopMost = true;
-            FormBorderStyle = FormBorderStyle.Sizable;
-            WindowState = FormWindowState.Maximized;
-
-            MapGenerating mapGenerating = new();
-            Inzilasing mapInfo = new();
-            
-      
-            Vehicle[] vehicles = mapInfo.NewCars();
-   
-            ParkingSpots[] parkingSpots = mapInfo.parkings();
-            Phouse phouse = new Phouse(10,10,100);
-            var maps = mapGenerating.Creating(parkingSpots,phouse, vehicles);
-            foreach (var map in maps)
-            {
-                Controls.Add(map);
-            }
-
-
-
-
+            //    TopMost = true;
+            //    FormBorderStyle = FormBorderStyle.Sizable;
+            //    WindowState = FormWindowState.Maximized;
+            Map map = new();
+            this.Controls.Add(map);
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
         }
+
+        private void BtnParking_Click(object sender, EventArgs e)
+        {
+            Map map = new();
+            this.Controls.Add(map);
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
+        }
+
+        private void BtnVehicles_Click(object sender, EventArgs e)
+        {
+            Addingvechails map = new();
+            this.Controls.Add(map);
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
+        }
+
+       
     }
 }
