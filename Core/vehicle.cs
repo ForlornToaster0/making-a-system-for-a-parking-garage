@@ -10,12 +10,12 @@ namespace Core
     {
         public string RegNumber { get; set; }
         public DateTime ParkTime { get; set; }
-        public int VehicleSize { get; protected set;  }
+        public int VehicleSize { get; protected set; }
         public Vehicle(string regNumber, DateTime parkTime)
         {
-            
+
             RegNumber = regNumber;
-            ParkTime = parkTime; 
+            ParkTime = parkTime;
 
         }
     }
@@ -26,7 +26,7 @@ namespace Core
         {
             VehicleSize = 4;
         }
-        
+
     }
     public class MC : Vehicle
     {
@@ -42,7 +42,7 @@ namespace Core
         public int VehicleCost { get; set; }
         public Buss(string regNumber, DateTime parkTime) : base(regNumber, parkTime)
         {
-            VehicleSize = 4*4;
+            VehicleSize = 4 * 4;
         }
     }
     public class Cycle : Vehicle
