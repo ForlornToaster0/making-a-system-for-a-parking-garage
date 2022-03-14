@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace Prauge_Parking
 {
@@ -52,6 +53,9 @@ namespace Prauge_Parking
             map.BringToFront();
         }
 
-       
+        private void BtnPrice_Click(object sender, EventArgs e)
+        {
+            string Price = Interaction.InputBox("New price?", "Title", "Default Text");
+        }
     }
 }

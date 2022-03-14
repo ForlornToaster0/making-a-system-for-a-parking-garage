@@ -29,67 +29,88 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtnVehicles = new System.Windows.Forms.Button();
-            this.BtnParking = new System.Windows.Forms.Button();
+            this.BtnPrice = new FontAwesome.Sharp.IconButton();
             this.LabConfig = new System.Windows.Forms.Label();
+            this.BtnAdd = new FontAwesome.Sharp.IconButton();
+            this.BtnMove = new FontAwesome.Sharp.IconButton();
             this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.PanelMenu.Controls.Add(this.BtnVehicles);
-            this.PanelMenu.Controls.Add(this.BtnParking);
+            this.PanelMenu.Controls.Add(this.BtnMove);
+            this.PanelMenu.Controls.Add(this.BtnAdd);
+            this.PanelMenu.Controls.Add(this.BtnPrice);
             this.PanelMenu.Controls.Add(this.LabConfig);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(229, 451);
+            this.PanelMenu.Size = new System.Drawing.Size(200, 338);
             this.PanelMenu.TabIndex = 20;
             // 
-            // BtnVehicles
+            // BtnPrice
             // 
-            this.BtnVehicles.FlatAppearance.BorderSize = 0;
-            this.BtnVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnVehicles.Location = new System.Drawing.Point(40, 141);
-            this.BtnVehicles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnVehicles.Name = "BtnVehicles";
-            this.BtnVehicles.Size = new System.Drawing.Size(153, 40);
-            this.BtnVehicles.TabIndex = 1;
-            this.BtnVehicles.Text = "Vehicles";
-            this.BtnVehicles.UseVisualStyleBackColor = true;
-            this.BtnVehicles.Click += new System.EventHandler(this.BtnVehicles_Click);
-            // 
-            // BtnParking
-            // 
-            this.BtnParking.FlatAppearance.BorderSize = 0;
-            this.BtnParking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnParking.Location = new System.Drawing.Point(40, 93);
-            this.BtnParking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnParking.Name = "BtnParking";
-            this.BtnParking.Size = new System.Drawing.Size(153, 40);
-            this.BtnParking.TabIndex = 0;
-            this.BtnParking.Text = "Parking";
-            this.BtnParking.UseVisualStyleBackColor = true;
-            this.BtnParking.Click += new System.EventHandler(this.BtnParking_Click);
+            this.BtnPrice.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.BtnPrice.IconColor = System.Drawing.Color.Black;
+            this.BtnPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnPrice.IconSize = 16;
+            this.BtnPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPrice.Location = new System.Drawing.Point(42, 73);
+            this.BtnPrice.Name = "BtnPrice";
+            this.BtnPrice.Size = new System.Drawing.Size(100, 23);
+            this.BtnPrice.TabIndex = 0;
+            this.BtnPrice.Text = "Edit price";
+            this.BtnPrice.UseVisualStyleBackColor = true;
+            this.BtnPrice.Click += new System.EventHandler(this.BtnPrice_Click);
             // 
             // LabConfig
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(14, 12);
+            this.LabConfig.Location = new System.Drawing.Point(12, 9);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(217, 36);
+            this.LabConfig.Size = new System.Drawing.Size(175, 29);
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
+            // BtnAdd
+            // 
+            this.BtnAdd.IconChar = FontAwesome.Sharp.IconChar.CarSide;
+            this.BtnAdd.IconColor = System.Drawing.Color.Black;
+            this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAdd.IconSize = 16;
+            this.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAdd.Location = new System.Drawing.Point(42, 102);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(100, 23);
+            this.BtnAdd.TabIndex = 14;
+            this.BtnAdd.Text = "Add vehicle";
+            this.BtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            // 
+            // BtnMove
+            // 
+            this.BtnMove.IconChar = FontAwesome.Sharp.IconChar.CarSide;
+            this.BtnMove.IconColor = System.Drawing.Color.Black;
+            this.BtnMove.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnMove.IconSize = 16;
+            this.BtnMove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMove.Location = new System.Drawing.Point(42, 131);
+            this.BtnMove.Name = "BtnMove";
+            this.BtnMove.Size = new System.Drawing.Size(100, 23);
+            this.BtnMove.TabIndex = 15;
+            this.BtnMove.Text = "Move vehicle";
+            this.BtnMove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnMove.UseVisualStyleBackColor = true;
+            // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.PanelMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainScreen";
             this.Text = "MainScreen";
             this.Load += new System.EventHandler(this.MainScreen_Load);
@@ -102,8 +123,9 @@
         #endregion
 
         public Panel PanelMenu;
-        private Button BtnVehicles;
-        private Button BtnParking;
         private Label LabConfig;
+        private FontAwesome.Sharp.IconButton BtnPrice;
+        private FontAwesome.Sharp.IconButton BtnAdd;
+        private FontAwesome.Sharp.IconButton BtnMove;
     }
 }

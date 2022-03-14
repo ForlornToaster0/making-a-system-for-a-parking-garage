@@ -52,8 +52,8 @@ namespace Prauge_Parking
                 xml.CZK = "CZK";
                 xml.CarSize = 4;
                 xml.MCSize = 2;
-                xml.mPrice = Convert.ToDouble(McPrice.Text);
-                xml.cPrice = Convert.ToDouble(CarPrice.Text);
+                // xml.mPrice = Convert.ToDouble(McPrice.Text);
+                xml.cPrice = Convert.ToDouble(PriceHour.Text);
                 xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
                 xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
                 XmlManager.XmlDataWriter(xml, "Config.xml");
@@ -74,10 +74,20 @@ namespace Prauge_Parking
             dataGridView1.DataSource = dataset.Tables[0];
 
             xml = XmlManager.XmlDataReader("Config.xml");
-            McPrice.Text = Convert.ToString(xml.mPrice);
-            CarPrice.Text = Convert.ToString(xml.cPrice);
+            // McPrice.Text = Convert.ToString(xml.mPrice);
+            PriceHour.Text = Convert.ToString(xml.cPrice);
             SizeLot.Text = Convert.ToString(xml.SizePerLot);
             PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
+        }
+
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Prague Parking v2.0", "About");
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
