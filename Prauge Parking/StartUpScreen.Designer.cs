@@ -55,6 +55,7 @@
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAddVehicle_Form = new System.Windows.Forms.Button();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCars)).BeginInit();
@@ -75,6 +76,7 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelMenu.Controls.Add(this.btnAddVehicle_Form);
             this.PanelMenu.Controls.Add(this.LabConfig);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
@@ -317,6 +319,16 @@
             this.textBox1.TabIndex = 54;
             this.textBox1.Text = "1 car = 4 spots\r\n1 mc = 2 spots";
             // 
+            // btnAddVehicle_Form
+            // 
+            this.btnAddVehicle_Form.Location = new System.Drawing.Point(44, 58);
+            this.btnAddVehicle_Form.Name = "btnAddVehicle_Form";
+            this.btnAddVehicle_Form.Size = new System.Drawing.Size(109, 31);
+            this.btnAddVehicle_Form.TabIndex = 55;
+            this.btnAddVehicle_Form.Text = "Add Vehicle";
+            this.btnAddVehicle_Form.UseVisualStyleBackColor = true;
+            this.btnAddVehicle_Form.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
+            // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -386,5 +398,6 @@
         private FontAwesome.Sharp.IconButton BtnAbout;
         private FontAwesome.Sharp.IconButton BtnExit;
         private TextBox textBox1;
+        private Button btnAddVehicle_Form;
     }
 }

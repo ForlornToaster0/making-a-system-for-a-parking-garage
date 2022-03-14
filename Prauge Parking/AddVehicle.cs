@@ -14,6 +14,7 @@ namespace Prauge_Parking
 {
     public partial class AddVehicle : Form
     {
+        
         public AddVehicle()
         {
             InitializeComponent();
@@ -73,6 +74,11 @@ namespace Prauge_Parking
                 txtLicensePlate.Text = "";
                 txtLicensePlate.ForeColor = SystemColors.WindowText;
             }
+        }
+
+        private void BtnPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
