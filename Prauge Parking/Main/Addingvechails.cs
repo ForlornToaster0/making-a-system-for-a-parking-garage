@@ -1,4 +1,5 @@
 ﻿using Core;
+using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,8 @@ namespace Prauge_Parking.Main
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DataImport dataImport = new ();
+            dataImport.import(DateTime.Now, "Car", "ABC123", 40);
         }
     }
 }
