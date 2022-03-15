@@ -12,11 +12,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using Core.Configurations;
 
 namespace Prauge_Parking
 {
     public partial class MainScreen : Form
     {
+        XML xml = new XML();
+
         public MainScreen()
         {
             InitializeComponent();
@@ -54,7 +57,16 @@ namespace Prauge_Parking
 
         private void BtnPrice_Click(object sender, EventArgs e)
         {
-            string Price = Interaction.InputBox("New price?", "Title", "Default Text");
+            string price = Interaction.InputBox("Current Price: " + xml.cPrice + "CZK", "Edit Price", "Enter New Price");
+            if (price != null)
+            {
+                xml.cPrice = Convert.ToDouble(price);
+                MessageBox.Show("New Price: " + price + "CZK", "Added!");
+            }
+            else
+            {
+                xml.cPrice = Convert.ToDouble(price);
+            }
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
