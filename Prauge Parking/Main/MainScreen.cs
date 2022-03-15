@@ -22,7 +22,6 @@ namespace Prauge_Parking
             InitializeComponent();
            
         }
-
         private void MainScreen_Load(object sender, EventArgs e)
         {
             //    TopMost = true;
@@ -72,15 +71,13 @@ namespace Prauge_Parking
         {
             AddVehicle AddVeh = new();  // Går det att maximera denna?
             Controls.Add(AddVeh);
-            // this.WindowState = FormWindowState.Maximized;
             AddVeh.BringToFront();
         }
 
         private void BtnMove_Click(object sender, EventArgs e)
         {
             MoveVehicle MovVeh = new();  // Går det att maximera denna?
-            Controls.Add(MovVeh);
-            // this.WindowState = FormWindowState.Maximized;
+            Controls.Add(MovVeh);            
             MovVeh.BringToFront();
         }
 
@@ -88,8 +85,20 @@ namespace Prauge_Parking
         {
             RemoveVehicle RemVeh = new();  // Går det att maximera denna?
             Controls.Add(RemVeh);
-            // this.WindowState = FormWindowState.Maximized;
             RemVeh.BringToFront();
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            AddVehicle map = new();
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
+
+
+
+            //var home = new Map();
+            //home.BringToFront();
         }
     }
 }

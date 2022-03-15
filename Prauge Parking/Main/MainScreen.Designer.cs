@@ -36,12 +36,14 @@
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPrice = new FontAwesome.Sharp.IconButton();
             this.LabConfig = new System.Windows.Forms.Label();
+            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelMenu.Controls.Add(this.BtnHome);
             this.PanelMenu.Controls.Add(this.BtnExit);
             this.PanelMenu.Controls.Add(this.BtnAbout);
             this.PanelMenu.Controls.Add(this.iconButton1);
@@ -158,6 +160,21 @@
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
+            // BtnHome
+            // 
+            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.BtnHome.IconColor = System.Drawing.Color.Black;
+            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnHome.IconSize = 16;
+            this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnHome.Location = new System.Drawing.Point(42, 209);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(100, 23);
+            this.BtnHome.TabIndex = 56;
+            this.BtnHome.Text = "Home";
+            this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -185,5 +202,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnAbout;
+        private FontAwesome.Sharp.IconButton BtnHome;
     }
 }

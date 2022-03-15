@@ -38,6 +38,7 @@
             this.BoxLicensePlate.Name = "BoxLicensePlate";
             this.BoxLicensePlate.Size = new System.Drawing.Size(100, 23);
             this.BoxLicensePlate.TabIndex = 0;
+            this.BoxLicensePlate.Text = "License Plate";
             // 
             // BtnMoveVehicle
             // 
