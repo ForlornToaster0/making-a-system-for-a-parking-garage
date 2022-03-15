@@ -46,7 +46,7 @@ namespace Prauge_Parking
 
         private void BtnVehicles_Click(object sender, EventArgs e)
         {
-            Addingvechails map = new();
+            AddVehicle map = new();
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
@@ -56,6 +56,40 @@ namespace Prauge_Parking
         private void BtnPrice_Click(object sender, EventArgs e)
         {
             string Price = Interaction.InputBox("New price?", "Title", "Default Text");
+        }
+
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Prague Parking v2.0", "About");                        
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            AddVehicle AddVeh = new();  // Går det att maximera denna?
+            Controls.Add(AddVeh);
+            // this.WindowState = FormWindowState.Maximized;
+            AddVeh.BringToFront();
+        }
+
+        private void BtnMove_Click(object sender, EventArgs e)
+        {
+            MoveVehicle MovVeh = new();  // Går det att maximera denna?
+            Controls.Add(MovVeh);
+            // this.WindowState = FormWindowState.Maximized;
+            MovVeh.BringToFront();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            RemoveVehicle RemVeh = new();  // Går det att maximera denna?
+            Controls.Add(RemVeh);
+            // this.WindowState = FormWindowState.Maximized;
+            RemVeh.BringToFront();
         }
     }
 }

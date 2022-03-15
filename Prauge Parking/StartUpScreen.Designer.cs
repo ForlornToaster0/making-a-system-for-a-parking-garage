@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
             this.LabConfig = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.btnAddVehicle_Form = new System.Windows.Forms.Button();
             this.BtnCreate = new System.Windows.Forms.Button();
             this.IconSpots = new FontAwesome.Sharp.IconPictureBox();
             this.LabelSpots = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.ListVehicle = new System.Windows.Forms.CheckedListBox();
             this.XAxis = new System.Windows.Forms.TextBox();
             this.YAxis = new System.Windows.Forms.TextBox();
+            this.BtnOpenLocation = new System.Windows.Forms.Button();
             this.LabelVehicle = new System.Windows.Forms.Label();
             this.LabelX = new System.Windows.Forms.Label();
             this.LabelY = new System.Windows.Forms.Label();
@@ -55,7 +57,6 @@
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAddVehicle_Form = new System.Windows.Forms.Button();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCars)).BeginInit();
@@ -83,6 +84,16 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(200, 466);
             this.PanelMenu.TabIndex = 19;
+            // 
+            // btnAddVehicle_Form
+            // 
+            this.btnAddVehicle_Form.Location = new System.Drawing.Point(44, 58);
+            this.btnAddVehicle_Form.Name = "btnAddVehicle_Form";
+            this.btnAddVehicle_Form.Size = new System.Drawing.Size(109, 31);
+            this.btnAddVehicle_Form.TabIndex = 55;
+            this.btnAddVehicle_Form.Text = "Add Vehicle";
+            this.btnAddVehicle_Form.UseVisualStyleBackColor = true;
+            this.btnAddVehicle_Form.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
             // 
             // BtnCreate
             // 
@@ -243,6 +254,17 @@
             this.YAxis.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TipConfig.SetToolTip(this.YAxis, "Value for Y axis");
             // 
+            // BtnOpenLocation
+            // 
+            this.BtnOpenLocation.Location = new System.Drawing.Point(206, 227);
+            this.BtnOpenLocation.Name = "BtnOpenLocation";
+            this.BtnOpenLocation.Size = new System.Drawing.Size(154, 23);
+            this.BtnOpenLocation.TabIndex = 55;
+            this.BtnOpenLocation.Text = "Open location";
+            this.TipConfig.SetToolTip(this.BtnOpenLocation, "Shows config file");
+            this.BtnOpenLocation.UseVisualStyleBackColor = true;
+            this.BtnOpenLocation.Click += new System.EventHandler(this.BtnOpenLocation_Click);
+            // 
             // LabelVehicle
             // 
             this.LabelVehicle.AutoSize = true;
@@ -287,9 +309,9 @@
             this.BtnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAbout.IconSize = 16;
             this.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAbout.Location = new System.Drawing.Point(708, 431);
+            this.BtnAbout.Location = new System.Drawing.Point(658, 431);
             this.BtnAbout.Name = "BtnAbout";
-            this.BtnAbout.Size = new System.Drawing.Size(75, 23);
+            this.BtnAbout.Size = new System.Drawing.Size(100, 23);
             this.BtnAbout.TabIndex = 52;
             this.BtnAbout.Text = "About";
             this.BtnAbout.UseVisualStyleBackColor = true;
@@ -302,9 +324,9 @@
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 16;
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(789, 431);
+            this.BtnExit.Location = new System.Drawing.Point(764, 431);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(75, 23);
+            this.BtnExit.Size = new System.Drawing.Size(100, 23);
             this.BtnExit.TabIndex = 53;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
@@ -319,21 +341,12 @@
             this.textBox1.TabIndex = 54;
             this.textBox1.Text = "1 car = 4 spots\r\n1 mc = 2 spots";
             // 
-            // btnAddVehicle_Form
-            // 
-            this.btnAddVehicle_Form.Location = new System.Drawing.Point(44, 58);
-            this.btnAddVehicle_Form.Name = "btnAddVehicle_Form";
-            this.btnAddVehicle_Form.Size = new System.Drawing.Size(109, 31);
-            this.btnAddVehicle_Form.TabIndex = 55;
-            this.btnAddVehicle_Form.Text = "Add Vehicle";
-            this.btnAddVehicle_Form.UseVisualStyleBackColor = true;
-            this.btnAddVehicle_Form.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
-            // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 466);
+            this.Controls.Add(this.BtnOpenLocation);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnAbout);
@@ -399,5 +412,6 @@
         private FontAwesome.Sharp.IconButton BtnExit;
         private TextBox textBox1;
         private Button btnAddVehicle_Form;
+        private Button BtnOpenLocation;
     }
 }

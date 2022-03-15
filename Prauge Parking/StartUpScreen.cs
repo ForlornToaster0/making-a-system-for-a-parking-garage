@@ -15,6 +15,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.Configurations;
+using System.Diagnostics;
+using Prauge_Parking.Main;
 
 namespace Prauge_Parking
 {
@@ -99,5 +101,9 @@ namespace Prauge_Parking
             addVehicleForm.Show();
         }
 
+        private void BtnOpenLocation_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", @"c:\temp"); // 
+        }
     }
 }
