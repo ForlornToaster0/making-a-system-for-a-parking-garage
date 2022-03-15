@@ -23,7 +23,6 @@ namespace Prauge_Parking
         public MainScreen()
         {
             InitializeComponent();
-           
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
@@ -58,15 +57,12 @@ namespace Prauge_Parking
         private void BtnPrice_Click(object sender, EventArgs e)
         {
             string price = Interaction.InputBox("Current Price: " + xml.cPrice + "CZK", "Edit Price", "Enter New Price");
-            if (price != null)
+            if (price != "")
             {
                 xml.cPrice = Convert.ToDouble(price);
                 MessageBox.Show("New Price: " + price + "CZK", "Added!");
             }
-            else
-            {
-                xml.cPrice = Convert.ToDouble(price);
-            }
+           
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
