@@ -54,11 +54,12 @@
             // 
             // txtLicensePlate
             // 
+            this.txtLicensePlate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtLicensePlate.Location = new System.Drawing.Point(127, 4);
             this.txtLicensePlate.Name = "txtLicensePlate";
             this.txtLicensePlate.Size = new System.Drawing.Size(142, 23);
-            this.txtLicensePlate.TabIndex = 4;
-            this.txtLicensePlate.Text = "License Plate Number";
+            this.txtLicensePlate.TabIndex = 1;
+            this.txtLicensePlate.Text = "License Plate";
             this.txtLicensePlate.TextChanged += new System.EventHandler(this.txtLicensePlate_TextChanged);
             this.txtLicensePlate.Enter += new System.EventHandler(this.txtLicensePlate_Text);
             // 

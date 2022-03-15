@@ -26,6 +26,19 @@ namespace Prauge_Parking
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();
+
+            string fileName = "Config.xml";
+
+            if (xml.ParkingPrice == 0)
+            {
+                xml.ParkingPrice = 20;
+            }
+            xml.CZK = "CZK";
+            xml.CarSize = 4;
+            xml.MCSize = 2;
+            xml.SizePerLot = 4;
+            xml.PhouseSize = 100;
+            XmlManager.XmlDataWriter(xml, "Config.xml");
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
@@ -59,11 +72,12 @@ namespace Prauge_Parking
 
         private void BtnPrice_Click(object sender, EventArgs e)
         {
-            string price = Interaction.InputBox("Current Price: " + xml.cPrice + "CZK", "Edit Price", "Enter New Price");
+            string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
             if (price != "")
             {
-                xml.cPrice = Convert.ToDouble(price);
-                MessageBox.Show("New Price: " + price + "CZK", "Added!");
+                xml.ParkingPrice = Convert.ToDouble(price);
+                XmlManager.XmlDataWriter(xml, "Config.xml");
+                MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
             }
            
         }

@@ -71,7 +71,7 @@ namespace Prauge_Parking.Main
 
         private void txtLicensePlate_Text(object sender, EventArgs e)
         {
-            if (txtLicensePlate.Text == "Licence Plate Number")
+            if (txtLicensePlate.Text == "License Plate")
             {
                 txtLicensePlate.Text = "";
                 txtLicensePlate.ForeColor = SystemColors.WindowText;
