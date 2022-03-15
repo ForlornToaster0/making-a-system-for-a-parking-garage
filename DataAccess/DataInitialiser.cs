@@ -10,16 +10,16 @@ namespace DataAccess
 {
     public class DataInitialiser
     {
-        public void InsertVehicle(string regNumber, int type, DateTime? parkTime)
+        public void InsertVehicle(string regNumber, int type, DateTime? arrival)
         {
             using (var db = new testContext())
             {
-                db.TestVehicles.Add(new testVehicle() { RegNumber = regNumber, Type = type, ParkTime = DateTime.Now });
+                db.Pspots.Add(new DBPspot() { Reg = regNumber, Type = Convert.ToString(type), Arrival = DateTime.Now });
                 db.SaveChanges();
             }
         }
 
-        public void RemoveVehicle(testVehicle vehicle)
+        public void RemoveVehicle(DBPspot vehicle)
         {
             using (var db = new testContext())
             {
@@ -27,7 +27,7 @@ namespace DataAccess
             }
         }
 
-        public void MoveVehicle(testVehicle vehicle, int newParkingId)
+        public void MoveVehicle(DBPspot vehicle, int newParkingId)
         {
             using (var db = new testContext())
             {

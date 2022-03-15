@@ -17,7 +17,6 @@ namespace DataAccess.Data
         {
         }
 
-        public virtual DbSet <testVehicle> TestVehicles { get; set; }
         public virtual DbSet<DBPspot> Pspots { get; set; } = null!;
         public virtual DbSet<DBVehicle> Vehicles { get; set; } = null!;
 
