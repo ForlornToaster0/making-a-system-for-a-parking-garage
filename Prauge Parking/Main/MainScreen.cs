@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Core.Configurations;
+using DataAccess.Data;
 
 namespace Prauge_Parking
 {
@@ -22,6 +23,8 @@ namespace Prauge_Parking
 
         public MainScreen()
         {
+            testContext context = new();
+            context.Database.EnsureCreated();
             InitializeComponent();
         }
         private void MainScreen_Load(object sender, EventArgs e)

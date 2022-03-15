@@ -59,6 +59,8 @@
             this.txtLicensePlate.Size = new System.Drawing.Size(142, 23);
             this.txtLicensePlate.TabIndex = 4;
             this.txtLicensePlate.Text = "License Plate Number";
+            this.txtLicensePlate.TextChanged += new System.EventHandler(this.txtLicensePlate_TextChanged);
+            this.txtLicensePlate.Enter += new System.EventHandler(this.txtLicensePlate_Text);
             // 
             // btnSaveVehicle
             // 
@@ -68,6 +70,7 @@
             this.btnSaveVehicle.TabIndex = 3;
             this.btnSaveVehicle.Text = "Add";
             this.btnSaveVehicle.UseVisualStyleBackColor = true;
+            this.btnSaveVehicle.Click += new System.EventHandler(this.btnSaveVehicle_Click);
             // 
             // AddVehicle
             // 
@@ -80,6 +83,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AddVehicle";
             this.Size = new System.Drawing.Size(475, 269);
+            this.Load += new System.EventHandler(this.cmbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
