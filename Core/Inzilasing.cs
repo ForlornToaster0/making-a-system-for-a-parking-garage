@@ -27,7 +27,7 @@ namespace Core
 
                             break;
                         }
-                    case "Car":
+                    case "CAR":
                         {
                             list.Add(new Car(car.Reg, car.Arrival));
 

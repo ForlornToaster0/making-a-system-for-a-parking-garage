@@ -22,7 +22,6 @@ namespace Prauge_Parking
             InitializeComponent();
            
         }
-
         private void MainScreen_Load(object sender, EventArgs e)
         {
             //    TopMost = true;
@@ -52,7 +51,7 @@ namespace Prauge_Parking
 
         private void BtnVehicles_Click(object sender, EventArgs e)
         {
-            Addingvechails map = new();
+            AddVehicle map = new();
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
@@ -64,20 +63,48 @@ namespace Prauge_Parking
             string Price = Interaction.InputBox("New price?", "Title", "Default Text");
         }
 
+        private void BtnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Prague Parking v2.0", "About");                        
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Addingvechails addingvechails = new();
-            Controls.Add(addingvechails);
-            addingvechails.BringToFront();
+            AddVehicle AddVeh = new();  // Går det att maximera denna?
+            Controls.Add(AddVeh);
+            AddVeh.BringToFront();
+        }
+
+        private void BtnMove_Click(object sender, EventArgs e)
+        {
+            MoveVehicle MovVeh = new();  // Går det att maximera denna?
+            Controls.Add(MovVeh);            
+            MovVeh.BringToFront();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            Map map = new();
-            this.Controls.Add(map);
+            RemoveVehicle RemVeh = new();  // Går det att maximera denna?
+            Controls.Add(RemVeh);
+            RemVeh.BringToFront();
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            AddVehicle map = new();
             map.CreateControl();
             map.Show();
             map.BringToFront();
+
+
+
+            //var home = new Map();
+            //home.BringToFront();
         }
     }
 }

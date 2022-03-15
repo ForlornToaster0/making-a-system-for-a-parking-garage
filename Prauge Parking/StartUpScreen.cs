@@ -15,21 +15,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.Configurations;
+using System.Diagnostics;
+using Prauge_Parking.Main;
 
 namespace Prauge_Parking
 {
     public partial class StartUpScreen : Form
     {
+        private AddVehicle addVehicle = new AddVehicle();
+
         XML xml = new XML();
         public StartUpScreen()
         {
             testContext context = new();
             context.Database.EnsureCreated();
-            if (context.Pspots.Count() == 0)
-            {
-                PopulateDbWithTestData populateDbWithTestData = new();
-                populateDbWithTestData.Populate();
-            }
+            //if (context.Pspots.Count() == 0)
+            //{
+            //    PopulateDbWithTestData populateDbWithTestData = new();
+            //    populateDbWithTestData.Populate();
+            //}
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -88,6 +92,18 @@ namespace Prauge_Parking
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddVehicle_Form_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddVehicle addVehicleForm = new AddVehicle();
+            addVehicleForm.Show();
+        }
+
+        private void BtnOpenLocation_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", @"c:\temp"); // 
         }
     }
 }
