@@ -15,6 +15,7 @@ namespace DataAccess.Models
     public partial class DBPspot
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Spot { get; set; }
         [Key]
         [StringLength(10)]
