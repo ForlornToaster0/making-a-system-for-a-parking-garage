@@ -90,15 +90,13 @@ namespace Prauge_Parking
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            AddVehicle map = new();
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
+            //AddVehicle map = new();
+            //map.CreateControl();
+            //map.Show();
+            //map.BringToFront();
 
-
-
-            //var home = new Map();
-            //home.BringToFront();
+            var home = new MainScreen();
+            home.Show();
         }
     }
 }

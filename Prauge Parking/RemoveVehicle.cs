@@ -15,7 +15,7 @@ namespace Prauge_Parking
         public RemoveVehicle()
         {
             MainScreen mainScreen = new();
-            this.Location = new Point(mainScreen.PanelMenu.Width + 30, 0);
+            this.Location = new Point(mainScreen.PanelMenu.Width + 30, 30);
             InitializeComponent();
         }
     }

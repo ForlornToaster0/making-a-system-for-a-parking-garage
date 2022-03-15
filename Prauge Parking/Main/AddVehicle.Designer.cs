@@ -69,17 +69,17 @@
             this.btnSaveVehicle.Text = "Add";
             this.btnSaveVehicle.UseVisualStyleBackColor = true;
             // 
-            // Addingvechails
+            // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.cmbTypeVehicle);
             this.Controls.Add(this.txtLicensePlate);
             this.Controls.Add(this.btnSaveVehicle);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Addingvechails";
-            this.Size = new System.Drawing.Size(477, 271);
+            this.Name = "AddVehicle";
+            this.Size = new System.Drawing.Size(475, 269);
             this.ResumeLayout(false);
             this.PerformLayout();
 

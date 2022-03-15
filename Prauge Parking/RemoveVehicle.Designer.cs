@@ -34,7 +34,7 @@
             // 
             // BtnRemoveVehicle
             // 
-            this.BtnRemoveVehicle.Location = new System.Drawing.Point(109, 3);
+            this.BtnRemoveVehicle.Location = new System.Drawing.Point(124, 19);
             this.BtnRemoveVehicle.Name = "BtnRemoveVehicle";
             this.BtnRemoveVehicle.Size = new System.Drawing.Size(75, 23);
             this.BtnRemoveVehicle.TabIndex = 3;
@@ -43,7 +43,7 @@
             // 
             // BoxLicensePlate
             // 
-            this.BoxLicensePlate.Location = new System.Drawing.Point(3, 3);
+            this.BoxLicensePlate.Location = new System.Drawing.Point(18, 19);
             this.BoxLicensePlate.Name = "BoxLicensePlate";
             this.BoxLicensePlate.Size = new System.Drawing.Size(100, 23);
             this.BoxLicensePlate.TabIndex = 2;
@@ -53,10 +53,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.BtnRemoveVehicle);
             this.Controls.Add(this.BoxLicensePlate);
             this.Name = "RemoveVehicle";
-            this.Size = new System.Drawing.Size(595, 150);
+            this.Size = new System.Drawing.Size(475, 269);
             this.ResumeLayout(false);
             this.PerformLayout();
 
