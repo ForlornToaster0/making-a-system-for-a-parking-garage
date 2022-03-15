@@ -22,8 +22,8 @@ namespace DataAccess.Models
             using(var context = new testContext())
             {
                 foreach (var item in testdata)
-                {
-                    DBPspot vehicle = new DBPspot();
+                {   
+                    DBPspot vehicle = new();
 
                     vehicle.Spot = Convert.ToInt32(item[0]);
                     vehicle.Reg = Convert.ToString(item[1]);

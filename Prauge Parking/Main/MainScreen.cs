@@ -33,6 +33,12 @@ namespace Prauge_Parking
             map.CreateControl();
             map.Show();
             map.BringToFront();
+
+            DetailedList detailedList = new();
+            this.Controls.Add(detailedList);
+            detailedList.CreateControl();
+            detailedList.Show();
+            detailedList.BringToFront();
         }
 
         private void BtnParking_Click(object sender, EventArgs e)
@@ -56,6 +62,22 @@ namespace Prauge_Parking
         private void BtnPrice_Click(object sender, EventArgs e)
         {
             string Price = Interaction.InputBox("New price?", "Title", "Default Text");
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            Addingvechails addingvechails = new();
+            Controls.Add(addingvechails);
+            addingvechails.BringToFront();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Map map = new();
+            this.Controls.Add(map);
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
         }
     }
 }

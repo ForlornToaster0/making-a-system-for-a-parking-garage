@@ -24,7 +24,7 @@ namespace Core
         public int Position { get; set; }   
         public ParkingSpots(int spotSize, int pos) 
         {
-            SpotSize = 4;
+            SpotSize = 0;
             Position = pos;
         }
     }

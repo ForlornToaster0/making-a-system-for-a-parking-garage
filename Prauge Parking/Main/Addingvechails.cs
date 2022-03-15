@@ -24,7 +24,9 @@ namespace Prauge_Parking.Main
         private void button1_Click(object sender, EventArgs e)
         {
             DataImport dataImport = new ();
-            dataImport.import(DateTime.Now, "Car", "ABC123", 40);
+            dataImport.import(DateTime.Now, "MC", "TSG345", 11);
+            Map map = new Map();
+            map.Update();
         }
     }
 }

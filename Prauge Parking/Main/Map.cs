@@ -34,8 +34,8 @@ namespace Prauge_Parking.Main
                 Controls.AddRange(maps);
             }
             this.Location = new Point(mainScreen.PanelMenu.Width + 30, 0);
-            this.Width = maps.Last().Location.X;
-            this.Height = maps.Last().Location.Y;
+            this.Width = maps.Last().Location.X + maps.Last().Size.Width;
+            this.Height = maps.Last().Location.Y+maps.Last().Size.Height;
             Inzilasing mapInfo = new();
 
             List<Vehicle> vehicles = mapInfo.NewCars();
