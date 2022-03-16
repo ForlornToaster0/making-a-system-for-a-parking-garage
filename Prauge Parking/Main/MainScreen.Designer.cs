@@ -33,7 +33,7 @@
             this.BtnMap = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BtnRemove = new FontAwesome.Sharp.IconButton();
             this.BtnMove = new FontAwesome.Sharp.IconButton();
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPrice = new FontAwesome.Sharp.IconButton();
@@ -47,7 +47,7 @@
             this.PanelMenu.Controls.Add(this.BtnMap);
             this.PanelMenu.Controls.Add(this.BtnExit);
             this.PanelMenu.Controls.Add(this.BtnAbout);
-            this.PanelMenu.Controls.Add(this.iconButton1);
+            this.PanelMenu.Controls.Add(this.BtnRemove);
             this.PanelMenu.Controls.Add(this.BtnMove);
             this.PanelMenu.Controls.Add(this.BtnAdd);
             this.PanelMenu.Controls.Add(this.BtnPrice);
@@ -72,6 +72,7 @@
             this.BtnMap.TabIndex = 4;
             this.BtnMap.Text = "Map";
             this.BtnMap.UseVisualStyleBackColor = true;
+            this.BtnMap.Click += new System.EventHandler(this.BtnMap_Click);
             // 
             // BtnExit
             // 
@@ -105,22 +106,22 @@
             this.BtnAbout.UseVisualStyleBackColor = true;
             this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
             // 
-            // iconButton1
+            // BtnRemove
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(37, 120);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(88, 17);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Remove vehicle";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.BtnRemove.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.BtnRemove.IconColor = System.Drawing.Color.Black;
+            this.BtnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnRemove.IconSize = 16;
+            this.BtnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnRemove.Location = new System.Drawing.Point(37, 120);
+            this.BtnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnRemove.Name = "BtnRemove";
+            this.BtnRemove.Size = new System.Drawing.Size(88, 17);
+            this.BtnRemove.TabIndex = 3;
+            this.BtnRemove.Text = "Remove vehicle";
+            this.BtnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // BtnMove
             // 
@@ -206,7 +207,7 @@
         private FontAwesome.Sharp.IconButton BtnPrice;
         private FontAwesome.Sharp.IconButton BtnAdd;
         private FontAwesome.Sharp.IconButton BtnMove;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BtnRemove;
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnAbout;
         private FontAwesome.Sharp.IconButton BtnMap;

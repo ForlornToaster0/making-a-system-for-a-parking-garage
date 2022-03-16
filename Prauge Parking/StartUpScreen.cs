@@ -106,7 +106,7 @@ namespace Prauge_Parking
 
         private void BtnOpenLocation_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", @"c:\temp"); // 
+            Process.Start("explorer.exe", @"c:\"); // Kan denna peka mot xml-filens mapp?
         }
     }
 }
