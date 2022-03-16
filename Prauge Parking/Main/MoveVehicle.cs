@@ -19,9 +19,16 @@ namespace Prauge_Parking
             InitializeComponent();
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
+        private void MoveVehicle_Load(object sender, EventArgs e)
         {
-            this.Hide();
+
+            MainScreen mainScreen = new();
+
+
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
+            this.Width = mainScreen.Size.Width + 200;
+            this.Height = (mainScreen.Size.Height);
+            this.BorderStyle = BorderStyle.None;
         }
     }
 }

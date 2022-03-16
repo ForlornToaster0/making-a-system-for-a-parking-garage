@@ -99,7 +99,7 @@
 
         #endregion
 
-        private DataGridView DetailedView;
+        public DataGridView DetailedView;
         private DataGridViewTextBoxColumn Pos;
         private DataGridViewTextBoxColumn Reg;
         private DataGridViewTextBoxColumn Arrival;

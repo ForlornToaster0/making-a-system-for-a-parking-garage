@@ -45,18 +45,15 @@ namespace Prauge_Parking.Main
             List<ParkingSpots> parkingSpots = mapInfo.parkings();
             Spot_inizilase spot_Inizilase = new();
             spot_Inizilase.SpotIni(parkingSpots, vehicles, maps, 4);
-            //if (parkingSpots[0] != null)
-            //{
-            //    for (int i = 0; i < parkingSpots.Count; i++)
-            //    {
-            //        var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], 20);
-            //        DetailedView.Rows.Add(rows);
-            //    }
-            //}
-        }
+            if (parkingSpots.Count > 0)
+            {
+                for (int i = 0; i < parkingSpots.Count; i++)
+                {
+                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], 20);
+                    DetailedView.Rows.Add(rows);
+                }
+            }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
         }
     }
 }
