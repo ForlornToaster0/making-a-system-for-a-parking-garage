@@ -16,7 +16,7 @@ namespace Prauge_Parking.Moving_soon
             {
                 int spotNum = spot[i].Position;
                 for (int j = 0; j < spot.Count; j++)
-                    if (spot[j].Position == spot[i].Position&&j!=i)
+                    if (spot[j].Position == spot[i].Position&&j!=i&& spot[j].SpotSize+spot[i].SpotSize<spotSize)
                     {
                         var substr = map[spotNum].Text;
                         map[spotNum - 1].Text = $"{substr}{vehicles[i].RegNumber}";
@@ -40,5 +40,7 @@ namespace Prauge_Parking.Moving_soon
 
             }
         }
+
+    
     }
 }

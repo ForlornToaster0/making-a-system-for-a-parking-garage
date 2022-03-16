@@ -28,20 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.DetailedView = new System.Windows.Forms.DataGridView();
+            this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Reg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Arrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DetailedView
+            // 
+            this.DetailedView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetailedView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pos,
+            this.Reg,
+            this.Arrival,
+            this.Price});
+            this.DetailedView.Location = new System.Drawing.Point(117, 238);
+            this.DetailedView.Name = "DetailedView";
+            this.DetailedView.RowHeadersWidth = 51;
+            this.DetailedView.RowTemplate.Height = 29;
+            this.DetailedView.Size = new System.Drawing.Size(553, 195);
+            this.DetailedView.TabIndex = 0;
+            // 
+            // Pos
+            // 
+            this.Pos.HeaderText = "Postion";
+            this.Pos.MinimumWidth = 6;
+            this.Pos.Name = "Pos";
+            this.Pos.ReadOnly = true;
+            this.Pos.Width = 125;
+            // 
+            // Reg
+            // 
+            this.Reg.HeaderText = "Regrestarion";
+            this.Reg.MinimumWidth = 6;
+            this.Reg.Name = "Reg";
+            this.Reg.ReadOnly = true;
+            this.Reg.Width = 125;
+            // 
+            // Arrival
+            // 
+            this.Arrival.HeaderText = "Arrival ";
+            this.Arrival.MinimumWidth = 6;
+            this.Arrival.Name = "Arrival";
+            this.Arrival.ReadOnly = true;
+            this.Arrival.Width = 125;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 125;
             // 
             // Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.DetailedView);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Map";
             this.Size = new System.Drawing.Size(903, 453);
             this.Load += new System.EventHandler(this.Map_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DataGridView DetailedView;
+        private DataGridViewTextBoxColumn Pos;
+        private DataGridViewTextBoxColumn Reg;
+        private DataGridViewTextBoxColumn Arrival;
+        private DataGridViewTextBoxColumn Price;
     }
 }

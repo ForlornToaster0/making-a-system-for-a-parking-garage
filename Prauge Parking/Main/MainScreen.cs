@@ -31,13 +31,26 @@ namespace Prauge_Parking
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
-            map.BringToFront();
+            map.BringToFront(); 
+            BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height/2);
+            BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-            DetailedList detailedList = new();
-            this.Controls.Add(detailedList);
-            detailedList.CreateControl();
-            detailedList.Show();
-            detailedList.BringToFront();
+
+            BtnMove.Location = new Point(BtnAdd.Location.X, BtnAdd.Location.Y + BtnAdd.Size.Height + BtnAdd.Size.Height /2);
+            BtnMove.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            iconButton1.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
+            iconButton1.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnHome.Location = new Point(iconButton1.Location.X, iconButton1.Location.Y + iconButton1.Size.Height + iconButton1.Size.Height * 2);
+            BtnHome.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnAbout.Location = new Point(BtnHome.Location.X, BtnHome.Location.Y + BtnHome.Size.Height + BtnHome.Size.Height * 2);
+            BtnAbout.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnExit.Location = new Point(BtnAbout.Location.X, BtnAbout.Location.Y + BtnAbout.Size.Height + BtnAbout.Size.Height / 2);
+            BtnExit.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
         }
 
         private void BtnParking_Click(object sender, EventArgs e)
