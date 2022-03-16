@@ -28,23 +28,23 @@ namespace DataAccess
             get { return _sizePerLot; }
             set { _sizePerLot = value; }
         }
-        private string _phouseSize; 
+        private int _phouseSize; 
         [XmlElement("Parkinghouse Size")]
-        public string PhouseSize
+        public int PhouseSize
         {
             get { return _phouseSize; }
             set { _phouseSize = value; }
         }
-        private string _carSize;
+        private int _carSize;
         [XmlElement("Car Size")]
-        public string CarSize
+        public int CarSize
         {
             get { return _carSize; }
             set { _carSize = value; }
         }
-        private string _mcSize;
+        private int _mcSize;
         [XmlElement("MC Size")]
-        public string MCSize
+        public int MCSize
         {
             get { return _mcSize; }
             set { _mcSize = value; }

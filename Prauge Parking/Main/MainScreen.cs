@@ -28,11 +28,11 @@ namespace Prauge_Parking
             if (!File.Exists("Config.xml"))
             {
                 xml.ParkingPrice = 20;
-                xml.CarSize = "4";
+                xml.CarSize = 2;
                 xml.SizePerLot = 4;
-                xml.MCSize = "2";
+                xml.MCSize = 2;
                 xml.CZK = "CZK";
-                xml.PhouseSize = "100";
+                xml.PhouseSize = 100;
                 xml.SizeX = 10;
                 xml.SizeY = 10;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
@@ -85,11 +85,6 @@ namespace Prauge_Parking
                     throw;
                 }
                 xml.ParkingPrice = Convert.ToInt32(price);
-                xml.CarSize = "4";
-                xml.SizePerLot = 4;
-                xml.MCSize = "2";
-                xml.CZK = "CZK";
-                xml.PhouseSize = "100";
                 XmlManager.XmlDataWriter(xml, "Config.xml");
                 MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
             }
