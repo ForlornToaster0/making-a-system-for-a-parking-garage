@@ -40,7 +40,10 @@ namespace Prauge_Parking
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.No)
             {
-
+                MainScreen mainScreen = new MainScreen();
+                mainScreen.Show();
+                StartUpScreen startUpScreen = new StartUpScreen();
+                startUpScreen.Close();
             }
             else
             {
