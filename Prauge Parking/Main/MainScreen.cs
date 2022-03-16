@@ -29,16 +29,16 @@ namespace Prauge_Parking
 
             string fileName = "Config.xml";
 
-            if (xml.ParkingPrice == 0)
+            if (!File.Exists(fileName))
             {
                 xml.ParkingPrice = 20;
+                xml.CZK = "CZK";
+                xml.CarSize = 4;
+                xml.MCSize = 2;
+                xml.SizePerLot = 4;
+                xml.PhouseSize = 100;
+                XmlManager.XmlDataWriter(xml, "Config.xml");
             }
-            xml.CZK = "CZK";
-            xml.CarSize = 4;
-            xml.MCSize = 2;
-            xml.SizePerLot = 4;
-            xml.PhouseSize = 100;
-            XmlManager.XmlDataWriter(xml, "Config.xml");
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
@@ -60,10 +60,10 @@ namespace Prauge_Parking
             iconButton1.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
             iconButton1.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-            BtnHome.Location = new Point(iconButton1.Location.X, iconButton1.Location.Y + iconButton1.Size.Height + iconButton1.Size.Height * 2);
-            BtnHome.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+            BtnMap.Location = new Point(iconButton1.Location.X, iconButton1.Location.Y + iconButton1.Size.Height + iconButton1.Size.Height * 2);
+            BtnMap.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-            BtnAbout.Location = new Point(BtnHome.Location.X, BtnHome.Location.Y + BtnHome.Size.Height + BtnHome.Size.Height * 2);
+            BtnAbout.Location = new Point(BtnMap.Location.X, BtnMap.Location.Y + BtnMap.Size.Height + BtnMap.Size.Height * 2);
             BtnAbout.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
             BtnExit.Location = new Point(BtnAbout.Location.X, BtnAbout.Location.Y + BtnAbout.Size.Height + BtnAbout.Size.Height / 2);
@@ -77,7 +77,7 @@ namespace Prauge_Parking
             if (price != "")
             {
                 xml.ParkingPrice = Convert.ToDouble(price);
-                XmlManager.XmlDataWriter(xml, "Config.xml");
+                XmlManager.XmlDataWriter(xml.ParkingPrice, "Config.xml");
                 MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
             }
 
@@ -114,15 +114,5 @@ namespace Prauge_Parking
             RemVeh.BringToFront();
         }
 
-        private void BtnHome_Click(object sender, EventArgs e)
-        {
-            //AddVehicle map = new();
-            //map.CreateControl();
-            //map.Show();
-            //map.BringToFront();
-
-            var home = new MainScreen();
-            home.Show();
-        }
     }
 }
