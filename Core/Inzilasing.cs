@@ -10,13 +10,12 @@ namespace Core
 {
     public class Inzilasing
     {
-
         public List<Vehicle> NewCars()
         {
             var carData = DataExtration.AllData();
 
             List<Vehicle> list = new();
-            int i = 0;
+            
             foreach (var car in carData)
             {
                 switch (car.Type)
@@ -27,7 +26,7 @@ namespace Core
 
                             break;
                         }
-                    case "CAR":
+                    case "Car":
                         {
                             list.Add(new Car(car.Reg, car.Arrival));
 
@@ -35,7 +34,7 @@ namespace Core
                         }
                 }
             }
-            return list;        
+            return list;
         }
         public List<ParkingSpots> parkings()
         {
@@ -48,6 +47,25 @@ namespace Core
                 }
                 return parkings;
             }
+        }
+        public object[] DetailedList(ParkingSpots spot, Vehicle vehicles, int Prize)
+        {
+            double priceAmount = 0;
+            var span = Math.Round(DateTime.Now.Subtract(vehicles.ParkTime).TotalHours);
+            if (vehicles.GetType() == typeof(Car))
+            {
+                priceAmount = span * Prize;
+
+            }
+            else if (vehicles.GetType() == typeof(MC))
+            {
+                priceAmount = span * (Prize / 2);
+
+
+            }
+            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime,priceAmount };
+            return row;
+
         }
     }
 }

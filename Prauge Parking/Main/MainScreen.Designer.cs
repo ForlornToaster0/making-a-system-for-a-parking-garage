@@ -54,8 +54,9 @@
             this.PanelMenu.Controls.Add(this.LabConfig);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(200, 338);
+            this.PanelMenu.Size = new System.Drawing.Size(229, 451);
             this.PanelMenu.TabIndex = 20;
             // 
             // BtnHome
@@ -158,9 +159,10 @@
             this.BtnPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnPrice.IconSize = 16;
             this.BtnPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPrice.Location = new System.Drawing.Point(42, 73);
+            this.BtnPrice.Location = new System.Drawing.Point(48, 97);
+            this.BtnPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPrice.Name = "BtnPrice";
-            this.BtnPrice.Size = new System.Drawing.Size(100, 23);
+            this.BtnPrice.Size = new System.Drawing.Size(114, 31);
             this.BtnPrice.TabIndex = 0;
             this.BtnPrice.Text = "Edit price";
             this.BtnPrice.UseVisualStyleBackColor = true;
@@ -170,17 +172,17 @@
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(12, 9);
+            this.LabConfig.Location = new System.Drawing.Point(14, 12);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(175, 29);
+            this.LabConfig.Size = new System.Drawing.Size(217, 36);
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.PanelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
