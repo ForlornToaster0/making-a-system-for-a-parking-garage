@@ -57,10 +57,10 @@ namespace Prauge_Parking
             BtnMove.Location = new Point(BtnAdd.Location.X, BtnAdd.Location.Y + BtnAdd.Size.Height + BtnAdd.Size.Height / 2);
             BtnMove.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-            iconButton1.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
-            iconButton1.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+            BtnRemove.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
+            BtnRemove.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-            BtnMap.Location = new Point(iconButton1.Location.X, iconButton1.Location.Y + iconButton1.Size.Height + iconButton1.Size.Height * 2);
+            BtnMap.Location = new Point(BtnRemove.Location.X, BtnRemove.Location.Y + BtnRemove.Size.Height + BtnRemove.Size.Height * 2);
             BtnMap.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
             BtnAbout.Location = new Point(BtnMap.Location.X, BtnMap.Location.Y + BtnMap.Size.Height + BtnMap.Size.Height * 2);
@@ -107,12 +107,22 @@ namespace Prauge_Parking
             MovVeh.BringToFront();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void BtnRemove_Click(object sender, EventArgs e)
         {
             RemoveVehicle RemVeh = new();  // Går det att maximera denna?
             Controls.Add(RemVeh);
             RemVeh.BringToFront();
         }
 
+        private void BtnMap_Click(object sender, EventArgs e)
+        {
+            Map map = new();
+            this.Controls.Add(map);
+            map.CreateControl();
+            map.Show();
+            map.BringToFront();
+            BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
+            BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+        }
     }
 }
