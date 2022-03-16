@@ -29,11 +29,11 @@ namespace Prauge_Parking
         {
             testContext context = new();
             context.Database.EnsureCreated();
-            //if (context.Pspots.Count() == 0)
-            //{
-            //    PopulateDbWithTestData populateDbWithTestData = new();
-            //    populateDbWithTestData.Populate();
-            //}
+            if (context.Pspots.Count() == 0)
+            {
+                PopulateDbWithTestData populateDbWithTestData = new();
+                populateDbWithTestData.Populate();
+            }
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;

@@ -49,12 +49,12 @@ namespace Prauge_Parking
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
-            map.BringToFront(); 
-            BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height/2);
+            map.BringToFront();
+            BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
             BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
 
-            BtnMove.Location = new Point(BtnAdd.Location.X, BtnAdd.Location.Y + BtnAdd.Size.Height + BtnAdd.Size.Height /2);
+            BtnMove.Location = new Point(BtnAdd.Location.X, BtnAdd.Location.Y + BtnAdd.Size.Height + BtnAdd.Size.Height / 2);
             BtnMove.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
             iconButton1.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
@@ -71,24 +71,6 @@ namespace Prauge_Parking
 
         }
 
-        private void BtnParking_Click(object sender, EventArgs e)
-        {
-            Map map = new();
-            this.Controls.Add(map);
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
-        }
-
-        private void BtnVehicles_Click(object sender, EventArgs e)
-        {
-            LabelAddVehicle map = new();
-            this.Controls.Add(map);
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
-        }
-
         private void BtnPrice_Click(object sender, EventArgs e)
         {
             string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
@@ -98,12 +80,12 @@ namespace Prauge_Parking
                 XmlManager.XmlDataWriter(xml, "Config.xml");
                 MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
             }
-           
+
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Prague Parking v2.0", "About");                        
+            MessageBox.Show("Prague Parking v2.0", "About");
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -121,7 +103,7 @@ namespace Prauge_Parking
         private void BtnMove_Click(object sender, EventArgs e)
         {
             MoveVehicle MovVeh = new();  // Går det att maximera denna?
-            Controls.Add(MovVeh);            
+            Controls.Add(MovVeh);
             MovVeh.BringToFront();
         }
 
