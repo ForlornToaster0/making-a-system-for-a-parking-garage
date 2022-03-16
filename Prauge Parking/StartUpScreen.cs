@@ -22,25 +22,28 @@ namespace Prauge_Parking
 {
     public partial class StartUpScreen : Form
     {
-        private AddVehicle addVehicle = new AddVehicle();
+        private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
         XML xml = new XML();
         public StartUpScreen()
         {
             testContext context = new();
             context.Database.EnsureCreated();
-            //if (context.Pspots.Count() == 0)
-            //{
-            //    PopulateDbWithTestData populateDbWithTestData = new();
-            //    populateDbWithTestData.Populate();
-            //}
+            if (context.Pspots.Count() == 0)
+            {
+                PopulateDbWithTestData populateDbWithTestData = new();
+                populateDbWithTestData.Populate();
+            }
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
             if (result == DialogResult.No)
             {
-
+                MainScreen mainScreen = new MainScreen();
+                mainScreen.Show();
+                StartUpScreen startUpScreen = new StartUpScreen();
+                startUpScreen.Close();
             }
             else
             {
@@ -97,7 +100,7 @@ namespace Prauge_Parking
         private void btnAddVehicle_Form_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddVehicle addVehicleForm = new AddVehicle();
+            LabelAddVehicle addVehicleForm = new LabelAddVehicle();
             addVehicleForm.Show();
         }
 

@@ -13,12 +13,11 @@ using System.Windows.Forms;
 
 namespace Prauge_Parking.Main
 {
-    public partial class AddVehicle : UserControl
+    public partial class LabelAddVehicle : UserControl
     {
-        public AddVehicle()
+        public LabelAddVehicle()
         {
-            MainScreen mainScreen = new();
-            this.Location = new Point(mainScreen.PanelMenu.Width + 30, 30);
+
             InitializeComponent();
         }
 
@@ -42,7 +41,17 @@ namespace Prauge_Parking.Main
         }
         private void cmbForm_Load(object sender, EventArgs e)
         {
+
+            MainScreen mainScreen = new();
+        
+
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
+            this.Width = mainScreen.Size.Width+200;
+            this.Height = ( mainScreen.Size.Height);
+            this.BorderStyle = BorderStyle.None;
             cmbTypeVehicle.DataSource = Enum.GetValues(typeof(VehicleTypeEnum));
+           
+
         }
 
         private void txtLicensePlate_TextChanged(object sender, EventArgs e)
@@ -76,6 +85,11 @@ namespace Prauge_Parking.Main
                 txtLicensePlate.Text = "";
                 txtLicensePlate.ForeColor = SystemColors.WindowText;
             }
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

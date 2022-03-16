@@ -50,24 +50,25 @@ namespace Prauge_Parking
             map.CreateControl();
             map.Show();
             map.BringToFront();
-        }
+            BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
+            BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
-        private void BtnParking_Click(object sender, EventArgs e)
-        {
-            Map map = new();
-            this.Controls.Add(map);
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
-        }
 
-        private void BtnVehicles_Click(object sender, EventArgs e)
-        {
-            AddVehicle map = new();
-            this.Controls.Add(map);
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
+            BtnMove.Location = new Point(BtnAdd.Location.X, BtnAdd.Location.Y + BtnAdd.Size.Height + BtnAdd.Size.Height / 2);
+            BtnMove.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            iconButton1.Location = new Point(BtnMove.Location.X, BtnMove.Location.Y + BtnMove.Size.Height + BtnMove.Size.Height / 2);
+            iconButton1.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnMap.Location = new Point(iconButton1.Location.X, iconButton1.Location.Y + iconButton1.Size.Height + iconButton1.Size.Height * 2);
+            BtnMap.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnAbout.Location = new Point(BtnMap.Location.X, BtnMap.Location.Y + BtnMap.Size.Height + BtnMap.Size.Height * 2);
+            BtnAbout.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
+            BtnExit.Location = new Point(BtnAbout.Location.X, BtnAbout.Location.Y + BtnAbout.Size.Height + BtnAbout.Size.Height / 2);
+            BtnExit.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
+
         }
 
         private void BtnPrice_Click(object sender, EventArgs e)
@@ -79,12 +80,12 @@ namespace Prauge_Parking
                 XmlManager.XmlDataWriter(xml.ParkingPrice, "Config.xml");
                 MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
             }
-           
+
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Prague Parking v2.0", "About");                        
+            MessageBox.Show("Prague Parking v2.0", "About");
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -94,7 +95,7 @@ namespace Prauge_Parking
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AddVehicle AddVeh = new();  // Går det att maximera denna?
+            LabelAddVehicle AddVeh = new();  // Går det att maximera denna?
             Controls.Add(AddVeh);
             AddVeh.BringToFront();
         }
@@ -102,7 +103,7 @@ namespace Prauge_Parking
         private void BtnMove_Click(object sender, EventArgs e)
         {
             MoveVehicle MovVeh = new();  // Går det att maximera denna?
-            Controls.Add(MovVeh);            
+            Controls.Add(MovVeh);
             MovVeh.BringToFront();
         }
 
@@ -113,15 +114,5 @@ namespace Prauge_Parking
             RemVeh.BringToFront();
         }
 
-        private void BtnHome_Click(object sender, EventArgs e)
-        {
-            //AddVehicle map = new();
-            //map.CreateControl();
-            //map.Show();
-            //map.BringToFront();
-
-            var home = new MainScreen();
-            home.Show();
-        }
     }
 }
