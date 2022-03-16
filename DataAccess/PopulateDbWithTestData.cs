@@ -23,16 +23,21 @@ namespace DataAccess.Models
             {
                 foreach (var item in testdata)
                 {
-                    DBPspot vehicle = new DBPspot();
+                    var Spot = Convert.ToInt32(item[0]);
+                    var Reg = Convert.ToString(item[1]);
+                    var Arrival = Convert.ToDateTime(item[2]);
+                    var Type = Convert.ToString(item[3]);
+                    DBPspot vehicle = new ();
 
                     vehicle.Spot = Convert.ToInt32(item[0]);
                     vehicle.Reg = Convert.ToString(item[1]);
                     vehicle.Arrival = Convert.ToDateTime(item[2]);
                     vehicle.Type = Convert.ToString(item[3]);
                     context.Pspots.Add(vehicle);
+
+                    context.SaveChanges();
                 }
 
-                context.SaveChanges();
             }
 
         }

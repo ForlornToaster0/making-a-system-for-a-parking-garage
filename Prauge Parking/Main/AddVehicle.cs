@@ -17,7 +17,6 @@ namespace Prauge_Parking.Main
     {
         public LabelAddVehicle()
         {
-
             InitializeComponent();
         }
 
@@ -49,7 +48,6 @@ namespace Prauge_Parking.Main
             this.Width = mainScreen.Size.Width+200;
             this.Height = ( mainScreen.Size.Height);
             this.BorderStyle = BorderStyle.None;
-            cmbTypeVehicle.DataSource = Enum.GetValues(typeof(VehicleTypeEnum));
            
 
         }

@@ -51,7 +51,7 @@ namespace Core
         public object[] DetailedList(ParkingSpots spot, Vehicle vehicles, int Prize)
         {
             double priceAmount = 0;
-            var span = Math.Round(DateTime.Now.Subtract(vehicles.ParkTime).TotalHours);
+            var span = Math.Round(DateTime.Now.Subtract(vehicles.ParkTime.AddMinutes(10)).TotalHours);
             if (vehicles.GetType() == typeof(Car))
             {
                 priceAmount = span * Prize;
