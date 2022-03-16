@@ -334,6 +334,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textBox1.Location = new System.Drawing.Point(712, 15);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";

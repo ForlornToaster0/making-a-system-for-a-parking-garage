@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -36,7 +38,6 @@
             this.BtnAdd = new FontAwesome.Sharp.IconButton();
             this.BtnPrice = new FontAwesome.Sharp.IconButton();
             this.LabConfig = new System.Windows.Forms.Label();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.PanelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,21 @@
             this.PanelMenu.Size = new System.Drawing.Size(200, 338);
             this.PanelMenu.TabIndex = 20;
             // 
+            // BtnHome
+            // 
+            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.BtnHome.IconColor = System.Drawing.Color.Black;
+            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnHome.IconSize = 16;
+            this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnHome.Location = new System.Drawing.Point(42, 209);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(100, 23);
+            this.BtnHome.TabIndex = 4;
+            this.BtnHome.Text = "Home";
+            this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            // 
             // BtnExit
             // 
             this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
@@ -67,7 +83,7 @@
             this.BtnExit.Location = new System.Drawing.Point(42, 295);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(100, 23);
-            this.BtnExit.TabIndex = 55;
+            this.BtnExit.TabIndex = 6;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -82,7 +98,7 @@
             this.BtnAbout.Location = new System.Drawing.Point(42, 266);
             this.BtnAbout.Name = "BtnAbout";
             this.BtnAbout.Size = new System.Drawing.Size(100, 23);
-            this.BtnAbout.TabIndex = 54;
+            this.BtnAbout.TabIndex = 5;
             this.BtnAbout.Text = "About";
             this.BtnAbout.UseVisualStyleBackColor = true;
             this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
@@ -97,7 +113,7 @@
             this.iconButton1.Location = new System.Drawing.Point(42, 160);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(100, 23);
-            this.iconButton1.TabIndex = 16;
+            this.iconButton1.TabIndex = 3;
             this.iconButton1.Text = "Remove vehicle";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.UseVisualStyleBackColor = true;
@@ -113,7 +129,7 @@
             this.BtnMove.Location = new System.Drawing.Point(42, 131);
             this.BtnMove.Name = "BtnMove";
             this.BtnMove.Size = new System.Drawing.Size(100, 23);
-            this.BtnMove.TabIndex = 15;
+            this.BtnMove.TabIndex = 2;
             this.BtnMove.Text = "Move vehicle";
             this.BtnMove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnMove.UseVisualStyleBackColor = true;
@@ -129,7 +145,7 @@
             this.BtnAdd.Location = new System.Drawing.Point(42, 102);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(100, 23);
-            this.BtnAdd.TabIndex = 14;
+            this.BtnAdd.TabIndex = 1;
             this.BtnAdd.Text = "Add vehicle";
             this.BtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -160,27 +176,13 @@
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
-            // BtnHome
-            // 
-            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.BtnHome.IconColor = System.Drawing.Color.Black;
-            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnHome.IconSize = 16;
-            this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHome.Location = new System.Drawing.Point(42, 209);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(100, 23);
-            this.BtnHome.TabIndex = 56;
-            this.BtnHome.Text = "Home";
-            this.BtnHome.UseVisualStyleBackColor = true;
-            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
-            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.PanelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

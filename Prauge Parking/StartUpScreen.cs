@@ -22,7 +22,7 @@ namespace Prauge_Parking
 {
     public partial class StartUpScreen : Form
     {
-        private AddVehicle addVehicle = new AddVehicle();
+        private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
         XML xml = new XML();
         public StartUpScreen()
@@ -97,7 +97,7 @@ namespace Prauge_Parking
         private void btnAddVehicle_Form_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AddVehicle addVehicleForm = new AddVehicle();
+            LabelAddVehicle addVehicleForm = new LabelAddVehicle();
             addVehicleForm.Show();
         }
 

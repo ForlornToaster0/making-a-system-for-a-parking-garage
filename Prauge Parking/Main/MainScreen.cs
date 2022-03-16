@@ -63,7 +63,7 @@ namespace Prauge_Parking
 
         private void BtnVehicles_Click(object sender, EventArgs e)
         {
-            AddVehicle map = new();
+            LabelAddVehicle map = new();
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
@@ -94,7 +94,7 @@ namespace Prauge_Parking
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AddVehicle AddVeh = new();  // Går det att maximera denna?
+            LabelAddVehicle AddVeh = new();  // Går det att maximera denna?
             Controls.Add(AddVeh);
             AddVeh.BringToFront();
         }

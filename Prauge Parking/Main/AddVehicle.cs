@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Prauge_Parking.Main
 {
-    public partial class AddVehicle : UserControl
+    public partial class LabelAddVehicle : UserControl
     {
-        public AddVehicle()
+        public LabelAddVehicle()
         {
             MainScreen mainScreen = new();
             this.Location = new Point(mainScreen.PanelMenu.Width + 30, 30);
