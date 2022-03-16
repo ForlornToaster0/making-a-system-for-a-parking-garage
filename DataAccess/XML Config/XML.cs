@@ -16,47 +16,41 @@ namespace Core.Configurations
             get { return _CZK; }
             set { _CZK = value; }
         }
-        private double _parkingPrice;
+        private string _parkingPrice;
         [XmlElement("Parking Spot Price")]
-        public double ParkingPrice
+        public string ParkingPrice
         {
             get { return _parkingPrice; }
             set { _parkingPrice = value; }
         }
-        private int _sizePerLot;
+        private string _sizePerLot;
         [XmlElement("Parking Spot Size")]
-        public int SizePerLot
+        public string SizePerLot
         {
             get { return _sizePerLot; }
             set { _sizePerLot = value; }
         }
-        private int _phouseSize; 
+        private string _phouseSize; 
         [XmlElement("Parkinghouse Size")]
-        public int PhouseSize
+        public string PhouseSize
         {
             get { return _phouseSize; }
             set { _phouseSize = value; }
         }
-        private int _carSize;
+        private string _carSize;
         [XmlElement("Car Size")]
-        public int CarSize
+        public string CarSize
         {
             get { return _carSize; }
             set { _carSize = value; }
         }
-        private int _mcSize;
+        private string _mcSize;
         [XmlElement("MC Size")]
-        public int MCSize
+        public string MCSize
         {
             get { return _mcSize; }
             set { _mcSize = value; }
         }
-
-        internal void ChangePrice(int newPrice)
-        {
-            ParkingPrice = newPrice;
-        }
-
     }
 
 
