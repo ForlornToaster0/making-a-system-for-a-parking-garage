@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.cmbTypeVehicle = new System.Windows.Forms.ComboBox();
             this.txtLicensePlate = new System.Windows.Forms.TextBox();
             this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.LabelVehicle = new System.Windows.Forms.Label();
+            this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(355, 198);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 22);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // cmbTypeVehicle
             // 
@@ -84,16 +74,31 @@
             this.LabelVehicle.TabIndex = 6;
             this.LabelVehicle.Text = "Add vehicle";
             // 
+            // BtnClose
+            // 
+            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.BtnClose.IconColor = System.Drawing.Color.Black;
+            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnClose.IconSize = 16;
+            this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClose.Location = new System.Drawing.Point(386, 232);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(75, 23);
+            this.BtnClose.TabIndex = 7;
+            this.BtnClose.Text = "Close";
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
             // LabelAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.LabelVehicle);
             this.Controls.Add(this.cmbTypeVehicle);
             this.Controls.Add(this.txtLicensePlate);
             this.Controls.Add(this.btnSaveVehicle);
-            this.Controls.Add(this.button1);
             this.Name = "LabelAddVehicle";
             this.Size = new System.Drawing.Size(475, 269);
             this.Load += new System.EventHandler(this.cmbForm_Load);
@@ -103,11 +108,10 @@
         }
 
         #endregion
-
-        private Button button1;
         private ComboBox cmbTypeVehicle;
         private TextBox txtLicensePlate;
         private Button btnSaveVehicle;
         private Label LabelVehicle;
+        private FontAwesome.Sharp.IconButton BtnClose;
     }
 }

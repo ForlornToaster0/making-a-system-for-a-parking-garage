@@ -32,7 +32,7 @@ namespace DataAccess.Models
                     context.Pspots.Add(vehicle);
                 }
 
-                context.SaveChanges();
+                //context.SaveChanges();
             }
 
         }

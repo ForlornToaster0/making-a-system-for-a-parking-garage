@@ -18,5 +18,10 @@ namespace Prauge_Parking
             this.Location = new Point(mainScreen.PanelMenu.Width + 30, 30);
             InitializeComponent();
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
