@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Core.Configurations
+namespace DataAccess
 {
     public class XML
     {
-        private int sizeX;
-        private int sizeY;
         
         private string _CZK;
         [XmlElement("Currency")]
@@ -16,16 +14,16 @@ namespace Core.Configurations
             get { return _CZK; }
             set { _CZK = value; }
         }
-        private string _parkingPrice;
+        private int _parkingPrice;
         [XmlElement("Parking Spot Price")]
-        public string ParkingPrice
+        public int ParkingPrice
         {
             get { return _parkingPrice; }
             set { _parkingPrice = value; }
         }
-        private string _sizePerLot;
+        private int _sizePerLot;
         [XmlElement("Parking Spot Size")]
-        public string SizePerLot
+        public int SizePerLot
         {
             get { return _sizePerLot; }
             set { _sizePerLot = value; }
@@ -51,6 +49,19 @@ namespace Core.Configurations
             get { return _mcSize; }
             set { _mcSize = value; }
         }
+        private int _sizeX;
+        public int SizeX
+        {
+            get { return _sizeX; }
+            set { _sizeX = value; }
+        }
+        private int _sizeY;
+        public int SizeY
+        {
+            get { return _sizeY; }
+            set { _sizeY = value; }
+        }
+
     }
 
 
