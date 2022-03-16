@@ -84,5 +84,10 @@ namespace Prauge_Parking.Main
                 txtLicensePlate.ForeColor = SystemColors.WindowText;
             }
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
