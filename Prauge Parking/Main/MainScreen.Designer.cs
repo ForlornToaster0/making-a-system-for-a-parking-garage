@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
+            this.BtnMap = new FontAwesome.Sharp.IconButton();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -44,7 +44,7 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.PanelMenu.Controls.Add(this.BtnHome);
+            this.PanelMenu.Controls.Add(this.BtnMap);
             this.PanelMenu.Controls.Add(this.BtnExit);
             this.PanelMenu.Controls.Add(this.BtnAbout);
             this.PanelMenu.Controls.Add(this.iconButton1);
@@ -54,25 +54,24 @@
             this.PanelMenu.Controls.Add(this.LabConfig);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(229, 451);
+            this.PanelMenu.Size = new System.Drawing.Size(200, 338);
             this.PanelMenu.TabIndex = 20;
             // 
-            // BtnHome
+            // BtnMap
             // 
-            this.BtnHome.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.BtnHome.IconColor = System.Drawing.Color.Black;
-            this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnHome.IconSize = 16;
-            this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHome.Location = new System.Drawing.Point(42, 209);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(100, 23);
-            this.BtnHome.TabIndex = 4;
-            this.BtnHome.Text = "Home";
-            this.BtnHome.UseVisualStyleBackColor = true;
-            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.BtnMap.IconChar = FontAwesome.Sharp.IconChar.GlobeEurope;
+            this.BtnMap.IconColor = System.Drawing.Color.Black;
+            this.BtnMap.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnMap.IconSize = 16;
+            this.BtnMap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnMap.Location = new System.Drawing.Point(37, 157);
+            this.BtnMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnMap.Name = "BtnMap";
+            this.BtnMap.Size = new System.Drawing.Size(88, 17);
+            this.BtnMap.TabIndex = 4;
+            this.BtnMap.Text = "Map";
+            this.BtnMap.UseVisualStyleBackColor = true;
             // 
             // BtnExit
             // 
@@ -81,9 +80,10 @@
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 16;
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(42, 295);
+            this.BtnExit.Location = new System.Drawing.Point(37, 221);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(100, 23);
+            this.BtnExit.Size = new System.Drawing.Size(88, 17);
             this.BtnExit.TabIndex = 6;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
@@ -96,9 +96,10 @@
             this.BtnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAbout.IconSize = 16;
             this.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAbout.Location = new System.Drawing.Point(42, 266);
+            this.BtnAbout.Location = new System.Drawing.Point(37, 200);
+            this.BtnAbout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAbout.Name = "BtnAbout";
-            this.BtnAbout.Size = new System.Drawing.Size(100, 23);
+            this.BtnAbout.Size = new System.Drawing.Size(88, 17);
             this.BtnAbout.TabIndex = 5;
             this.BtnAbout.Text = "About";
             this.BtnAbout.UseVisualStyleBackColor = true;
@@ -111,9 +112,10 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 16;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(42, 160);
+            this.iconButton1.Location = new System.Drawing.Point(37, 120);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(100, 23);
+            this.iconButton1.Size = new System.Drawing.Size(88, 17);
             this.iconButton1.TabIndex = 3;
             this.iconButton1.Text = "Remove vehicle";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,9 +129,10 @@
             this.BtnMove.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnMove.IconSize = 16;
             this.BtnMove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnMove.Location = new System.Drawing.Point(42, 131);
+            this.BtnMove.Location = new System.Drawing.Point(37, 98);
+            this.BtnMove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMove.Name = "BtnMove";
-            this.BtnMove.Size = new System.Drawing.Size(100, 23);
+            this.BtnMove.Size = new System.Drawing.Size(88, 17);
             this.BtnMove.TabIndex = 2;
             this.BtnMove.Text = "Move vehicle";
             this.BtnMove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -143,9 +146,10 @@
             this.BtnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAdd.IconSize = 16;
             this.BtnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAdd.Location = new System.Drawing.Point(42, 102);
+            this.BtnAdd.Location = new System.Drawing.Point(37, 76);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(100, 23);
+            this.BtnAdd.Size = new System.Drawing.Size(88, 17);
             this.BtnAdd.TabIndex = 1;
             this.BtnAdd.Text = "Add vehicle";
             this.BtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,10 +163,9 @@
             this.BtnPrice.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnPrice.IconSize = 16;
             this.BtnPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnPrice.Location = new System.Drawing.Point(48, 97);
-            this.BtnPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnPrice.Location = new System.Drawing.Point(42, 73);
             this.BtnPrice.Name = "BtnPrice";
-            this.BtnPrice.Size = new System.Drawing.Size(114, 31);
+            this.BtnPrice.Size = new System.Drawing.Size(100, 23);
             this.BtnPrice.TabIndex = 0;
             this.BtnPrice.Text = "Edit price";
             this.BtnPrice.UseVisualStyleBackColor = true;
@@ -172,17 +175,17 @@
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(14, 12);
+            this.LabConfig.Location = new System.Drawing.Point(12, 9);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(217, 36);
+            this.LabConfig.Size = new System.Drawing.Size(175, 29);
             this.LabConfig.TabIndex = 13;
             this.LabConfig.Text = "Config car park";
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.PanelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -206,6 +209,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnAbout;
-        private FontAwesome.Sharp.IconButton BtnHome;
+        private FontAwesome.Sharp.IconButton BtnMap;
     }
 }
