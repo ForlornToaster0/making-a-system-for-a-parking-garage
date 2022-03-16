@@ -54,11 +54,14 @@
             // 
             // txtLicensePlate
             // 
+            this.txtLicensePlate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtLicensePlate.Location = new System.Drawing.Point(127, 4);
             this.txtLicensePlate.Name = "txtLicensePlate";
             this.txtLicensePlate.Size = new System.Drawing.Size(142, 23);
-            this.txtLicensePlate.TabIndex = 4;
-            this.txtLicensePlate.Text = "License Plate Number";
+            this.txtLicensePlate.TabIndex = 1;
+            this.txtLicensePlate.Text = "License Plate";
+            this.txtLicensePlate.TextChanged += new System.EventHandler(this.txtLicensePlate_TextChanged);
+            this.txtLicensePlate.Enter += new System.EventHandler(this.txtLicensePlate_Text);
             // 
             // btnSaveVehicle
             // 
@@ -68,18 +71,20 @@
             this.btnSaveVehicle.TabIndex = 3;
             this.btnSaveVehicle.Text = "Add";
             this.btnSaveVehicle.UseVisualStyleBackColor = true;
+            this.btnSaveVehicle.Click += new System.EventHandler(this.btnSaveVehicle_Click);
             // 
-            // Addingvechails
+            // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.cmbTypeVehicle);
             this.Controls.Add(this.txtLicensePlate);
             this.Controls.Add(this.btnSaveVehicle);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Addingvechails";
-            this.Size = new System.Drawing.Size(477, 271);
+            this.Name = "AddVehicle";
+            this.Size = new System.Drawing.Size(475, 269);
+            this.Load += new System.EventHandler(this.cmbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

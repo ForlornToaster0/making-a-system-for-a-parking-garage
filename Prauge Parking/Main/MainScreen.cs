@@ -12,15 +12,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using Core.Configurations;
+using DataAccess.Data;
 
 namespace Prauge_Parking
 {
     public partial class MainScreen : Form
     {
+        XML xml = new XML();
+
         public MainScreen()
         {
+            testContext context = new();
+            context.Database.EnsureCreated();
             InitializeComponent();
-           
+
+            string fileName = "Config.xml";
+
+            if (xml.ParkingPrice == 0)
+            {
+                xml.ParkingPrice = 20;
+            }
+            xml.CZK = "CZK";
+            xml.CarSize = 4;
+            xml.MCSize = 2;
+            xml.SizePerLot = 4;
+            xml.PhouseSize = 100;
+            XmlManager.XmlDataWriter(xml, "Config.xml");
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
@@ -73,7 +91,14 @@ namespace Prauge_Parking
 
         private void BtnPrice_Click(object sender, EventArgs e)
         {
-            string Price = Interaction.InputBox("New price?", "Title", "Default Text");
+            string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
+            if (price != "")
+            {
+                xml.ParkingPrice = Convert.ToDouble(price);
+                XmlManager.XmlDataWriter(xml, "Config.xml");
+                MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
+            }
+           
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
@@ -109,15 +134,13 @@ namespace Prauge_Parking
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            AddVehicle map = new();
-            map.CreateControl();
-            map.Show();
-            map.BringToFront();
+            //AddVehicle map = new();
+            //map.CreateControl();
+            //map.Show();
+            //map.BringToFront();
 
-
-
-            //var home = new Map();
-            //home.BringToFront();
+            var home = new MainScreen();
+            home.Show();
         }
     }
 }
