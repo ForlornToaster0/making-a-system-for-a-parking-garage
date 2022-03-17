@@ -14,7 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess.Configurations;
 using System.Diagnostics;
 using Prauge_Parking.Main;
 
@@ -54,37 +53,37 @@ namespace Prauge_Parking
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            try
-            {
-                xml.CZK = "CZK";
-                xml.CarSize = 4;
-                xml.MCSize = 2;
-                // xml.mPrice = Convert.ToDouble(McPrice.Text);
-                xml.cPrice = Convert.ToDouble(PriceHour.Text);
-                xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
-                xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
-                XmlManager.XmlDataWriter(xml, "Config.xml");
-                MessageBox.Show("Data Saved", "XML file is now updated");
+            //try
+            //{
+            //    xml.CZK = "CZK";
+            //    xml.CarSize = 4;
+            //    xml.MCSize = 2;
+            //    // xml.mPrice = Convert.ToDouble(McPrice.Text);
+            //    xml.cPrice = Convert.ToDouble(PriceHour.Text);
+            //    xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
+            //    xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
+            //    XmlManager.XmlDataWriter(xml, "Config.xml");
+            //    MessageBox.Show("Data Saved", "XML file is now updated");
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error " + ex.ToString());
-                throw;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error " + ex.ToString());
+            //    throw;
+            //}
         }
 
         private void btnShowConfig_Click(object sender, EventArgs e)
         {
-            DataSet dataset = new DataSet();
-            dataset.ReadXml("Config.xml");
-            dataGridView1.DataSource = dataset.Tables[0];
+            //DataSet dataset = new DataSet();
+            //dataset.ReadXml("Config.xml");
+            //dataGridView1.DataSource = dataset.Tables[0];
 
-            xml = XmlManager.XmlDataReader("Config.xml");
-            // McPrice.Text = Convert.ToString(xml.mPrice);
-            PriceHour.Text = Convert.ToString(xml.cPrice);
-            SizeLot.Text = Convert.ToString(xml.SizePerLot);
-            PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
+            //xml = XmlManager.XmlDataReader("Config.xml");
+            //// McPrice.Text = Convert.ToString(xml.mPrice);
+            //PriceHour.Text = Convert.ToString(xml.cPrice);
+            //SizeLot.Text = Convert.ToString(xml.SizePerLot);
+            //PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
@@ -106,7 +105,7 @@ namespace Prauge_Parking
 
         private void BtnOpenLocation_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", @"c:\temp"); // 
+            Process.Start("explorer.exe", @"c:\"); // Kan denna peka mot xml-filens mapp?
         }
     }
 }

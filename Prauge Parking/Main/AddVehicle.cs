@@ -52,6 +52,11 @@ namespace Prauge_Parking.Main
 
         }
 
+        private void CmbForm_Load(object sender, EventArgs e)
+        {
+            cmbTypeVehicle.DataSource = Enum.GetValues(typeof(VehicleTypeEnum));
+        }
+
         private void txtLicensePlate_TextChanged(object sender, EventArgs e)
         {
             txtLicensePlate.Text = txtLicensePlate.Text.ToUpper();

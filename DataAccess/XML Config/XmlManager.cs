@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Core.Configurations
+namespace DataAccess
 {
     public class XmlManager
     {

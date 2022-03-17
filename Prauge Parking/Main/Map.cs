@@ -16,15 +16,18 @@ namespace Prauge_Parking.Main
 {
     public partial class Map : UserControl
     {
+        XML xml = new XML();
         public Map()
         {
             InitializeComponent();
+
+            xml = XmlManager.XmlDataReader("Config.xml"); // Läser in xml filen för kolla priset vid "xml.ParkingPrice, xml.SizePerLot, xml.sizeY/sizeX".
         }
 
         private void Map_Load(object sender, EventArgs e)
         {
             MapGenerating mapGenerating = new();
-            Phouse phouse = new(10, 10, 100);
+            Phouse phouse = new(xml.SizeX, xml.SizeY, 100); //(xml)X & Y default size 10.
             MainScreen mainScreen = new();
             Inzilasing inizilasing = new();
 
@@ -44,12 +47,12 @@ namespace Prauge_Parking.Main
 
             List<ParkingSpots> parkingSpots = mapInfo.parkings();
             Spot_inizilase spot_Inizilase = new();
-            spot_Inizilase.SpotIni(parkingSpots, vehicles, maps, 4);
+            spot_Inizilase.SpotIni(parkingSpots, vehicles, maps, xml.SizePerLot); //(xml) default SizePerLot is 4.
             if (parkingSpots.Count > 0)
             {
                 for (int i = 0; i < parkingSpots.Count; i++)
                 {
-                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], 20);
+                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], xml.ParkingPrice); //(xml) default parkingprice is 20.
                     DetailedView.Rows.Add(rows);
                 }
             }

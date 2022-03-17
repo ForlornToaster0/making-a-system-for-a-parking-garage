@@ -101,7 +101,7 @@
             this.Controls.Add(this.btnSaveVehicle);
             this.Name = "LabelAddVehicle";
             this.Size = new System.Drawing.Size(475, 269);
-            this.Load += new System.EventHandler(this.cmbForm_Load);
+            this.Load += new System.EventHandler(this.CmbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

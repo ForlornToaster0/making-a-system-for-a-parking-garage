@@ -31,5 +31,10 @@ namespace Prauge_Parking
             this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
             this.BorderStyle = BorderStyle.None;
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

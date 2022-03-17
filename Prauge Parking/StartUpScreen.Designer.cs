@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartUpScreen));
             this.LabConfig = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.btnAddVehicle_Form = new System.Windows.Forms.Button();
+            this.BtnMainScreen = new System.Windows.Forms.Button();
             this.BtnCreate = new System.Windows.Forms.Button();
             this.IconSpots = new FontAwesome.Sharp.IconPictureBox();
             this.LabelSpots = new System.Windows.Forms.Label();
@@ -77,23 +77,24 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
-            this.PanelMenu.Controls.Add(this.btnAddVehicle_Form);
+            this.PanelMenu.Controls.Add(this.BtnMainScreen);
             this.PanelMenu.Controls.Add(this.LabConfig);
+            this.PanelMenu.Controls.Add(this.BtnExit);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(200, 466);
             this.PanelMenu.TabIndex = 19;
             // 
-            // btnAddVehicle_Form
+            // BtnMainScreen
             // 
-            this.btnAddVehicle_Form.Location = new System.Drawing.Point(44, 58);
-            this.btnAddVehicle_Form.Name = "btnAddVehicle_Form";
-            this.btnAddVehicle_Form.Size = new System.Drawing.Size(109, 31);
-            this.btnAddVehicle_Form.TabIndex = 55;
-            this.btnAddVehicle_Form.Text = "Add Vehicle";
-            this.btnAddVehicle_Form.UseVisualStyleBackColor = true;
-            this.btnAddVehicle_Form.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
+            this.BtnMainScreen.Location = new System.Drawing.Point(37, 58);
+            this.BtnMainScreen.Name = "BtnMainScreen";
+            this.BtnMainScreen.Size = new System.Drawing.Size(109, 31);
+            this.BtnMainScreen.TabIndex = 55;
+            this.BtnMainScreen.Text = "MainScreen";
+            this.BtnMainScreen.UseVisualStyleBackColor = true;
+            this.BtnMainScreen.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
             // 
             // BtnCreate
             // 
@@ -309,7 +310,7 @@
             this.BtnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAbout.IconSize = 16;
             this.BtnAbout.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnAbout.Location = new System.Drawing.Point(658, 431);
+            this.BtnAbout.Location = new System.Drawing.Point(37, 200);
             this.BtnAbout.Name = "BtnAbout";
             this.BtnAbout.Size = new System.Drawing.Size(100, 23);
             this.BtnAbout.TabIndex = 52;
@@ -324,7 +325,7 @@
             this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnExit.IconSize = 16;
             this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(764, 431);
+            this.BtnExit.Location = new System.Drawing.Point(37, 227);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(100, 23);
             this.BtnExit.TabIndex = 53;
@@ -349,7 +350,6 @@
             this.ClientSize = new System.Drawing.Size(871, 466);
             this.Controls.Add(this.BtnOpenLocation);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnAbout);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LabelY);
@@ -412,7 +412,7 @@
         private FontAwesome.Sharp.IconButton BtnAbout;
         private FontAwesome.Sharp.IconButton BtnExit;
         private TextBox textBox1;
-        private Button btnAddVehicle_Form;
+        private Button BtnMainScreen;
         private Button BtnOpenLocation;
     }
 }
