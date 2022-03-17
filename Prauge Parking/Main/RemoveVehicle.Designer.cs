@@ -31,12 +31,11 @@
             this.BtnRemoveVehicle = new System.Windows.Forms.Button();
             this.BoxLicensePlate = new System.Windows.Forms.TextBox();
             this.LabelRemoveVehicle = new System.Windows.Forms.Label();
-            this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // BtnRemoveVehicle
             // 
-            this.BtnRemoveVehicle.Location = new System.Drawing.Point(227, 65);
+            this.BtnRemoveVehicle.Location = new System.Drawing.Point(333, 65);
             this.BtnRemoveVehicle.Name = "BtnRemoveVehicle";
             this.BtnRemoveVehicle.Size = new System.Drawing.Size(100, 23);
             this.BtnRemoveVehicle.TabIndex = 1;
@@ -61,28 +60,11 @@
             this.LabelRemoveVehicle.TabIndex = 4;
             this.LabelRemoveVehicle.Text = "Remove vehicle";
             // 
-            // BtnClose
-            // 
-            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.BtnClose.IconColor = System.Drawing.Color.Black;
-            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnClose.IconSize = 16;
-            this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClose.Location = new System.Drawing.Point(386, 232);
-            this.BtnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(66, 17);
-            this.BtnClose.TabIndex = 8;
-            this.BtnClose.Text = "Close";
-            this.BtnClose.UseVisualStyleBackColor = true;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
             // RemoveVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.LabelRemoveVehicle);
             this.Controls.Add(this.BtnRemoveVehicle);
             this.Controls.Add(this.BoxLicensePlate);
@@ -99,6 +81,5 @@
         private Button BtnRemoveVehicle;
         private TextBox BoxLicensePlate;
         private Label LabelRemoveVehicle;
-        private FontAwesome.Sharp.IconButton BtnClose;
     }
 }

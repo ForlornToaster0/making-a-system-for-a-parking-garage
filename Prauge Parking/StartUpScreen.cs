@@ -28,11 +28,11 @@ namespace Prauge_Parking
         {
             testContext context = new();
             context.Database.EnsureCreated();
-            if (context.Pspots.Count() == 0)
-            {
-                PopulateDbWithTestData populateDbWithTestData = new();
-                populateDbWithTestData.Populate();
-            }
+            //if (context.Pspots.Count() == 0)
+            //{
+            //    PopulateDbWithTestData populateDbWithTestData = new();
+            //    populateDbWithTestData.Populate();
+            //}
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -94,18 +94,18 @@ namespace Prauge_Parking
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnAddVehicle_Form_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LabelAddVehicle addVehicleForm = new LabelAddVehicle();
-            addVehicleForm.Show();
-        }
+        }       
 
         private void BtnOpenLocation_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", @"c:\"); // Kan denna peka mot xml-filens mapp?
+            Process.Start("explorer.exe", "/select," + Directory.GetCurrentDirectory() + "Config.txt"); // Kan denna peka mot xml-filens mapp?
+            
+        }
+
+        private void BtnMainScreen_Click(object sender, EventArgs e)
+        {
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.Show();
         }
     }
 }

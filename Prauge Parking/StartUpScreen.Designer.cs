@@ -95,7 +95,7 @@
             this.BtnMainScreen.Text = "MainScreen";
             this.TipConfig.SetToolTip(this.BtnMainScreen, "Return to MainScreen");
             this.BtnMainScreen.UseVisualStyleBackColor = true;
-            this.BtnMainScreen.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
+            this.BtnMainScreen.Click += new System.EventHandler(this.BtnMainScreen_Click);
             // 
             // BtnExit
             // 

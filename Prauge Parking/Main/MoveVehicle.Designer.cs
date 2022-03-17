@@ -32,7 +32,6 @@
             this.BtnMoveVehicle = new System.Windows.Forms.Button();
             this.BoxPspot = new System.Windows.Forms.TextBox();
             this.LabelMoveVehicle = new System.Windows.Forms.Label();
-            this.BtnClose = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // BoxLicensePlate
@@ -45,7 +44,7 @@
             // 
             // BtnMoveVehicle
             // 
-            this.BtnMoveVehicle.Location = new System.Drawing.Point(227, 65);
+            this.BtnMoveVehicle.Location = new System.Drawing.Point(333, 65);
             this.BtnMoveVehicle.Name = "BtnMoveVehicle";
             this.BtnMoveVehicle.Size = new System.Drawing.Size(100, 23);
             this.BtnMoveVehicle.TabIndex = 2;
@@ -54,7 +53,7 @@
             // 
             // BoxPspot
             // 
-            this.BoxPspot.Location = new System.Drawing.Point(121, 65);
+            this.BoxPspot.Location = new System.Drawing.Point(227, 65);
             this.BoxPspot.Name = "BoxPspot";
             this.BoxPspot.Size = new System.Drawing.Size(100, 23);
             this.BoxPspot.TabIndex = 1;
@@ -70,28 +69,11 @@
             this.LabelMoveVehicle.TabIndex = 3;
             this.LabelMoveVehicle.Text = "Move vehicle";
             // 
-            // BtnClose
-            // 
-            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.BtnClose.IconColor = System.Drawing.Color.Black;
-            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnClose.IconSize = 16;
-            this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClose.Location = new System.Drawing.Point(386, 232);
-            this.BtnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(66, 17);
-            this.BtnClose.TabIndex = 9;
-            this.BtnClose.Text = "Close";
-            this.BtnClose.UseVisualStyleBackColor = true;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
             // MoveVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.LabelMoveVehicle);
             this.Controls.Add(this.BoxPspot);
             this.Controls.Add(this.BtnMoveVehicle);
@@ -110,6 +92,5 @@
         private Button BtnMoveVehicle;
         private TextBox BoxPspot;
         private Label LabelMoveVehicle;
-        private FontAwesome.Sharp.IconButton BtnClose;
     }
 }

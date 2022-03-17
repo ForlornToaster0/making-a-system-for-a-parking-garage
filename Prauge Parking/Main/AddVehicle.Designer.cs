@@ -32,7 +32,7 @@
             this.txtLicensePlate = new System.Windows.Forms.TextBox();
             this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.LabelVehicle = new System.Windows.Forms.Label();
-            this.BtnClose = new FontAwesome.Sharp.IconButton();
+            this.BoxPspot = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cmbTypeVehicle
@@ -56,7 +56,7 @@
             // 
             // btnSaveVehicle
             // 
-            this.btnSaveVehicle.Location = new System.Drawing.Point(227, 65);
+            this.btnSaveVehicle.Location = new System.Drawing.Point(333, 65);
             this.btnSaveVehicle.Name = "btnSaveVehicle";
             this.btnSaveVehicle.Size = new System.Drawing.Size(100, 23);
             this.btnSaveVehicle.TabIndex = 2;
@@ -74,27 +74,20 @@
             this.LabelVehicle.TabIndex = 6;
             this.LabelVehicle.Text = "Add vehicle";
             // 
-            // BtnClose
+            // BoxPspot
             // 
-            this.BtnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.BtnClose.IconColor = System.Drawing.Color.Black;
-            this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnClose.IconSize = 16;
-            this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClose.Location = new System.Drawing.Point(386, 232);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(75, 23);
-            this.BtnClose.TabIndex = 7;
-            this.BtnClose.Text = "Close";
-            this.BtnClose.UseVisualStyleBackColor = true;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.BoxPspot.Location = new System.Drawing.Point(227, 65);
+            this.BoxPspot.Name = "BoxPspot";
+            this.BoxPspot.Size = new System.Drawing.Size(100, 23);
+            this.BoxPspot.TabIndex = 7;
+            this.BoxPspot.Text = "Pspot";
             // 
             // LabelAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.BoxPspot);
             this.Controls.Add(this.LabelVehicle);
             this.Controls.Add(this.cmbTypeVehicle);
             this.Controls.Add(this.txtLicensePlate);
@@ -112,6 +105,6 @@
         private TextBox txtLicensePlate;
         private Button btnSaveVehicle;
         private Label LabelVehicle;
-        private FontAwesome.Sharp.IconButton BtnClose;
+        private TextBox BoxPspot;
     }
 }
