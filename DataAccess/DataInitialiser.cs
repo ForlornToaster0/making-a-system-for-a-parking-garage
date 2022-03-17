@@ -10,6 +10,17 @@ namespace DataAccess
 {
     public class DataInitialiser
     {
+        public void update(string newReg,int newPos)
+        {
+            testContext context = new();
+
+            var test = context.Pspots.SingleOrDefault(p => p.Reg == newReg);
+            if (test != null)
+            {
+                test.Spot = newPos;
+                context.SaveChanges();
+            }
+        }
         public void InsertVehicle(string regNumber, int type, int spot)
         {
             using (var db = new testContext())

@@ -144,7 +144,6 @@ namespace Prauge_Parking
 
         private void BtnMap_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Map map = new();
             this.Controls.Add(map);
             map.CreateControl();

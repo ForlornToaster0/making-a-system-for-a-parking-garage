@@ -1,4 +1,7 @@
-﻿using Prauge_Parking.Main;
+﻿using DataAccess;
+using DataAccess.Data;
+using DataAccess.Models;
+using Prauge_Parking.Main;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +24,7 @@ namespace Prauge_Parking
 
         private void MoveVehicle_Load(object sender, EventArgs e)
         {
-
+            
             MainScreen mainScreen = new();
 
             Map map = new();
@@ -32,9 +35,10 @@ namespace Prauge_Parking
             this.BorderStyle = BorderStyle.None;
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
+        private void BtnMoveVehicle_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            DataInitialiser dataInitialiser = new();
+            dataInitialiser.update(BoxLicensePlate.Text,int.Parse(BoxPspot.Text));
         }
     }
 }

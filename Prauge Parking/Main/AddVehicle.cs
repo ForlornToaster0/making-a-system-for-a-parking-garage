@@ -18,6 +18,14 @@ namespace Prauge_Parking.Main
         public LabelAddVehicle()
         {
             InitializeComponent();
+            Map map = new();
+            MainScreen mainScreen = new();
+
+
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
+            this.Width = mainScreen.Size.Width + 200;
+            this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
+            this.BorderStyle = BorderStyle.None;
         }
 
         private void btnSaveVehicle_Click(object sender, EventArgs e)
@@ -39,29 +47,36 @@ namespace Prauge_Parking.Main
                         var tester1 = pSpots.Select(p => p.Position).ToList();
                         for (int i = 0; i < pSpots.Count; i++)
                         {
-                            if (pSpots [i].Position == spot && vehicles[i].GetType() == typeof(MC) 
-                                && (int)cmbTypeVehicle.SelectedItem == 1 && tester == 2)
+                            if (pSpots[i].Position == spot && vehicles[i].GetType() == typeof(MC)
+                                && (int)cmbTypeVehicle.SelectedItem == 1 && tester != 2)
                             {
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+
+                                MessageBox.Show("Inserted vehicle to database!", "Success");
                                 break;
                             }
-                            else if(tester1.Contains(spot))
+                            else if (tester1.Contains(spot))
                             {
+                                int oldspot = spot;
                                 while (tester1.Contains(spot))
                                 {
                                     spot++;
-                                    data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
-                                    break;
+                                  
                                 }
+
+                                MessageBox.Show($"moved from {oldspot} to {spot}");
+                                data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+                                break;
                             }
-                            else if (pSpots.Count == i)
+                            else
                             {
-                                MessageBox.Show("Error");
+                                data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+
+                                MessageBox.Show("Inserted vehicle to database!", "Success");
                             }
                         }
                     }
                     txtLicensePlate.Text = "";
-                    MessageBox.Show("Inserted vehicle to database!", "Success");
                 }
                 catch
                 {
@@ -72,15 +87,8 @@ namespace Prauge_Parking.Main
         }
         private void cmbForm_Load(object sender, EventArgs e)
         {
-            Map map = new();
-            MainScreen mainScreen = new();
-        
-
-            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
-            this.Width = mainScreen.Size.Width+200;
-           this.Height = ( map.DetailedView.Location.Y-10+ map.DetailedView.Location.Y/3);
-            this.BorderStyle = BorderStyle.None;
            
+
 
         }
 
