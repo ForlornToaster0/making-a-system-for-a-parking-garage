@@ -33,6 +33,7 @@
             this.LabConfig = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.BtnMainScreen = new System.Windows.Forms.Button();
+            this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.BtnCreate = new System.Windows.Forms.Button();
             this.IconSpots = new FontAwesome.Sharp.IconPictureBox();
             this.LabelSpots = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.LabelY = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
-            this.BtnExit = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
@@ -68,11 +68,11 @@
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(12, 9);
+            this.LabConfig.Location = new System.Drawing.Point(37, 12);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(175, 29);
+            this.LabConfig.Size = new System.Drawing.Size(83, 29);
             this.LabConfig.TabIndex = 13;
-            this.LabConfig.Text = "Config car park";
+            this.LabConfig.Text = "Config";
             // 
             // PanelMenu
             // 
@@ -88,13 +88,29 @@
             // 
             // BtnMainScreen
             // 
-            this.BtnMainScreen.Location = new System.Drawing.Point(37, 58);
+            this.BtnMainScreen.Location = new System.Drawing.Point(42, 73);
             this.BtnMainScreen.Name = "BtnMainScreen";
             this.BtnMainScreen.Size = new System.Drawing.Size(109, 31);
-            this.BtnMainScreen.TabIndex = 55;
+            this.BtnMainScreen.TabIndex = 9;
             this.BtnMainScreen.Text = "MainScreen";
+            this.TipConfig.SetToolTip(this.BtnMainScreen, "Return to MainScreen");
             this.BtnMainScreen.UseVisualStyleBackColor = true;
             this.BtnMainScreen.Click += new System.EventHandler(this.btnAddVehicle_Form_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.BtnExit.IconColor = System.Drawing.Color.Black;
+            this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnExit.IconSize = 16;
+            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExit.Location = new System.Drawing.Point(37, 227);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(100, 23);
+            this.BtnExit.TabIndex = 11;
+            this.BtnExit.Text = "Exit";
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // BtnCreate
             // 
@@ -260,9 +276,9 @@
             this.BtnOpenLocation.Location = new System.Drawing.Point(206, 227);
             this.BtnOpenLocation.Name = "BtnOpenLocation";
             this.BtnOpenLocation.Size = new System.Drawing.Size(154, 23);
-            this.BtnOpenLocation.TabIndex = 55;
+            this.BtnOpenLocation.TabIndex = 8;
             this.BtnOpenLocation.Text = "Open location";
-            this.TipConfig.SetToolTip(this.BtnOpenLocation, "Shows config file");
+            this.TipConfig.SetToolTip(this.BtnOpenLocation, "Opens config location");
             this.BtnOpenLocation.UseVisualStyleBackColor = true;
             this.BtnOpenLocation.Click += new System.EventHandler(this.BtnOpenLocation_Click);
             // 
@@ -313,25 +329,10 @@
             this.BtnAbout.Location = new System.Drawing.Point(37, 200);
             this.BtnAbout.Name = "BtnAbout";
             this.BtnAbout.Size = new System.Drawing.Size(100, 23);
-            this.BtnAbout.TabIndex = 52;
+            this.BtnAbout.TabIndex = 10;
             this.BtnAbout.Text = "About";
             this.BtnAbout.UseVisualStyleBackColor = true;
             this.BtnAbout.Click += new System.EventHandler(this.BtnAbout_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.BtnExit.IconColor = System.Drawing.Color.Black;
-            this.BtnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnExit.IconSize = 16;
-            this.BtnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExit.Location = new System.Drawing.Point(37, 227);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(100, 23);
-            this.BtnExit.TabIndex = 53;
-            this.BtnExit.Text = "Exit";
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // textBox1
             // 

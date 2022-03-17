@@ -77,7 +77,7 @@
             this.BtnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnClose.IconSize = 16;
             this.BtnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClose.Location = new System.Drawing.Point(338, 175);
+            this.BtnClose.Location = new System.Drawing.Point(386, 232);
             this.BtnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(66, 17);
