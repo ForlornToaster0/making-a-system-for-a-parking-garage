@@ -22,7 +22,7 @@ namespace Prauge_Parking
 
                     Pspots pspots = new();
                     map[i] = pspots.Modular(x, mapLenght);
-                    map[i].Text = $"{i}";
+                    map[i].Text = $"{i+1}";
                     map[i].BackColor = Color.White;
                     map[i].BringToFront();
                     map[i].Name = newName;
