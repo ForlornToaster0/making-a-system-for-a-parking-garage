@@ -176,11 +176,11 @@
             // 
             this.LabConfig.AutoSize = true;
             this.LabConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabConfig.Location = new System.Drawing.Point(12, 9);
+            this.LabConfig.Location = new System.Drawing.Point(37, 12);
             this.LabConfig.Name = "LabConfig";
-            this.LabConfig.Size = new System.Drawing.Size(175, 29);
+            this.LabConfig.Size = new System.Drawing.Size(104, 29);
             this.LabConfig.TabIndex = 13;
-            this.LabConfig.Text = "Config car park";
+            this.LabConfig.Text = "Car park";
             // 
             // MainScreen
             // 
