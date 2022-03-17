@@ -92,8 +92,8 @@ namespace Prauge_Parking
 
         private void BtnOpenLocation_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", "/select," + Directory.GetCurrentDirectory() + "Config.txt"); // Kan denna peka mot xml-filens mapp?
-            
+            Process.Start("explorer.exe",  Directory.GetCurrentDirectory()); // Kan denna välja Config.xml?
+            // "/select," + + "Config.txt"
         }
 
         private void BtnMainScreen_Click(object sender, EventArgs e)
