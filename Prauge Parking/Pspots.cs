@@ -14,9 +14,9 @@ namespace Prauge_Parking
             IconButton spot = new();
             
 
-            spot.Size = new Size(80, 40);
+            spot.Size = new Size(70, 30);
          
-            spot.Location = new Point(100 * xPos, 50 * yPos);
+            spot.Location = new Point(80 * xPos, 30 * yPos);
             
            
             return spot;

@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using Core.Configurations;
 using DataAccess.Data;
 
 namespace Prauge_Parking
@@ -26,19 +25,19 @@ namespace Prauge_Parking
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();
-
-            string fileName = "Config.xml";
-
-            if (!File.Exists(fileName))
+            if (!File.Exists("Config.xml"))
             {
                 xml.ParkingPrice = 20;
-                xml.CZK = "CZK";
-                xml.CarSize = 4;
-                xml.MCSize = 2;
+                xml.CarSize = 2;
                 xml.SizePerLot = 4;
+                xml.MCSize = 2;
+                xml.CZK = "CZK";
                 xml.PhouseSize = 100;
+                xml.SizeX = 10;
+                xml.SizeY = 10;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
             }
+            xml = XmlManager.XmlDataReader("Config.xml");
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
@@ -76,9 +75,22 @@ namespace Prauge_Parking
             string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
             if (price != "")
             {
-                xml.ParkingPrice = Convert.ToDouble(price);
-                XmlManager.XmlDataWriter(xml.ParkingPrice, "Config.xml");
+                try
+                {
+                    xml.ParkingPrice = Convert.ToInt32(price);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error " + ex.ToString());
+                    throw;
+                }
+                xml.ParkingPrice = Convert.ToInt32(price);
+                XmlManager.XmlDataWriter(xml, "Config.xml");
                 MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
+            }
+            if (File.Exists("Config.xml"))
+            {
+                xml = XmlManager.XmlDataReader("Config.xml");
             }
 
         }

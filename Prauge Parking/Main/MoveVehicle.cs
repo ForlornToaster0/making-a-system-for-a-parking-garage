@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prauge_Parking.Main;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,6 @@ namespace Prauge_Parking
         public MoveVehicle()
         {
             MainScreen mainScreen = new();
-            this.Location = new Point(mainScreen.PanelMenu.Width + 30, 30);
             InitializeComponent();
         }
 
@@ -24,10 +24,11 @@ namespace Prauge_Parking
 
             MainScreen mainScreen = new();
 
-
+            Map map = new();
             this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
             this.Width = mainScreen.Size.Width + 200;
-            this.Height = (mainScreen.Size.Height);
+
+            this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
             this.BorderStyle = BorderStyle.None;
         }
 

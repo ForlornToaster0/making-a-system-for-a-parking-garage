@@ -6,6 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Models
 {
+    public enum VehicleTypeEnum
+    {
+        MC = 1, CAR = 2
+    }
 
     [Table("PSpot")]
     public partial class DBPspot
