@@ -27,7 +27,7 @@ namespace Prauge_Parking.Main
         private void Map_Load(object sender, EventArgs e)
         {
             MapGenerating mapGenerating = new();
-            Phouse phouse = new(xml.SizeX, xml.SizeY, 100); //(xml)X & Y default size 10.
+            Phouse phouse = new(xml.SizeX, xml.SizeY, xml.PhouseSize); //(xml)X & Y default size 10.
             MainScreen mainScreen = new();
             Inzilasing inizilasing = new();
 

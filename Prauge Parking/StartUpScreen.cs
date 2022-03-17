@@ -21,6 +21,7 @@ namespace Prauge_Parking
 {
     public partial class StartUpScreen : Form
     {
+        XML xml = new XML();
         private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
         public StartUpScreen()
@@ -47,34 +48,34 @@ namespace Prauge_Parking
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    xml.CZK = "CZK";
-            //    xml.CarSize = 4;
-            //    xml.MCSize = 2;
-            //    // xml.mPrice = Convert.ToDouble(McPrice.Text);
-            //    xml.cPrice = Convert.ToDouble(PriceHour.Text);
-            //    xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
-            //    xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
-            //    XmlManager.XmlDataWriter(xml, "Config.xml");
-            //    MessageBox.Show("Data Saved", "XML file is now updated");
+            try
+            {
+                xml.CarSize = 4;
+                xml.MCSize = 2;
+                // xml.mPrice = Convert.ToDouble(McPrice.Text);
+                xml.ParkingPrice = Convert.ToInt32(PriceHour.Text);
+                xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
+                xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
+                xml.SizeX = Convert.ToInt32(XAxis.Text);
+                xml.SizeY = Convert.ToInt32(YAxis.Text);
+                XmlManager.XmlDataWriter(xml, "Config.xml");
+                MessageBox.Show("Data Saved", "XML file is now updated");
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error " + ex.ToString());
-            //    throw;
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString());
+            }
         }
 
         private void btnShowConfig_Click(object sender, EventArgs e)
         {
-            //DataSet dataset = new DataSet();
-            //dataset.ReadXml("Config.xml");
-            //dataGridView1.DataSource = dataset.Tables[0];
+            DataSet dataset = new DataSet();
+            dataset.ReadXml("Config.xml");
+            dataGridView1.DataSource = dataset.Tables[0];
 
-            //xml = XmlManager.XmlDataReader("Config.xml");
-            //// McPrice.Text = Convert.ToString(xml.mPrice);
+            xml = XmlManager.XmlDataReader("Config.xml");
+            // McPrice.Text = Convert.ToString(xml.mPrice);
             //PriceHour.Text = Convert.ToString(xml.cPrice);
             //SizeLot.Text = Convert.ToString(xml.SizePerLot);
             //PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
