@@ -23,7 +23,6 @@ namespace Prauge_Parking
     {
         private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
-        XML xml = new XML();
         public StartUpScreen()
         {
             testContext context = new();
@@ -89,18 +88,18 @@ namespace Prauge_Parking
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnAddVehicle_Form_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LabelAddVehicle addVehicleForm = new LabelAddVehicle();
-            addVehicleForm.Show();
-        }
+        }       
 
         private void BtnOpenLocation_Click(object sender, EventArgs e)
         {
-            Process.Start("explorer.exe", @"c:\"); // Kan denna peka mot xml-filens mapp?
+            Process.Start("explorer.exe",  Directory.GetCurrentDirectory()); // Kan denna välja Config.xml?
+            // "/select," + + "Config.txt"
+        }
+
+        private void BtnMainScreen_Click(object sender, EventArgs e)
+        {
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.Show();
         }
     }
 }

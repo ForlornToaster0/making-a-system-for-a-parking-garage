@@ -22,6 +22,22 @@ namespace Prauge_Parking
 
         public MainScreen()
         {
+            try
+            {
+                using (var adder = new testContext())
+                {
+                    bool insert = adder.Pspots.Any();
+
+                    if (insert != true)
+                    {
+                        testContext.TestDataAdd();
+                    }
+                }
+
+            }
+            catch
+            {
+            }
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();
@@ -128,6 +144,7 @@ namespace Prauge_Parking
 
         private void BtnMap_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Map map = new();
             this.Controls.Add(map);
             map.CreateControl();
