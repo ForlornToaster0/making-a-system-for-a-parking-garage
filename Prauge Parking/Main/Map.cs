@@ -48,7 +48,7 @@ namespace Prauge_Parking.Main
             List<ParkingSpots> parkingSpots = mapInfo.parkings();
             Spot_inizilase spot_Inizilase = new();
             spot_Inizilase.SpotIni(parkingSpots, vehicles, maps, xml.SizePerLot); //(xml) default SizePerLot is 4.
-            if (parkingSpots.Count > 0)
+            if (vehicles.Count > 0)
             {
                 for (int i = 0; i < parkingSpots.Count; i++)
                 {

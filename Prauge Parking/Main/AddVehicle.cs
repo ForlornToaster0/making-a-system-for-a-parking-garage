@@ -27,7 +27,10 @@ namespace Prauge_Parking.Main
                 try
                 {
                     DataInitialiser data = new DataInitialiser();
-                    data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, DateTime.Now);
+                    if (int.TryParse(txtPspot.Text, out int spot))
+                    {
+                        data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+                    }
                     txtLicensePlate.Text = "";
                     MessageBox.Show("Inserted vehicle to database!", "Success");
                 }
