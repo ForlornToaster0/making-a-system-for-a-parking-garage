@@ -14,7 +14,7 @@ namespace DataAccess.Models
     [Table("PSpot")]
     public partial class DBPspot
     {
-        [Key]
+        //[Key] Tog bort key här för att det blev problem med att flytta fordon.
         public int Spot { get; set; }
         [Key]
         [StringLength(10)]

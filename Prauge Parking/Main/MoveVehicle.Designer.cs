@@ -42,6 +42,8 @@
             this.BoxLicensePlate.Size = new System.Drawing.Size(114, 27);
             this.BoxLicensePlate.TabIndex = 0;
             this.BoxLicensePlate.Text = "License Plate";
+            this.BoxLicensePlate.TextChanged += new System.EventHandler(this.txtLicensePlate_TextChanged);
+            this.BoxLicensePlate.Enter += new System.EventHandler(this.txtLicensePlate_Text);
             // 
             // BtnMoveVehicle
             // 

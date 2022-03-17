@@ -35,16 +35,18 @@ namespace Prauge_Parking
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
             }
+
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();
             if (!File.Exists("Config.xml"))
             {
                 xml.ParkingPrice = 20;
-                xml.CarSize = 2;
+                xml.CarSize = 4;
                 xml.SizePerLot = 4;
                 xml.MCSize = 2;
                 xml.CZK = "CZK";

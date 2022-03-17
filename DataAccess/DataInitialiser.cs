@@ -10,6 +10,7 @@ namespace DataAccess
 {
     public class DataInitialiser
     {
+        testContext context = new testContext(); 
         public void update(string newReg,int newPos)
         {
             testContext context = new();
@@ -32,10 +33,7 @@ namespace DataAccess
 
         public void RemoveVehicle(DBPspot vehicle)
         {
-            using (var db = new testContext())
-            {
-                
-            }
+
         }
 
         public void MoveVehicle(DBPspot vehicle, int newParkingId)
