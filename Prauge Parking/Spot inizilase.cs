@@ -16,11 +16,12 @@ namespace Prauge_Parking.Moving_soon
             {
                 int spotNum = spot[i].Position;
                 for (int j = 0; j < spot.Count; j++)
-                    if (spot[j].Position == spot[i].Position&&j!=i&& spot[j].SpotSize+spot[i].SpotSize<spotSize)
+                    if (spot[j].Position == spot[i].Position && j != i && spot[j].SpotSize + spot[i].SpotSize < spotSize)
                     {
                         map[spotNum - 1].BackColor = Color.Green;
                         break;
                     }
+                   
                     else if (vehicles[i].GetType() == typeof(Car))
                     {
 
@@ -37,6 +38,6 @@ namespace Prauge_Parking.Moving_soon
             }
         }
 
-    
+
     }
 }
