@@ -23,16 +23,10 @@ namespace Prauge_Parking
     {
         private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
-        XML xml = new XML();
         public StartUpScreen()
         {
             testContext context = new();
             context.Database.EnsureCreated();
-            //if (context.Pspots.Count() == 0)
-            //{
-            //    PopulateDbWithTestData populateDbWithTestData = new();
-            //    populateDbWithTestData.Populate();
-            //}
             string message = "Do you want to configure the program?";
             string title = "Config";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;

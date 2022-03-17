@@ -10,11 +10,11 @@ namespace DataAccess
 {
     public class DataInitialiser
     {
-        public void InsertVehicle(string regNumber, int type, DateTime? arrival)
+        public void InsertVehicle(string regNumber, int type, int spot)
         {
             using (var db = new testContext())
             {
-                db.Pspots.Add(new DBPspot() { Reg = regNumber, Type = Convert.ToString(type), Arrival = DateTime.Now });
+                db.Pspots.Add(new DBPspot() { Reg = regNumber, Type = Convert.ToString(type), Arrival = DateTime.Now, Spot = spot });
                 db.SaveChanges();
             }
         }
