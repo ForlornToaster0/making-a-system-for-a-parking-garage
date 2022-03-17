@@ -42,10 +42,51 @@ namespace Prauge_Parking
 
         private void BtnRemoveVehicle_Click(object sender, EventArgs e)
         {
-            var tester = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
+            try
+            {
+                var vehicle = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
+                BoxLicensePlate.Text = "";
 
-            context.Pspots.Remove(tester);
-            context.SaveChanges();
+                context.Pspots.Remove(vehicle);
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vehicle couldn't be found", "Error");
+            }
+            
+        }
+
+        private void txtLicensePlate_TextChanged(object sender, EventArgs e)
+        {
+            BoxLicensePlate.Text = BoxLicensePlate.Text.ToUpper();
+            BoxLicensePlate.Select(BoxLicensePlate.Text.Length, 0);
+            if (IsLicence_OK(BoxLicensePlate.Text))
+            {
+                BtnRemoveVehicle.Enabled = true;
+                BoxLicensePlate.BackColor = Color.LightGreen;
+
+            }
+            else
+            {
+                BoxLicensePlate.BackColor = Color.LightSalmon;
+                BtnRemoveVehicle.Enabled = false;
+            }
+            if (BoxLicensePlate.Text == "") BoxLicensePlate.BackColor = SystemColors.ButtonHighlight;
+        }
+        private bool IsLicence_OK(string regnum)
+        {
+            if (regnum.Any(c => !char.IsLetterOrDigit(c))) return false;
+            if (regnum.Length > 10 || regnum.Length < 4) return false;
+            return true;
+        }
+        private void txtLicensePlate_Text(object sender, EventArgs e)
+        {
+            if (BoxLicensePlate.Text == "License Plate")
+            {
+                BoxLicensePlate.Text = "";
+                BoxLicensePlate.ForeColor = SystemColors.WindowText;
+            }
         }
     }
 }
