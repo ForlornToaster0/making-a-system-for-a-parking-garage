@@ -32,7 +32,7 @@ namespace DataAccess.Data
         {
             modelBuilder.Entity<DBPspot>(entity =>
             {
-                entity.HasKey(e => new { e.Spot, e.Reg });
+                entity.HasKey(e => new { e.Reg });
             });
 
 

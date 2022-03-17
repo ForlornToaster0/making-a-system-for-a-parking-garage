@@ -85,12 +85,6 @@ namespace Prauge_Parking.Main
             }
 
         }
-        private void cmbForm_Load(object sender, EventArgs e)
-        {
-           
-
-
-        }
 
         private void CmbForm_Load(object sender, EventArgs e)
         {

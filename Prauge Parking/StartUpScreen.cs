@@ -55,9 +55,10 @@ namespace Prauge_Parking
                 // xml.mPrice = Convert.ToDouble(McPrice.Text);
                 xml.ParkingPrice = Convert.ToInt32(PriceHour.Text);
                 xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
-                xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
+                //xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
                 xml.SizeX = Convert.ToInt32(XAxis.Text);
                 xml.SizeY = Convert.ToInt32(YAxis.Text);
+                xml.PhouseSize = xml.SizeX * xml.SizeY;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
                 MessageBox.Show("Data Saved", "XML file is now updated");
 
