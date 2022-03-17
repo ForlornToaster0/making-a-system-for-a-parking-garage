@@ -40,13 +40,13 @@ namespace Prauge_Parking.Main
         }
         private void cmbForm_Load(object sender, EventArgs e)
         {
-
+            Map map = new();
             MainScreen mainScreen = new();
         
 
             this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
             this.Width = mainScreen.Size.Width+200;
-            this.Height = ( mainScreen.Size.Height);
+           this.Height = ( map.DetailedView.Location.Y-10+ map.DetailedView.Location.Y/3);
             this.BorderStyle = BorderStyle.None;
            
 
