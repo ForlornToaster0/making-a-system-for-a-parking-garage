@@ -40,5 +40,10 @@ namespace DataAccess.Data
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public static void TestDataAdd()
+        {
+            AddTestData.AddVehicles();
+        }
     }
 }

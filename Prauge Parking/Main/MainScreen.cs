@@ -22,6 +22,22 @@ namespace Prauge_Parking
 
         public MainScreen()
         {
+            try
+            {
+                using (var adder = new testContext())
+                {
+                    bool insert = adder.Pspots.Any();
+
+                    if (insert != true)
+                    {
+                        testContext.TestDataAdd();
+                    }
+                }
+
+            }
+            catch
+            {
+            }
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();

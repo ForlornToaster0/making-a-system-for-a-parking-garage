@@ -23,7 +23,6 @@ namespace Prauge_Parking
     {
         private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
-        XML xml = new XML();
         public StartUpScreen()
         {
             testContext context = new();

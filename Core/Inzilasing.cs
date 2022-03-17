@@ -20,13 +20,13 @@ namespace Core
             {
                 switch (car.Type)
                 {
-                    case "MC":
+                    case "1":
                         {
                             list.Add(new MC(car.Reg, car.Arrival));
 
                             break;
                         }
-                    case "Car":
+                    case "2":
                         {
                             list.Add(new Car(car.Reg, car.Arrival));
 
