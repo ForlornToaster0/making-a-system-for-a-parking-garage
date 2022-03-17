@@ -35,18 +35,21 @@
             // 
             // BtnRemoveVehicle
             // 
-            this.BtnRemoveVehicle.Location = new System.Drawing.Point(333, 65);
+            this.BtnRemoveVehicle.Location = new System.Drawing.Point(381, 87);
+            this.BtnRemoveVehicle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnRemoveVehicle.Name = "BtnRemoveVehicle";
-            this.BtnRemoveVehicle.Size = new System.Drawing.Size(100, 23);
+            this.BtnRemoveVehicle.Size = new System.Drawing.Size(114, 31);
             this.BtnRemoveVehicle.TabIndex = 1;
             this.BtnRemoveVehicle.Text = "Remove";
             this.BtnRemoveVehicle.UseVisualStyleBackColor = true;
+            this.BtnRemoveVehicle.Click += new System.EventHandler(this.BtnRemoveVehicle_Click);
             // 
             // BoxLicensePlate
             // 
-            this.BoxLicensePlate.Location = new System.Drawing.Point(15, 65);
+            this.BoxLicensePlate.Location = new System.Drawing.Point(17, 87);
+            this.BoxLicensePlate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BoxLicensePlate.Name = "BoxLicensePlate";
-            this.BoxLicensePlate.Size = new System.Drawing.Size(100, 23);
+            this.BoxLicensePlate.Size = new System.Drawing.Size(114, 27);
             this.BoxLicensePlate.TabIndex = 0;
             this.BoxLicensePlate.Text = "License Plate";
             // 
@@ -54,22 +57,23 @@
             // 
             this.LabelRemoveVehicle.AutoSize = true;
             this.LabelRemoveVehicle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelRemoveVehicle.Location = new System.Drawing.Point(15, 15);
+            this.LabelRemoveVehicle.Location = new System.Drawing.Point(17, 20);
             this.LabelRemoveVehicle.Name = "LabelRemoveVehicle";
-            this.LabelRemoveVehicle.Size = new System.Drawing.Size(182, 32);
+            this.LabelRemoveVehicle.Size = new System.Drawing.Size(224, 41);
             this.LabelRemoveVehicle.TabIndex = 4;
             this.LabelRemoveVehicle.Text = "Remove vehicle";
             // 
             // RemoveVehicle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.LabelRemoveVehicle);
             this.Controls.Add(this.BtnRemoveVehicle);
             this.Controls.Add(this.BoxLicensePlate);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RemoveVehicle";
-            this.Size = new System.Drawing.Size(475, 269);
+            this.Size = new System.Drawing.Size(543, 359);
             this.Load += new System.EventHandler(this.RemoveVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

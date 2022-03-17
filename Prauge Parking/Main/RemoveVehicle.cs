@@ -1,4 +1,5 @@
-﻿using Prauge_Parking.Main;
+﻿using DataAccess.Data;
+using Prauge_Parking.Main;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace Prauge_Parking
 {
     public partial class RemoveVehicle : UserControl
     {
+        Map map = new Map();
+        testContext context = new testContext();
         public RemoveVehicle()
         {
             MainScreen mainScreen = new();
@@ -35,6 +38,14 @@ namespace Prauge_Parking
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void BtnRemoveVehicle_Click(object sender, EventArgs e)
+        {
+            var tester = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
+
+            context.Pspots.Remove(tester);
+            context.SaveChanges();
         }
     }
 }
