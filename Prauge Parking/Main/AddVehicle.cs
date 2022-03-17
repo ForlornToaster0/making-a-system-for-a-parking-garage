@@ -22,14 +22,43 @@ namespace Prauge_Parking.Main
 
         private void btnSaveVehicle_Click(object sender, EventArgs e)
         {
+
+            Inzilasing inz = new Inzilasing();
+            List<ParkingSpots> pSpots = inz.parkings();
+            List<Vehicle> vehicles = inz.NewCars();
+
             if (!string.IsNullOrEmpty(txtLicensePlate.Text) && !(txtLicensePlate.Text.Length <= 3))
             {
                 try
                 {
                     DataInitialiser data = new DataInitialiser();
+
                     if (int.TryParse(txtPspot.Text, out int spot))
                     {
-                        data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+                        var tester = pSpots.Where(p => p.Position == spot).Count();
+                        var tester1 = pSpots.Select(p => p.Position).ToList();
+                        for (int i = 0; i < pSpots.Count; i++)
+                        {
+                            if (pSpots [i].Position == spot && vehicles[i].GetType() == typeof(MC) 
+                                && (int)cmbTypeVehicle.SelectedItem == 1 && tester == 2)
+                            {
+                                data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+                                break;
+                            }
+                            else if(tester1.Contains(spot))
+                            {
+                                while (tester1.Contains(spot))
+                                {
+                                    spot++;
+                                    data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+                                    break;
+                                }
+                            }
+                            else if (pSpots.Count == i)
+                            {
+                                MessageBox.Show("Error");
+                            }
+                        }
                     }
                     txtLicensePlate.Text = "";
                     MessageBox.Show("Inserted vehicle to database!", "Success");
