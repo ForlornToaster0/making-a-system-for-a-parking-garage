@@ -72,7 +72,7 @@ namespace Prauge_Parking.Main
                             {
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
 
-                                MessageBox.Show("Inserted vehicle to database!", "Success");
+                                MessageBox.Show("Inserted vehicle to database!", "Successer");
                             }
                         }
                     }

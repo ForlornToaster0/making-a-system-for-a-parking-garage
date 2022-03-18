@@ -60,7 +60,7 @@ namespace Core
             {
                 priceAmount = span * Prize[0];
             }
-            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime,priceAmount };
+            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime, priceAmount };
             return row;
 
         }

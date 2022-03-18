@@ -22,7 +22,6 @@ namespace Prauge_Parking
     public partial class StartUpScreen : Form
     {
         XML xml = new XML();
-        private LabelAddVehicle addVehicle = new LabelAddVehicle();
 
         public StartUpScreen()
         {
@@ -66,10 +65,6 @@ namespace Prauge_Parking
             dataGridView1.DataSource = dataset.Tables[0];
 
             xml = XmlManager.XmlDataReader("Config.xml");
-            // McPrice.Text = Convert.ToString(xml.mPrice);
-            //PriceHour.Text = Convert.ToString(xml.cPrice);
-            //SizeLot.Text = Convert.ToString(xml.SizePerLot);
-            //PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)

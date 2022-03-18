@@ -42,15 +42,15 @@ namespace Prauge_Parking
 
         private void BtnRemoveVehicle_Click(object sender, EventArgs e)
         {
-            
             try
             {
                 var vehicle = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
                 BoxLicensePlate.Text = "";
+                MessageBox.Show($"Vehicle has been removed", "Vehicle Removed");
+
 
                 context.Pspots.Remove(vehicle);
                 context.SaveChanges();
-                MessageBox.Show("Vehicle has been removed", "Vehicle Removed");
 
 
             }
@@ -58,6 +58,10 @@ namespace Prauge_Parking
             {
                 MessageBox.Show("Vehicle couldn't be found", "Error");
             }
+            MainScreen mainScreen = new MainScreen();
+            mainScreen.Show();
+            this.Hide();
+            Hide();
 
         }
 
