@@ -39,6 +39,7 @@ namespace Prauge_Parking
         {
             DataInitialiser dataInitialiser = new();
             dataInitialiser.update(BoxLicensePlate.Text,int.Parse(BoxPspot.Text));
+            MessageBox.Show("Vehicle " + BoxLicensePlate.Text + " has moved to parking Spot: " + BoxPspot.Text, "Success!");
         }
         private void txtLicensePlate_TextChanged(object sender, EventArgs e)
         {

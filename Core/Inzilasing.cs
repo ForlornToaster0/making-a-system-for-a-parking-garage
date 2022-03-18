@@ -50,18 +50,16 @@ namespace Core
         }
         public object[] DetailedList(ParkingSpots spot, Vehicle vehicles, int Prize)
         {
+            int xmlLoad = 0;
             double priceAmount = 0;
             var span = Math.Round(DateTime.Now.Subtract(vehicles.ParkTime.AddMinutes(10)).TotalHours);
             if (vehicles.GetType() == typeof(Car))
             {
                 priceAmount = span * Prize;
-
             }
             else if (vehicles.GetType() == typeof(MC))
             {
                 priceAmount = span * (Prize / 2);
-
-
             }
             object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime,priceAmount };
             return row;

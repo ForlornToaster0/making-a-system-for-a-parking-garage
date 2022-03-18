@@ -14,6 +14,22 @@ namespace DataAccess
             get { return _CZK; }
             set { _CZK = value; }
         }
+        private int _carPrice;
+        [XmlElement("Car Price")]
+        public int CarPrice
+        {
+            get { return _carPrice; }
+            set { _carPrice = value; }
+        }
+        public int _mcPrice;
+        [XmlElement("Mc Price")]
+        public int MCPrice
+        {
+            get { return _mcPrice; }
+            set { _mcPrice = value; }
+        }
+
+
         private int _parkingPrice;
         [XmlElement("Parking Spot Price")]
         public int ParkingPrice

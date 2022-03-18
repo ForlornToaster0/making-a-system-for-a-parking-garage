@@ -43,9 +43,11 @@ namespace Prauge_Parking
             testContext context = new();
             context.Database.EnsureCreated();
             InitializeComponent();
+
             if (!File.Exists("Config.xml"))
             {
-                xml.ParkingPrice = 20;
+                xml.CarPrice = 20;
+                xml.MCPrice = 10;
                 xml.CarSize = 4;
                 xml.SizePerLot = 4;
                 xml.MCSize = 2;
@@ -53,6 +55,7 @@ namespace Prauge_Parking
                 xml.PhouseSize = 100;
                 xml.SizeX = 10;
                 xml.SizeY = 10;
+                xml.ParkingPrice = 20;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
             }
             xml = XmlManager.XmlDataReader("Config.xml");
@@ -90,26 +93,10 @@ namespace Prauge_Parking
 
         private void BtnPrice_Click(object sender, EventArgs e)
         {
-            string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
-            if (price != "")
-            {
-                try
-                {
-                    xml.ParkingPrice = Convert.ToInt32(price);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error " + ex.ToString());
-                    throw;
-                }
-                xml.ParkingPrice = Convert.ToInt32(price);
-                XmlManager.XmlDataWriter(xml, "Config.xml");
-                MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
-            }
-            if (File.Exists("Config.xml"))
-            {
-                xml = XmlManager.XmlDataReader("Config.xml");
-            }
+            StartUpScreen mainScreen = new StartUpScreen();
+            mainScreen.Show();
+            this.Hide();
+            Hide();
 
         }
 

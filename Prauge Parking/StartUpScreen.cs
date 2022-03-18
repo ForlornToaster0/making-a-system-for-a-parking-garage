@@ -26,20 +26,6 @@ namespace Prauge_Parking
 
         public StartUpScreen()
         {
-            testContext context = new();
-            context.Database.EnsureCreated();
-            string message = "Do you want to configure the program?";
-            string title = "Config";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.No)
-            {
-                MainScreen mainScreen = new MainScreen();
-                mainScreen.Show();
-                StartUpScreen startUpScreen = new StartUpScreen();
-                startUpScreen.Close();
-            }
-            else
             {
                 InitializeComponent();
             }
@@ -52,10 +38,10 @@ namespace Prauge_Parking
             {
                 xml.CarSize = 4;
                 xml.MCSize = 2;
-                // xml.mPrice = Convert.ToDouble(McPrice.Text);
-                xml.ParkingPrice = Convert.ToInt32(PriceHour.Text);
+                xml.CarPrice = Convert.ToInt32(txtCarPrice.Text);
+                xml.MCPrice = Convert.ToInt32(txtMcPrice.Text);
                 xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
-                //xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
+                xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
                 xml.SizeX = Convert.ToInt32(XAxis.Text);
                 xml.SizeY = Convert.ToInt32(YAxis.Text);
                 xml.PhouseSize = xml.SizeX * xml.SizeY;
@@ -102,6 +88,38 @@ namespace Prauge_Parking
         {
             MainScreen mainScreen = new MainScreen();
             mainScreen.Show();
+            this.Hide();
+            Hide();
         }
+
+        //private void txtCarPrice_TextChanged(object sender, EventArgs e)
+        //{
+        //    txtCarPrice.Text = Convert.ToString(xml.CarPrice);
+        //}
+
+        //private void txtMcPrice_TextChanged(object sender, EventArgs e)
+        //{
+        //    txtMcPrice.Text = Convert.ToString(xml.MCPrice);
+        //}
+
+        //private void SizeLot_TextChanged(object sender, EventArgs e)
+        //{
+        //    SizeLot.Text = Convert.ToString(xml.SizePerLot);
+        //}
+
+        //private void PhouseSpot_TextChanged(object sender, EventArgs e)
+        //{
+        //    PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
+        //}
+
+        //private void YAxis_TextChanged(object sender, EventArgs e)
+        //{
+        //    YAxis.Text = Convert.ToString(xml.SizeY);
+        //}
+
+        //private void XAxis_TextChanged(object sender, EventArgs e)
+        //{
+        //    XAxis.Text = Convert.ToString(xml.SizeX);
+        //}
     }
 }

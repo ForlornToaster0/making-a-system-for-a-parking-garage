@@ -43,7 +43,7 @@
             this.SizeLot = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnShowConfig = new System.Windows.Forms.Button();
-            this.PriceHour = new System.Windows.Forms.TextBox();
+            this.txtMcPrice = new System.Windows.Forms.TextBox();
             this.LabelPrice = new System.Windows.Forms.Label();
             this.IconPrice = new FontAwesome.Sharp.IconPictureBox();
             this.TipConfig = new System.Windows.Forms.ToolTip(this.components);
@@ -51,17 +51,21 @@
             this.XAxis = new System.Windows.Forms.TextBox();
             this.YAxis = new System.Windows.Forms.TextBox();
             this.BtnOpenLocation = new System.Windows.Forms.Button();
+            this.txtCarPrice = new System.Windows.Forms.TextBox();
             this.LabelVehicle = new System.Windows.Forms.Label();
             this.LabelX = new System.Windows.Forms.Label();
             this.LabelY = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconSpots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LabConfig
@@ -131,7 +135,7 @@
             this.IconSpots.IconColor = System.Drawing.SystemColors.ControlText;
             this.IconSpots.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.IconSpots.IconSize = 48;
-            this.IconSpots.Location = new System.Drawing.Point(206, 12);
+            this.IconSpots.Location = new System.Drawing.Point(528, 175);
             this.IconSpots.Name = "IconSpots";
             this.IconSpots.Size = new System.Drawing.Size(48, 48);
             this.IconSpots.TabIndex = 33;
@@ -140,7 +144,7 @@
             // LabelSpots
             // 
             this.LabelSpots.AutoSize = true;
-            this.LabelSpots.Location = new System.Drawing.Point(260, 12);
+            this.LabelSpots.Location = new System.Drawing.Point(582, 175);
             this.LabelSpots.Name = "LabelSpots";
             this.LabelSpots.Size = new System.Drawing.Size(96, 15);
             this.LabelSpots.TabIndex = 31;
@@ -148,7 +152,7 @@
             // 
             // PhouseSpot
             // 
-            this.PhouseSpot.Location = new System.Drawing.Point(260, 30);
+            this.PhouseSpot.Location = new System.Drawing.Point(582, 192);
             this.PhouseSpot.Name = "PhouseSpot";
             this.PhouseSpot.Size = new System.Drawing.Size(100, 23);
             this.PhouseSpot.TabIndex = 0;
@@ -174,9 +178,9 @@
             this.LabelCars.AutoSize = true;
             this.LabelCars.Location = new System.Drawing.Point(606, 12);
             this.LabelCars.Name = "LabelCars";
-            this.LabelCars.Size = new System.Drawing.Size(76, 15);
+            this.LabelCars.Size = new System.Drawing.Size(97, 15);
             this.LabelCars.TabIndex = 36;
-            this.LabelCars.Text = "Cars per spot";
+            this.LabelCars.Text = "Parking Spot Size";
             // 
             // SizeLot
             // 
@@ -208,23 +212,23 @@
             this.btnShowConfig.UseVisualStyleBackColor = true;
             this.btnShowConfig.Click += new System.EventHandler(this.btnShowConfig_Click);
             // 
-            // PriceHour
+            // txtMcPrice
             // 
-            this.PriceHour.Location = new System.Drawing.Point(260, 84);
-            this.PriceHour.Name = "PriceHour";
-            this.PriceHour.Size = new System.Drawing.Size(100, 23);
-            this.PriceHour.TabIndex = 1;
-            this.PriceHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TipConfig.SetToolTip(this.PriceHour, "What price per hour?");
+            this.txtMcPrice.Location = new System.Drawing.Point(260, 84);
+            this.txtMcPrice.Name = "txtMcPrice";
+            this.txtMcPrice.Size = new System.Drawing.Size(100, 23);
+            this.txtMcPrice.TabIndex = 1;
+            this.txtMcPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.txtMcPrice, "What price per hour?");
             // 
             // LabelPrice
             // 
             this.LabelPrice.AutoSize = true;
             this.LabelPrice.Location = new System.Drawing.Point(260, 66);
             this.LabelPrice.Name = "LabelPrice";
-            this.LabelPrice.Size = new System.Drawing.Size(81, 15);
+            this.LabelPrice.Size = new System.Drawing.Size(55, 15);
             this.LabelPrice.TabIndex = 43;
-            this.LabelPrice.Text = "Price per hour";
+            this.LabelPrice.Text = "MC Price";
             // 
             // IconPrice
             // 
@@ -281,6 +285,15 @@
             this.TipConfig.SetToolTip(this.BtnOpenLocation, "Opens config location");
             this.BtnOpenLocation.UseVisualStyleBackColor = true;
             this.BtnOpenLocation.Click += new System.EventHandler(this.BtnOpenLocation_Click);
+            // 
+            // txtCarPrice
+            // 
+            this.txtCarPrice.Location = new System.Drawing.Point(260, 30);
+            this.txtCarPrice.Name = "txtCarPrice";
+            this.txtCarPrice.Size = new System.Drawing.Size(100, 23);
+            this.txtCarPrice.TabIndex = 56;
+            this.txtCarPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TipConfig.SetToolTip(this.txtCarPrice, "What price per hour?");
             // 
             // LabelVehicle
             // 
@@ -344,11 +357,37 @@
             this.textBox1.TabIndex = 54;
             this.textBox1.Text = "1 car = 4 spots\r\n1 mc = 2 spots";
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CreditCard;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 48;
+            this.iconPictureBox1.Location = new System.Drawing.Point(206, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.iconPictureBox1.TabIndex = 55;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(260, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 15);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Car Price";
+            // 
             // StartUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 466);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCarPrice);
+            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.BtnOpenLocation);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnAbout);
@@ -361,7 +400,7 @@
             this.Controls.Add(this.ListVehicle);
             this.Controls.Add(this.IconPrice);
             this.Controls.Add(this.LabelPrice);
-            this.Controls.Add(this.PriceHour);
+            this.Controls.Add(this.txtMcPrice);
             this.Controls.Add(this.btnShowConfig);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnCreate);
@@ -382,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IconCars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,7 +439,7 @@
         public TextBox SizeLot;
         private DataGridView dataGridView1;
         private Button btnShowConfig;
-        public TextBox PriceHour;
+        public TextBox txtMcPrice;
         public Label LabelPrice;
         public FontAwesome.Sharp.IconPictureBox IconPrice;
         private ToolTip TipConfig;
@@ -415,5 +455,8 @@
         private TextBox textBox1;
         private Button BtnMainScreen;
         private Button BtnOpenLocation;
+        public FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        public TextBox txtCarPrice;
+        public Label label2;
     }
 }

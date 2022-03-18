@@ -80,7 +80,6 @@ namespace Prauge_Parking.Main
                 }
                 catch
                 {
-                    MessageBox.Show("Failed to insert vehicle to database", "Failed");
                 }
             }
 
