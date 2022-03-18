@@ -54,13 +54,15 @@ namespace Prauge_Parking
                 xml.PhouseSize = 100;
                 xml.SizeX = 10;
                 xml.SizeY = 10;
-                xml.ParkingPrice = 20;
+                //xml.ParkingPrice = 20;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
             }
             xml = XmlManager.XmlDataReader("Config.xml");
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            label1.Text = Convert.ToString(xml.VehiclePrice[1]);
+            label2.Text = Convert.ToString(xml.VehiclePrice[0]);
             //    TopMost = true;
             //    FormBorderStyle = FormBorderStyle.Sizable;
             //    WindowState = FormWindowState.Maximized;

@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DetailedView = new System.Windows.Forms.DataGridView();
             this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Arrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xMLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DetailedView
@@ -84,6 +87,10 @@
             this.Price.ReadOnly = true;
             this.Price.Width = 125;
             // 
+            // xMLBindingSource
+            // 
+            this.xMLBindingSource.DataSource = typeof(DataAccess.XML);
+            // 
             // Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -93,6 +100,7 @@
             this.Size = new System.Drawing.Size(1083, 602);
             this.Load += new System.EventHandler(this.Map_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,5 +112,6 @@
         private DataGridViewTextBoxColumn Reg;
         private DataGridViewTextBoxColumn Arrival;
         private DataGridViewTextBoxColumn Price;
+        private BindingSource xMLBindingSource;
     }
 }

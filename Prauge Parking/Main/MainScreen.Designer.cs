@@ -30,8 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.BtnMap = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.BtnExit = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnAbout = new FontAwesome.Sharp.IconButton();
             this.BtnRemove = new FontAwesome.Sharp.IconButton();
             this.BtnMove = new FontAwesome.Sharp.IconButton();
@@ -44,8 +48,12 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.SteelBlue;
+            this.PanelMenu.Controls.Add(this.label4);
+            this.PanelMenu.Controls.Add(this.label3);
             this.PanelMenu.Controls.Add(this.BtnMap);
+            this.PanelMenu.Controls.Add(this.label2);
             this.PanelMenu.Controls.Add(this.BtnExit);
+            this.PanelMenu.Controls.Add(this.label1);
             this.PanelMenu.Controls.Add(this.BtnAbout);
             this.PanelMenu.Controls.Add(this.BtnRemove);
             this.PanelMenu.Controls.Add(this.BtnMove);
@@ -57,6 +65,24 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(200, 660);
             this.PanelMenu.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 472);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Car Price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 548);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "MC Price";
             // 
             // BtnMap
             // 
@@ -74,6 +100,15 @@
             this.BtnMap.UseVisualStyleBackColor = true;
             this.BtnMap.Click += new System.EventHandler(this.BtnMap_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 487);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "label2";
+            // 
             // BtnExit
             // 
             this.BtnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
@@ -89,6 +124,15 @@
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 563);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "label1";
             // 
             // BtnAbout
             // 
@@ -211,5 +255,9 @@
         private FontAwesome.Sharp.IconButton BtnExit;
         private FontAwesome.Sharp.IconButton BtnAbout;
         private FontAwesome.Sharp.IconButton BtnMap;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
     }
 }

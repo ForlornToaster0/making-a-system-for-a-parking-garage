@@ -27,6 +27,7 @@ namespace Prauge_Parking
         public StartUpScreen()
         {
             {
+                xml = XmlManager.XmlDataReader("Config.xml");
                 InitializeComponent();
             }
 
@@ -44,10 +45,13 @@ namespace Prauge_Parking
                 xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
                 xml.SizeX = Convert.ToInt32(XAxis.Text);
                 xml.SizeY = Convert.ToInt32(YAxis.Text);
-                xml.PhouseSize = xml.SizeX * xml.SizeY;
+                xml.PhouseSize = xml.SizeY * xml.SizeX;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
                 MessageBox.Show("Data Saved", "XML file is now updated");
-
+                StartUpScreen startUpScreen = new StartUpScreen();
+                startUpScreen.Show();
+                this.Hide();
+                Hide();
             }
             catch (Exception ex)
             {
@@ -92,34 +96,10 @@ namespace Prauge_Parking
             Hide();
         }
 
-        //private void txtCarPrice_TextChanged(object sender, EventArgs e)
-        //{
-        //    txtCarPrice.Text = Convert.ToString(xml.CarPrice);
-        //}
-
-        //private void txtMcPrice_TextChanged(object sender, EventArgs e)
-        //{
-        //    txtMcPrice.Text = Convert.ToString(xml.MCPrice);
-        //}
-
-        //private void SizeLot_TextChanged(object sender, EventArgs e)
-        //{
-        //    SizeLot.Text = Convert.ToString(xml.SizePerLot);
-        //}
-
-        //private void PhouseSpot_TextChanged(object sender, EventArgs e)
-        //{
-        //    PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
-        //}
-
-        //private void YAxis_TextChanged(object sender, EventArgs e)
-        //{
-        //    YAxis.Text = Convert.ToString(xml.SizeY);
-        //}
-
-        //private void XAxis_TextChanged(object sender, EventArgs e)
-        //{
-        //    XAxis.Text = Convert.ToString(xml.SizeX);
-        //}
+        private void StartUpScreen_Load(object sender, EventArgs e)
+        {
+            label5.Text = Convert.ToString(xml.VehiclePrice[1]);
+            label6.Text = Convert.ToString(xml.VehiclePrice[0]);
+        }
     }
 }
