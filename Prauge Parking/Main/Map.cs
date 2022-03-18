@@ -52,7 +52,7 @@ namespace Prauge_Parking.Main
             {
                 for (int i = 0; i < parkingSpots.Count; i++)
                 {
-                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], xml.ParkingPrice); //(xml) default parkingprice is 20.
+                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], xml.VehiclePrice); //(xml) default parkingprice is 20.
                     DetailedView.Rows.Add(rows);
                 }
             }

@@ -46,8 +46,7 @@ namespace Prauge_Parking
 
             if (!File.Exists("Config.xml"))
             {
-                xml.CarPrice = 20;
-                xml.MCPrice = 10;
+                xml.VehiclePrice = new int[] { 10, 20 };
                 xml.CarSize = 4;
                 xml.SizePerLot = 4;
                 xml.MCSize = 2;

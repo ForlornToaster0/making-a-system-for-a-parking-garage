@@ -28,6 +28,14 @@ namespace DataAccess
             get { return _mcPrice; }
             set { _mcPrice = value; }
         }
+        private int[] _vehiclePrice;
+        [XmlArray("Vehicle Price")]
+        public int[] VehiclePrice
+        {
+            get { return _vehiclePrice; }
+            set { _vehiclePrice = value; }
+        }
+
 
 
         private int _parkingPrice;

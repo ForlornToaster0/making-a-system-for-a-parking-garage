@@ -38,8 +38,8 @@ namespace Prauge_Parking
             {
                 xml.CarSize = 4;
                 xml.MCSize = 2;
-                xml.CarPrice = Convert.ToInt32(txtCarPrice.Text);
-                xml.MCPrice = Convert.ToInt32(txtMcPrice.Text);
+                xml.VehiclePrice = new int[] { Convert.ToInt32(txtCarPrice.Text), Convert.ToInt32(txtMcPrice.Text) };
+                //xml.MCPrice = Convert.ToInt32(txtMcPrice.Text);
                 xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
                 xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
                 xml.SizeX = Convert.ToInt32(XAxis.Text);
