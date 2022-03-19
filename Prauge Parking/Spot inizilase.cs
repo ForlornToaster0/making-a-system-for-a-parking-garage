@@ -10,34 +10,23 @@ namespace Prauge_Parking.Moving_soon
 {
     public class Spot_inizilase
     {
-        public void SpotIni(List<ParkingSpots> spot, List<Vehicle> vehicles, IconButton[] map, int spotSize)
+        public void SpotIni(List<ParkingSpots> spot, IconButton[] map, int spotSize)
         {
-            for (int i = 0; i < vehicles.Count; i++)
+            for (int i = 0; i < spot.Count; i++)
             {
                 int spotNum = spot[i].Position;
-                for (int j = 0; j < spot.Count; j++)
-                    if (spot[j].Position == spot[i].Position && j != i && spot[j].SpotSize + spot[i].SpotSize < spotSize)
-                    {
-                        map[spotNum - 1].BackColor = Color.Green;
-                        break;
-                    }
-                   
-                    else if (vehicles[i].GetType() == typeof(Car))
-                    {
 
-                        spot[i].SpotSize += vehicles[i].VehicleSize;
-                        map[spotNum - 1].BackColor = Color.Green;
-                    }
-                    else if (vehicles[i].GetType() == typeof(MC))
-                    {
-                        map[spotNum - 1].BackColor = Color.Yellow;
-
-                        spot[i].SpotSize += vehicles[i].VehicleSize;
-                    }
-
+                if (spot[i].SpotSize == spotSize)
+                {
+                    map[spotNum - 1].BackColor = Color.Red;
+                    break;
+                }
+                else if (spot[i].SpotSize == spotSize / 2)
+                {
+                    map[spotNum - 1].BackColor = Color.Yellow;
+                    break;
+                }
             }
         }
-
-
     }
 }

@@ -11,13 +11,22 @@ namespace DataAccess
 {
     public class DataExtration
     {
-        public static DBPspot[] AllData()
+        public static int[] AllData()
         {
             using testContext Context = new();
             {
-                var data = Context.Pspots.Select(s => s).ToArray();
+                var data = Context.Pspots.Select(s => s).Select(s=>s.Spot).ToArray();
                 return data;
             }
+        }
+        public static DBPspot[] spotVechales(int pos)
+        {
+            using testContext Context = new();
+            {
+                var vechailelist = Context.Pspots.Where(x => x.Spot == pos).ToArray();
+                return vechailelist;
+            }
+
         }
     }
 }

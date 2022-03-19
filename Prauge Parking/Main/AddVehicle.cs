@@ -32,14 +32,14 @@ namespace Prauge_Parking.Main
         {
 
             Inzilasing inz = new Inzilasing();
-            List<ParkingSpots> pSpots = inz.parkings();
-            List<Vehicle> vehicles = inz.NewCars();
+            List<ParkingSpots> pSpots = inz.ParkingHouse();
+            
 
             if (!string.IsNullOrEmpty(txtLicensePlate.Text) && !(txtLicensePlate.Text.Length <= 3))
             {
                 try
                 {
-                    DataInitialiser data = new DataInitialiser();
+                    DataInitialiser data = new ();
 
                     if (int.TryParse(txtPspot.Text, out int spot))
                     {
@@ -47,7 +47,7 @@ namespace Prauge_Parking.Main
                         var tester1 = pSpots.Select(p => p.Position).ToList();
                         for (int i = 0; i < pSpots.Count; i++)
                         {
-                            if (pSpots[i].Position == spot && vehicles[i].GetType() == typeof(MC)
+                            if (pSpots[i].Position == spot && pSpots[i].Vehicle.GetType() == typeof(MC)
                                 && (int)cmbTypeVehicle.SelectedItem == 1 && tester != 2)
                             {
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);

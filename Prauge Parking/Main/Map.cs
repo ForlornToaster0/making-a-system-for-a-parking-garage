@@ -43,18 +43,22 @@ namespace Prauge_Parking.Main
             this.Height = DetailedView.Location.Y + DetailedView.Size.Height;
             Inzilasing mapInfo = new();
 
-            List<Vehicle> vehicles = mapInfo.NewCars();
+            
 
-            List<ParkingSpots> parkingSpots = mapInfo.parkings();
+            List<ParkingSpots> parkingSpots = mapInfo.ParkingHouse();
             Spot_inizilase spot_Inizilase = new();
-            spot_Inizilase.SpotIni(parkingSpots, vehicles, maps, xml.SizePerLot); //(xml) default SizePerLot is 4.
-            if (vehicles.Count > 0)
+            spot_Inizilase.SpotIni(parkingSpots, maps, xml.SizePerLot); //(xml) default SizePerLot is 4.
+            if (parkingSpots.Count > 0)
             {
-                for (int i = 0; i < parkingSpots.Count; i++)
+                foreach (var sopts in parkingSpots)
                 {
-                    var rows = inizilasing.DetailedList(parkingSpots[i], vehicles[i], xml.ParkingPrice); //(xml) default parkingprice is 20.
+                    foreach (var vehicle in sopts.Vehicle)
+                    { 
+
+                    var rows = inizilasing.DetailedList(sopts, vehicle, xml.ParkingPrice); //(xml) default parkingprice is 20.
                     DetailedView.Rows.Add(rows);
                 }
+            }
             }
 
         }

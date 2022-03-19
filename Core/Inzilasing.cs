@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -10,43 +11,59 @@ namespace Core
 {
     public class Inzilasing
     {
-        public List<Vehicle> NewCars()
+
+
+        public List<ParkingSpots> ParkingHouse()
         {
-            var carData = DataExtration.AllData();
+            var allData = DataExtration.AllData();
+            List<ParkingSpots> list = new();
 
-            List<Vehicle> list = new();
-            
-            foreach (var car in carData)
+            foreach (var Position in allData)
             {
-                switch (car.Type)
+                int size = 0;
+                List<Vehicle> vehicleList = new();
+                var DBData = DataExtration.spotVechales(Position);
+                foreach (var Data in DBData)
                 {
-                    case "1":
-                        {
-                            list.Add(new MC(car.Reg, car.Arrival));
-
-                            break;
-                        }
-                    case "2":
-                        {
-                            list.Add(new Car(car.Reg, car.Arrival));
-
-                            break;
-                        }
+                    vehicleList.AddRange(NewCars(Data.Reg, Data.Arrival, int.Parse(Data.Type)));
+                }
+                foreach (var Data in vehicleList)
+                {
+                    size = +Data.VehicleSize;
+                }
+                if (vehicleList.Count > 0)
+                {
+                    list.Add(new ParkingSpots(size, Position, vehicleList));
                 }
             }
             return list;
+
+
         }
-        public List<ParkingSpots> parkings()
+        public List<Vehicle> NewCars(string reg, DateTime arrival, int type)
         {
-            {
-                var allData = DataExtration.AllData();
-                List<ParkingSpots> parkings = new();
-                foreach (var car in allData)
+
+            List<Vehicle> list = new();
+
+            
+                switch (type)
                 {
-                    parkings.Add(new ParkingSpots(0, car.Spot));
+                    case 1:
+                        {
+                            list.Add(new MC(reg, arrival));
+
+                            break;
+                        }
+                    case 2:
+                        {
+                            list.Add(new Car(reg, arrival));
+
+                            break;
+                        }
                 }
-                return parkings;
-            }
+
+                return list;
+            
         }
         public object[] DetailedList(ParkingSpots spot, Vehicle vehicles, int Prize)
         {
@@ -63,9 +80,11 @@ namespace Core
 
 
             }
-            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime,priceAmount };
+            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime, priceAmount };
             return row;
 
         }
+
+
     }
 }
