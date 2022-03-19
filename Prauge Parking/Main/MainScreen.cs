@@ -142,5 +142,11 @@ namespace Prauge_Parking
             BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
             BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Form1 userrr = new Form1();
+            userrr.Show();
+        }
     }
 }
