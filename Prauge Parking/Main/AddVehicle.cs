@@ -33,49 +33,53 @@ namespace Prauge_Parking.Main
 
             Inzilasing inz = new Inzilasing();
             List<ParkingSpots> pSpots = inz.ParkingHouse();
+            var maxsize = XmlManager.XmlDataReader("Config.xml");
             
-
             if (!string.IsNullOrEmpty(txtLicensePlate.Text) && !(txtLicensePlate.Text.Length <= 3))
             {
                 try
                 {
-                    DataInitialiser data = new ();
+                    DataInitialiser data = new();
 
                     if (int.TryParse(txtPspot.Text, out int spot))
                     {
+                        bool added = false;
                         var tester = pSpots.Where(p => p.Position == spot).Count();
                         var tester1 = pSpots.Select(p => p.Position).ToList();
                         for (int i = 0; i < pSpots.Count; i++)
                         {
-                            if (pSpots[i].Position == spot && pSpots[i].Vehicle.GetType() == typeof(MC)
-                                && (int)cmbTypeVehicle.SelectedItem == 1 && tester != 2)
+                            if (pSpots[i].Position == spot && pSpots[i].SpotSize != maxsize.SizePerLot
+                                && (int)cmbTypeVehicle.SelectedItem == 1)
                             {
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
-
+                                added = true;
                                 MessageBox.Show("Inserted vehicle to database!", "Success");
                                 break;
                             }
-                            else if (tester1.Contains(spot))
-                            {
-                                int oldspot = spot;
-                                while (tester1.Contains(spot))
-                                {
-                                    spot++;
-                                  
-                                }
-
-                                MessageBox.Show($"moved from {oldspot} to {spot}");
-                                data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
-                                break;
-                            }
-                            else
-                            {
-                                data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
-
-                                MessageBox.Show("Inserted vehicle to database!", "Successer");
-                            }
+                        
                         }
+                        if (tester1.Contains(spot)&&added==false)
+                        {
+                            int oldspot = spot;
+                            while (tester1.Contains(spot))
+                            {
+                                spot++;
+
+                            }
+
+                            MessageBox.Show($"moved from {oldspot} to {spot}");
+                            data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+
+                        }
+                        else if (added==false)
+                        {
+                            data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
+
+                            MessageBox.Show("Inserted vehicle to database!", "Successer");
+                        }
+
                     }
+
                     txtLicensePlate.Text = "";
                 }
                 catch

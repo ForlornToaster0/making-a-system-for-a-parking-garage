@@ -55,7 +55,7 @@ namespace Prauge_Parking.Main
                     foreach (var vehicle in sopts.Vehicle)
                     { 
 
-                    var rows = inizilasing.DetailedList(sopts, vehicle, xml.ParkingPrice); //(xml) default parkingprice is 20.
+                    var rows = inizilasing.DetailedList(sopts, vehicle, xml.VehiclePrice); //(xml) default parkingprice is 20.
                     DetailedView.Rows.Add(rows);
                 }
             }

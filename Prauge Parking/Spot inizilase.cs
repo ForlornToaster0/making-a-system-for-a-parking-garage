@@ -19,12 +19,12 @@ namespace Prauge_Parking.Moving_soon
                 if (spot[i].SpotSize == spotSize)
                 {
                     map[spotNum - 1].BackColor = Color.Red;
-                    break;
+                    
                 }
-                else if (spot[i].SpotSize == spotSize / 2)
+                else if (spot[i].SpotSize <= spotSize / 2)
                 {
                     map[spotNum - 1].BackColor = Color.Yellow;
-                    break;
+                    
                 }
             }
         }

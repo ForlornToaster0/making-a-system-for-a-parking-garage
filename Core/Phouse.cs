@@ -27,7 +27,7 @@ namespace Core
         public ParkingSpots(int spotSize, int pos, List<Vehicle> vehicles) 
         {
             this.Vehicle = vehicles;
-            SpotSize = 0;
+            SpotSize = spotSize;
             Position = pos;
         }
     }
