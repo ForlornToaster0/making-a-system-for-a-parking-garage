@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class DataInitialiser
+    public class DataInitialiser //Insert data & update DB with vehicles.
     {
+        testContext context = new testContext(); 
         public void update(string newReg,int newPos)
         {
             testContext context = new();
@@ -27,22 +28,6 @@ namespace DataAccess
             {
                 db.Pspots.Add(new DBPspot() { Reg = regNumber, Type = Convert.ToString(type), Arrival = DateTime.Now, Spot = spot });
                 db.SaveChanges();
-            }
-        }
-
-        public void RemoveVehicle(DBPspot vehicle)
-        {
-            using (var db = new testContext())
-            {
-                
-            }
-        }
-
-        public void MoveVehicle(DBPspot vehicle, int newParkingId)
-        {
-            using (var db = new testContext())
-            {
-                
             }
         }
     }

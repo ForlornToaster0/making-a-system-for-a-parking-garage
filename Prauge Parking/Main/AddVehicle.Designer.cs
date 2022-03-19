@@ -33,6 +33,9 @@
             this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.LabelVehicle = new System.Windows.Forms.Label();
             this.txtPspot = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbTypeVehicle
@@ -82,11 +85,41 @@
             this.txtPspot.Size = new System.Drawing.Size(100, 23);
             this.txtPspot.TabIndex = 8;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Vehicle";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(116, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Type";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(227, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 15);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Desired P-Spot";
+            // 
             // LabelAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPspot);
             this.Controls.Add(this.LabelVehicle);
             this.Controls.Add(this.cmbTypeVehicle);
@@ -106,5 +139,8 @@
         private Button btnSaveVehicle;
         private Label LabelVehicle;
         private TextBox txtPspot;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

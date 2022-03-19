@@ -21,25 +21,12 @@ namespace Prauge_Parking
 {
     public partial class StartUpScreen : Form
     {
-        private LabelAddVehicle addVehicle = new LabelAddVehicle();
+        XML xml = new XML();
 
         public StartUpScreen()
         {
-            testContext context = new();
-            context.Database.EnsureCreated();
-            string message = "Do you want to configure the program?";
-            string title = "Config";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.No)
             {
-                MainScreen mainScreen = new MainScreen();
-                mainScreen.Show();
-                StartUpScreen startUpScreen = new StartUpScreen();
-                startUpScreen.Close();
-            }
-            else
-            {
+                xml = XmlManager.XmlDataReader("Config.xml");
                 InitializeComponent();
             }
 
@@ -47,37 +34,37 @@ namespace Prauge_Parking
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    xml.CZK = "CZK";
-            //    xml.CarSize = 4;
-            //    xml.MCSize = 2;
-            //    // xml.mPrice = Convert.ToDouble(McPrice.Text);
-            //    xml.cPrice = Convert.ToDouble(PriceHour.Text);
-            //    xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
-            //    xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
-            //    XmlManager.XmlDataWriter(xml, "Config.xml");
-            //    MessageBox.Show("Data Saved", "XML file is now updated");
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error " + ex.ToString());
-            //    throw;
-            //}
+            try
+            {
+                xml.CarSize = 4;
+                xml.MCSize = 2;
+                xml.VehiclePrice = new int[] { Convert.ToInt32(txtCarPrice.Text), Convert.ToInt32(txtMcPrice.Text) };
+                //xml.MCPrice = Convert.ToInt32(txtMcPrice.Text);
+                xml.SizePerLot = Convert.ToInt32(SizeLot.Text);
+                xml.PhouseSize = Convert.ToInt32(PhouseSpot.Text);
+                xml.SizeX = Convert.ToInt32(XAxis.Text);
+                xml.SizeY = Convert.ToInt32(YAxis.Text);
+                xml.PhouseSize = xml.SizeY * xml.SizeX;
+                XmlManager.XmlDataWriter(xml, "Config.xml");
+                MessageBox.Show("Data Saved", "XML file is now updated");
+                StartUpScreen startUpScreen = new StartUpScreen();
+                startUpScreen.Show();
+                this.Hide();
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString());
+            }
         }
 
         private void btnShowConfig_Click(object sender, EventArgs e)
         {
-            //DataSet dataset = new DataSet();
-            //dataset.ReadXml("Config.xml");
-            //dataGridView1.DataSource = dataset.Tables[0];
+            DataSet dataset = new DataSet();
+            dataset.ReadXml("Config.xml");
+            dataGridView1.DataSource = dataset.Tables[0];
 
-            //xml = XmlManager.XmlDataReader("Config.xml");
-            //// McPrice.Text = Convert.ToString(xml.mPrice);
-            //PriceHour.Text = Convert.ToString(xml.cPrice);
-            //SizeLot.Text = Convert.ToString(xml.SizePerLot);
-            //PhouseSpot.Text = Convert.ToString(xml.PhouseSize);
+            xml = XmlManager.XmlDataReader("Config.xml");
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
@@ -100,6 +87,14 @@ namespace Prauge_Parking
         {
             MainScreen mainScreen = new MainScreen();
             mainScreen.Show();
+            this.Hide();
+            Hide();
+        }
+
+        private void StartUpScreen_Load(object sender, EventArgs e)
+        {
+            label5.Text = Convert.ToString(xml.VehiclePrice[1]);
+            label6.Text = Convert.ToString(xml.VehiclePrice[0]);
         }
     }
 }

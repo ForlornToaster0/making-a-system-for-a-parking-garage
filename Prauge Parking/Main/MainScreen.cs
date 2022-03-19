@@ -35,16 +35,19 @@ namespace Prauge_Parking
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
             }
+
             testContext context = new();
-            context.Database.EnsureCreated();
+            context.Database.EnsureCreated(); //Skapa DB vid start av program.
             InitializeComponent();
-            if (!File.Exists("Config.xml"))
+
+            if (!File.Exists("Config.xml")) //Om xml filen ej finns så skapas den med default inställningar.
             {
-                xml.ParkingPrice = 20;
-                xml.CarSize = 2;
+                xml.VehiclePrice = new int[] { 10, 20 };
+                xml.CarSize = 4;
                 xml.SizePerLot = 4;
                 xml.MCSize = 2;
                 xml.CZK = "CZK";
@@ -57,14 +60,15 @@ namespace Prauge_Parking
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            //    TopMost = true;
-            //    FormBorderStyle = FormBorderStyle.Sizable;
-            //    WindowState = FormWindowState.Maximized;
+            label1.Text = Convert.ToString(xml.VehiclePrice[1]);
+            label2.Text = Convert.ToString(xml.VehiclePrice[0]);
+
             Map map = new();
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
             map.BringToFront();
+
             BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
             BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
@@ -88,26 +92,10 @@ namespace Prauge_Parking
 
         private void BtnPrice_Click(object sender, EventArgs e)
         {
-            string price = Interaction.InputBox("Current Price: " + xml.ParkingPrice + "CZK", "Edit Price", "Enter New Price");
-            if (price != "")
-            {
-                try
-                {
-                    xml.ParkingPrice = Convert.ToInt32(price);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error " + ex.ToString());
-                    throw;
-                }
-                xml.ParkingPrice = Convert.ToInt32(price);
-                XmlManager.XmlDataWriter(xml, "Config.xml");
-                MessageBox.Show("New Price: " + xml.ParkingPrice + "CZK", "Added!");
-            }
-            if (File.Exists("Config.xml"))
-            {
-                xml = XmlManager.XmlDataReader("Config.xml");
-            }
+            StartUpScreen mainScreen = new StartUpScreen();
+            mainScreen.Show();
+            this.Hide();
+            Hide();
 
         }
 

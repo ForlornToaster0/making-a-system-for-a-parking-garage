@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace DataAccess
 {
-    public class XML
+    public class XML //Ange properties för vår XML fil för att serialisera och deserialisera data.
     {
         
         private string _CZK;
@@ -14,13 +14,15 @@ namespace DataAccess
             get { return _CZK; }
             set { _CZK = value; }
         }
-        private int _parkingPrice;
-        [XmlElement("Parking Spot Price")]
-        public int ParkingPrice
+        private int[] _vehiclePrice;
+        [XmlArray("Vehicle Price")]
+        public int[] VehiclePrice
         {
-            get { return _parkingPrice; }
-            set { _parkingPrice = value; }
+            get { return _vehiclePrice; }
+            set { _vehiclePrice = value; }
         }
+
+
         private int _sizePerLot;
         [XmlElement("Parking Spot Size")]
         public int SizePerLot

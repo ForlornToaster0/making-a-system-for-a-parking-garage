@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class AddTestData
     {
-        public static void AddVehicles()
+        public static void AddVehicles() //Create test data för Claes.
         {
             var context = new testContext();
 
@@ -42,15 +42,15 @@ namespace DataAccess
                     Type = "2" },
                     new DBPspot {  Spot = 51,
                     Reg = "DCC123",
-                    Arrival = new DateTime(2022, 04, 01),
+                    Arrival = new DateTime(2022, 03, 11),
                     Type = "2" },
                     new DBPspot {  Spot = 55,
                     Reg = "RCC123",
-                    Arrival = new DateTime(2022, 05, 01),
+                    Arrival = new DateTime(2022, 03, 16),
                     Type = "2" },
                     new DBPspot {  Spot = 65,
                     Reg = "TCC123",
-                    Arrival = new DateTime(2022, 03, 01),
+                    Arrival = new DateTime(2022, 03, 18),
                     Type = "1" },
                     new DBPspot {  Spot = 18,
                     Reg = "QCC123",

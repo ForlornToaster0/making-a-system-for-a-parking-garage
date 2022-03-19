@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Models
 {
-    public enum VehicleTypeEnum
+    public enum VehicleTypeEnum 
     {
         MC = 1, CAR = 2
     }
@@ -14,7 +14,6 @@ namespace DataAccess.Models
     [Table("PSpot")]
     public partial class DBPspot
     {
-        [Key]
         public int Spot { get; set; }
         [Key]
         [StringLength(10)]

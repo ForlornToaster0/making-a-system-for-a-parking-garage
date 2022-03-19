@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DetailedView = new System.Windows.Forms.DataGridView();
             this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Arrival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xMLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DetailedView
@@ -44,11 +47,12 @@
             this.Reg,
             this.Arrival,
             this.Price});
-            this.DetailedView.Location = new System.Drawing.Point(117, 238);
+            this.DetailedView.Location = new System.Drawing.Point(62, 266);
+            this.DetailedView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DetailedView.Name = "DetailedView";
             this.DetailedView.RowHeadersWidth = 51;
             this.DetailedView.RowTemplate.Height = 29;
-            this.DetailedView.Size = new System.Drawing.Size(553, 195);
+            this.DetailedView.Size = new System.Drawing.Size(561, 258);
             this.DetailedView.TabIndex = 0;
             // 
             // Pos
@@ -83,16 +87,20 @@
             this.Price.ReadOnly = true;
             this.Price.Width = 125;
             // 
+            // xMLBindingSource
+            // 
+            this.xMLBindingSource.DataSource = typeof(DataAccess.XML);
+            // 
             // Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DetailedView);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Map";
-            this.Size = new System.Drawing.Size(903, 453);
+            this.Size = new System.Drawing.Size(1083, 602);
             this.Load += new System.EventHandler(this.Map_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DetailedView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xMLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,5 +112,6 @@
         private DataGridViewTextBoxColumn Reg;
         private DataGridViewTextBoxColumn Arrival;
         private DataGridViewTextBoxColumn Price;
+        private BindingSource xMLBindingSource;
     }
 }
