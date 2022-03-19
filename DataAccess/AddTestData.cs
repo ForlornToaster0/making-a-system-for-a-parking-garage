@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class AddTestData
     {
-        public static void AddVehicles()
+        public static void AddVehicles() //Create test data för Claes.
         {
             var context = new testContext();
 

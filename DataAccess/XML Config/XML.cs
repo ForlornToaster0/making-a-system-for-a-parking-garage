@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace DataAccess
 {
-    public class XML
+    public class XML //Ange properties för vår XML fil för att serialisera och deserialisera data.
     {
         
         private string _CZK;

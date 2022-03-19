@@ -41,10 +41,10 @@ namespace Prauge_Parking
             }
 
             testContext context = new();
-            context.Database.EnsureCreated();
+            context.Database.EnsureCreated(); //Skapa DB vid start av program.
             InitializeComponent();
 
-            if (!File.Exists("Config.xml"))
+            if (!File.Exists("Config.xml")) //Om xml filen ej finns så skapas den med default inställningar.
             {
                 xml.VehiclePrice = new int[] { 10, 20 };
                 xml.CarSize = 4;
@@ -54,7 +54,6 @@ namespace Prauge_Parking
                 xml.PhouseSize = 100;
                 xml.SizeX = 10;
                 xml.SizeY = 10;
-                //xml.ParkingPrice = 20;
                 XmlManager.XmlDataWriter(xml, "Config.xml");
             }
             xml = XmlManager.XmlDataReader("Config.xml");
@@ -63,14 +62,13 @@ namespace Prauge_Parking
         {
             label1.Text = Convert.ToString(xml.VehiclePrice[1]);
             label2.Text = Convert.ToString(xml.VehiclePrice[0]);
-            //    TopMost = true;
-            //    FormBorderStyle = FormBorderStyle.Sizable;
-            //    WindowState = FormWindowState.Maximized;
+
             Map map = new();
             this.Controls.Add(map);
             map.CreateControl();
             map.Show();
             map.BringToFront();
+
             BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
             BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
 
@@ -141,12 +139,6 @@ namespace Prauge_Parking
             map.BringToFront();
             BtnAdd.Location = new Point(BtnPrice.Location.X, BtnPrice.Location.Y + BtnPrice.Size.Height + BtnPrice.Size.Height / 2);
             BtnAdd.Size = new Size(BtnPrice.Size.Width, BtnPrice.Size.Height);
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Form1 userrr = new Form1();
-            userrr.Show();
         }
     }
 }

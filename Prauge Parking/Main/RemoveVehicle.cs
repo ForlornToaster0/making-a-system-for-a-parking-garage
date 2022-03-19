@@ -14,7 +14,6 @@ namespace Prauge_Parking
 {
     public partial class RemoveVehicle : UserControl
     {
-        Map map = new Map();
         testContext context = new testContext();
         public RemoveVehicle()
         {

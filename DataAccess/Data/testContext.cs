@@ -41,7 +41,7 @@ namespace DataAccess.Data
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-        public static void TestDataAdd()
+        public static void TestDataAdd() //Add test data upon start of program. 
         {
             AddTestData.AddVehicles();
         }

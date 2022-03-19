@@ -74,7 +74,6 @@
             this.label4.Size = new System.Drawing.Size(54, 15);
             this.label4.TabIndex = 24;
             this.label4.Text = "Car Price";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
