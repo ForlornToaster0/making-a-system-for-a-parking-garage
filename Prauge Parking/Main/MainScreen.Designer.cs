@@ -96,7 +96,7 @@
             this.BtnMap.Name = "BtnMap";
             this.BtnMap.Size = new System.Drawing.Size(88, 17);
             this.BtnMap.TabIndex = 4;
-            this.BtnMap.Text = "Map";
+            this.BtnMap.Text = "Refresh";
             this.BtnMap.UseVisualStyleBackColor = true;
             this.BtnMap.Click += new System.EventHandler(this.BtnMap_Click);
             // 

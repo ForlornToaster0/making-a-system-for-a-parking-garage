@@ -78,7 +78,6 @@ namespace Prauge_Parking
             {
                 MessageBox.Show("Vehicle couldn't be found", "Error");
             }
-            scr.Show();
 
         }
 
