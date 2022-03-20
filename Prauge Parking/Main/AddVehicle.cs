@@ -54,6 +54,8 @@ namespace Prauge_Parking.Main
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
                                 added = true;
                                 MessageBox.Show("Inserted vehicle to database!", "Success");
+                                scr.Show();
+
                                 break;
                             }
                         
@@ -66,7 +68,6 @@ namespace Prauge_Parking.Main
                                 spot++;
 
                             }
-
                             MessageBox.Show($"moved from {oldspot} to {spot}");
                             data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
                             scr.Show();
@@ -76,17 +77,20 @@ namespace Prauge_Parking.Main
                             data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
 
                             MessageBox.Show("Inserted vehicle to database!", "Successer");
+                            scr.Show();
+
                         }
 
                     }
+                    scr.Show();
 
                     txtLicensePlate.Text = "";
                 }
                 catch
                 {
+                    MessageBox.Show("Failed to insert Vehicle", "Error");
                 }
             }
-            scr.Show();
 
 
         }

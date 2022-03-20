@@ -17,6 +17,7 @@ namespace Prauge_Parking
     public partial class MoveVehicle : UserControl
     {
         static MainScreen scr = new();
+        static Map m = new Map();
         public MoveVehicle()
         {
             InitializeComponent();
@@ -40,9 +41,9 @@ namespace Prauge_Parking
             DataInitialiser dataInitialiser = new();
             dataInitialiser.update(BoxLicensePlate.Text,int.Parse(BoxPspot.Text));
             MessageBox.Show("Vehicle " + BoxLicensePlate.Text + " has moved to parking Spot: " + BoxPspot.Text, "Success!");
+            MainScreen scr = new();
 
             scr.Show();
-
         }
         private void txtLicensePlate_TextChanged(object sender, EventArgs e)
         {
