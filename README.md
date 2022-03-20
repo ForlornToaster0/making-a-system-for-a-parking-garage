@@ -2,4 +2,4 @@
 
 DB & XML config file is created automatically upon start.
 
-Use button "map" on main screen to refresh Datagridview and the parking spot after adding, removing or moving a vehicle. 
+Use button "Refresh" on main screen to refresh Datagridview and the parking spot after adding, removing or moving a vehicle. 
