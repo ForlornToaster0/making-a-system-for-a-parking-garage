@@ -32,11 +32,8 @@ namespace Prauge_Parking
 
             MainScreen mainScreen = new();
 
-            Map map = new();
-            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
-            this.Width = mainScreen.Size.Width + 200;
-
-            this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 600);
+            this.Width = mainScreen.Size.Width + -800;
             this.BorderStyle = BorderStyle.None;
         }
 
@@ -51,7 +48,6 @@ namespace Prauge_Parking
 
             try
             {
-                int priceAmount = 0;
                 var vehicle = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
                 var span = (Math.Round(DateTime.Now.Subtract(vehicle.Arrival.AddMinutes(10)).TotalHours));
 

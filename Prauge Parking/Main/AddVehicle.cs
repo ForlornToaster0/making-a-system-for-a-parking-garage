@@ -22,9 +22,8 @@ namespace Prauge_Parking.Main
             MainScreen mainScreen = new();
 
 
-            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
-            this.Width = mainScreen.Size.Width + 200;
-            this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 600);
+            this.Width = mainScreen.Size.Width + -800;
             this.BorderStyle = BorderStyle.None;
         }
 
@@ -48,8 +47,8 @@ namespace Prauge_Parking.Main
                         var tester1 = pSpots.Select(p => p.Position).ToList();
                         for (int i = 0; i < pSpots.Count; i++)
                         {
-                            if (pSpots[i].Position == spot && pSpots[i].SpotSize != maxsize.SizePerLot
-                                && (int)cmbTypeVehicle.SelectedItem == 1)
+                            if (pSpots[i].Position == spot && pSpots[i].SpotSize != maxsize.SizePerLot)
+                                
                             {
                                 data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
                                 added = true;

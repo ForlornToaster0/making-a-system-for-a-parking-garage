@@ -18,7 +18,6 @@ namespace Prauge_Parking
     {
         public MoveVehicle()
         {
-            MainScreen mainScreen = new();
             InitializeComponent();
         }
 
@@ -27,12 +26,12 @@ namespace Prauge_Parking
             
             MainScreen mainScreen = new();
 
-            Map map = new();
-            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 0);
-            this.Width = mainScreen.Size.Width + 200;
-
-            this.Height = (map.DetailedView.Location.Y - 10 + map.DetailedView.Location.Y / 3);
+            this.Location = new Point(mainScreen.PanelMenu.Size.Width, 600);
+            this.Width = mainScreen.Size.Width + -800;
             this.BorderStyle = BorderStyle.None;
+
+
+          
         }
 
         private void BtnMoveVehicle_Click(object sender, EventArgs e)
@@ -40,6 +39,8 @@ namespace Prauge_Parking
             DataInitialiser dataInitialiser = new();
             dataInitialiser.update(BoxLicensePlate.Text,int.Parse(BoxPspot.Text));
             MessageBox.Show("Vehicle " + BoxLicensePlate.Text + " has moved to parking Spot: " + BoxPspot.Text, "Success!");
+
+            Map map = new();
         }
         private void txtLicensePlate_TextChanged(object sender, EventArgs e)
         {
@@ -57,7 +58,7 @@ namespace Prauge_Parking
                 BtnMoveVehicle.Enabled = false;
             }
             if (BoxLicensePlate.Text == "") BoxLicensePlate.BackColor = SystemColors.ButtonHighlight;
-        }
+                    }
         private bool IsLicence_OK(string regnum)
         {
             if (regnum.Any(c => !char.IsLetterOrDigit(c))) return false;

@@ -60,7 +60,8 @@ namespace Prauge_Parking
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            
+            label1.Text = Convert.ToString(xml.VehiclePrice[0]);
+            label2.Text = Convert.ToString(xml.VehiclePrice[1]);
 
             Map map = new();
             this.Controls.Add(map);

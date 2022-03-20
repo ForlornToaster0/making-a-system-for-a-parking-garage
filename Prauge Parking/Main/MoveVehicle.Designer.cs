@@ -48,7 +48,7 @@
             // 
             // BtnMoveVehicle
             // 
-            this.BtnMoveVehicle.Location = new System.Drawing.Point(333, 65);
+            this.BtnMoveVehicle.Location = new System.Drawing.Point(227, 63);
             this.BtnMoveVehicle.Name = "BtnMoveVehicle";
             this.BtnMoveVehicle.Size = new System.Drawing.Size(100, 23);
             this.BtnMoveVehicle.TabIndex = 2;
@@ -58,7 +58,7 @@
             // 
             // BoxPspot
             // 
-            this.BoxPspot.Location = new System.Drawing.Point(227, 65);
+            this.BoxPspot.Location = new System.Drawing.Point(121, 64);
             this.BoxPspot.Name = "BoxPspot";
             this.BoxPspot.Size = new System.Drawing.Size(100, 23);
             this.BoxPspot.TabIndex = 1;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 47);
+            this.label2.Location = new System.Drawing.Point(121, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 5;
@@ -104,7 +104,7 @@
             this.Controls.Add(this.BtnMoveVehicle);
             this.Controls.Add(this.BoxLicensePlate);
             this.Name = "MoveVehicle";
-            this.Size = new System.Drawing.Size(475, 269);
+            this.Size = new System.Drawing.Size(342, 93);
             this.Load += new System.EventHandler(this.MoveVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

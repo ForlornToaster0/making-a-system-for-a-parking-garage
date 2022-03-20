@@ -59,7 +59,7 @@
             // 
             // btnSaveVehicle
             // 
-            this.btnSaveVehicle.Location = new System.Drawing.Point(121, 139);
+            this.btnSaveVehicle.Location = new System.Drawing.Point(333, 65);
             this.btnSaveVehicle.Name = "btnSaveVehicle";
             this.btnSaveVehicle.Size = new System.Drawing.Size(100, 23);
             this.btnSaveVehicle.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.txtLicensePlate);
             this.Controls.Add(this.btnSaveVehicle);
             this.Name = "LabelAddVehicle";
-            this.Size = new System.Drawing.Size(475, 269);
+            this.Size = new System.Drawing.Size(436, 96);
             this.Load += new System.EventHandler(this.CmbForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
