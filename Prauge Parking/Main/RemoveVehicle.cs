@@ -21,6 +21,7 @@ namespace Prauge_Parking
         XML xml = new();
         testContext context = new testContext();
         XmlManager xmlManager = new XmlManager();
+        static MainScreen scr = new();
         public RemoveVehicle()
         {
             MainScreen mainScreen = new();
@@ -77,10 +78,7 @@ namespace Prauge_Parking
             {
                 MessageBox.Show("Vehicle couldn't be found", "Error");
             }
-            MainScreen mainScreen = new MainScreen();
-            mainScreen.Show();
-            this.Hide();
-            Hide();
+            scr.Show();
 
         }
 

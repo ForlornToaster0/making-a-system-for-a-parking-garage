@@ -15,6 +15,7 @@ namespace Prauge_Parking.Main
 {
     public partial class LabelAddVehicle : UserControl
     {
+        static MainScreen scr = new();
         public LabelAddVehicle()
         {
             InitializeComponent();
@@ -68,7 +69,7 @@ namespace Prauge_Parking.Main
 
                             MessageBox.Show($"moved from {oldspot} to {spot}");
                             data.InsertVehicle(txtLicensePlate.Text, (int)cmbTypeVehicle.SelectedItem, spot);
-
+                            scr.Show();
                         }
                         else if (added==false)
                         {
@@ -85,6 +86,8 @@ namespace Prauge_Parking.Main
                 {
                 }
             }
+            scr.Show();
+
 
         }
 
