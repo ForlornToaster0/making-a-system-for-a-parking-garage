@@ -69,7 +69,7 @@ namespace Prauge_Parking
 
         private void BtnAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Prague Parking v2.0", "About");
+            MessageBox.Show("Prague Parking v2.0\nby Golden Bananas", "About");
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
