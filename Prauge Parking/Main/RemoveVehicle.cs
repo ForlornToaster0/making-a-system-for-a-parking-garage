@@ -1,5 +1,9 @@
-﻿using DataAccess.Data;
+﻿using Core;
+using DataAccess;
+using DataAccess.Data;
+using DataAccess.Models;
 using Prauge_Parking.Main;
+using Prauge_Parking.Moving_soon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +18,9 @@ namespace Prauge_Parking
 {
     public partial class RemoveVehicle : UserControl
     {
+        XML xml = new();
         testContext context = new testContext();
+        XmlManager xmlManager = new XmlManager();
         public RemoveVehicle()
         {
             MainScreen mainScreen = new();
@@ -41,12 +47,30 @@ namespace Prauge_Parking
 
         private void BtnRemoveVehicle_Click(object sender, EventArgs e)
         {
+            xml = XmlManager.XmlDataReader("Config.xml");
+
             try
             {
+                int priceAmount = 0;
                 var vehicle = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
-                BoxLicensePlate.Text = "";
-                MessageBox.Show($"Vehicle has been removed", "Vehicle Removed");
+                var span = (Math.Round(DateTime.Now.Subtract(vehicle.Arrival.AddMinutes(10)).TotalHours));
 
+
+                var type = vehicle.Type;
+                var prisCar = Convert.ToInt32(xml.VehiclePrice[0]);
+                var calculatedCar = prisCar * span;
+
+                var prisMc = Convert.ToInt32(xml.VehiclePrice[1]);
+                var calculatedMc = prisMc * span;
+
+                if (type == "1")
+                {
+                    MessageBox.Show($"{BoxLicensePlate.Text} has been removed\nTotal parktime: {span} hours. \nPrice to pay: {calculatedCar} CZK", "Vehicle Removed");
+                }
+                else
+                {
+                    MessageBox.Show($"{BoxLicensePlate.Text} has been removed\nTotal parktime: {span} hours. \nPrice to pay: {calculatedMc} CZK", "Vehicle Removed");
+                }
 
                 context.Pspots.Remove(vehicle);
                 context.SaveChanges();
@@ -61,6 +85,27 @@ namespace Prauge_Parking
             mainScreen.Show();
             this.Hide();
             Hide();
+
+        }
+
+        public object[] DetailedList(ParkingSpots spot, Vehicle vehicles, int[] Prize)
+        {
+
+            double priceAmount = 0;
+            var vehicle = context.Pspots.SingleOrDefault(p => p.Reg == BoxLicensePlate.Text.ToUpper());
+
+            var type = vehicle.Type;
+            var span = Math.Round(DateTime.Now.Subtract(vehicles.ParkTime.AddMinutes(10)).TotalHours);
+            if (vehicles.GetType() == typeof(Car))
+            {
+                priceAmount = span * Prize[1];
+            }
+            else if (vehicles.GetType() == typeof(MC))
+            {
+                priceAmount = span * Prize[0];
+            }
+            object[] row = new object[4] { spot.Position, vehicles.RegNumber, vehicles.ParkTime, priceAmount };
+            return row;
 
         }
 
