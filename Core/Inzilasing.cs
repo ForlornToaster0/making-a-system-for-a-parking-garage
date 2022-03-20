@@ -29,8 +29,9 @@ namespace Core
                 }
                 foreach (var Data in vehicleList)
                 {
-                    size = +Data.VehicleSize;
+                    size =size + Data.VehicleSize;
                 }
+                
                 if (vehicleList.Count > 0)
                 {
                     list.Add(new ParkingSpots(size, Position, vehicleList));

@@ -15,7 +15,7 @@ namespace DataAccess
         {
             using testContext Context = new();
             {
-                var data = Context.Pspots.Select(s => s).Select(s=>s.Spot).ToArray();
+                var data = Context.Pspots.Select(s => s).Select(s=>s.Spot).Distinct().ToArray();
                 return data;
             }
         }
